@@ -44,6 +44,7 @@ class DemoFragment : Fragment() {
 
         val imgRes : Int = if (page == "0") R.drawable.rl_1 else if (page == "1") R.drawable.rl_2 else R.drawable.rl_3
         binding.rlImage.setImageResource(imgRes)
+        binding.payoff.text = "Frase Presentazione ${page}"
         return binding.root
     }
 
