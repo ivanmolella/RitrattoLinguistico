@@ -1,5 +1,6 @@
 package com.anastaasiasenyshyn.ritrattolinguistico
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -11,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityDemoBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.demoslider.DemoFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.util.AnimationUtil
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -60,7 +62,18 @@ class DemoActivity : AppCompatActivity() {
                 viewPager?.currentItem = counter
                 if (counter < 2){
                     nextItem()
+                }else {
+                    goToMainActivity()
                 }
+            }
+        },3000)
+    }
+
+    private fun goToMainActivity() {
+        handler.postDelayed(object : Runnable {
+            override fun run() {
+                AnimationUtil.startIntentWithSlideInRightAnimation(this@DemoActivity,
+                    Intent(this@DemoActivity, MainActivity::class.java),null)
             }
         },3000)
     }
