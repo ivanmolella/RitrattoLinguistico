@@ -2,8 +2,22 @@ package com.anastaasiasenyshyn.ritrattolinguistico.test
 
 fun main() {
     //readLine()
-    println("Insert 2 numbers:")
 
-    val (a, b) = readLine()!!.split(' ')
-    println("$a + $b")
+    readNumbersFromCommandLine()
+    //readStringFromCommandLine()
+
+}
+
+fun readNumbersFromCommandLine(){
+    println("Insert a string:\n")
+    val numbers= readLine()!!.split(' ')
+    numbers.forEach {
+        println("Inserita numero: $it")
+    }
+}
+
+fun readStringFromCommandLine(){
+    println("Insert some numbers separated by space:\n")
+    val string = readLine()!!
+    println("Inserito string: $string")
 }
