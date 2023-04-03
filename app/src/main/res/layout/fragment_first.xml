@@ -35,6 +35,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:background="@android:color/holo_orange_light">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="32dp"
+                    android:text="SCOPRI DI PIU'"
+                    android:backgroundTint="@android:color/black">
+                </Button>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -42,6 +49,13 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/holo_green_light">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="32dp"
+                    android:text="RITRATTO LINGUISTICO"
+                    android:backgroundTint="@android:color/darker_gray">
+                </Button>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
