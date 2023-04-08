@@ -31,20 +31,31 @@ fun main() {
 
     //calcolaQuadratodellaSommaNumeriIndefiniti()
 
-    //NumeriOrdineCrescente()
+    numeriOrdineCrescente()
 
 
 }
 
-fun NumeriOrdineCrescente() {
+fun numeriOrdineCrescente() {
     
     println("Inserisci dei numeri: \n")
     val lista : List<String> = readLine()!!.split(' ')
-    lista.forEach { numero ->
-        numero.toDouble()
-        println("numeri inseriti sono: $numero")
+    var min : Int? = null
+    var max : Int? = null
 
+    if (lista[0].toInt() > lista[1].toInt()){
+        max = lista[0].toInt()
+        min = lista[1].toInt()
+    }else{
+        max = lista[1].toInt()
+        min = lista[0].toInt()
     }
+    println("${min} ${max}")
+
+//    lista.forEach { numero ->
+//        numero.toDouble()
+//        println("numeri inseriti sono: $numero")
+//    }
 
 }
 

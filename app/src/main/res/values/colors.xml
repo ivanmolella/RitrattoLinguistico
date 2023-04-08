@@ -13,5 +13,6 @@
     <color name="purplebackground">#9AC2B0CD</color>
     <color name="purplebackground2">#E1EAE3EE</color>
     <color name="purplebutton2">#E1BAA0C8</color>
+    <color name="colorAccent_classic">#EC407A</color>
 
 </resources>

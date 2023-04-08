@@ -19,11 +19,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/baseline_star_outline_24">
-
         </ImageView>
-
-
-
 
     </LinearLayout>
 
@@ -52,9 +48,8 @@
                     android:layout_margin="25dp"
                     android:text="@string/scopridipiùbutton"
                     android:textSize="14sp"
-                    android:backgroundTint="@color/purplebutton2"
+                    android:backgroundTint="@color/colorAccent_classic"
                     android:layout_gravity="center">
-
                 </Button>
 
             </LinearLayout>
