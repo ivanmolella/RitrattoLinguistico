@@ -5,76 +5,149 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/holo_red_dark"
+    android:background="@color/purplebackground2"
     tools:context=".FirstFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="#CCCC00">
+        android:orientation="horizontal"
+        android:background="@color/purple_100"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/baseline_star_outline_24">
+
+        </ImageView>
+
+
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2.3"
         android:orientation="vertical"
-        android:background="@android:color/holo_blue_bright">
+        android:background="@color/purplebackground2">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
-            android:background="@android:color/holo_red_dark">
+            android:background="@color/purplebackground2">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light">
+                android:background="@android:color/transparent">
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="32dp"
-                    android:text="SCOPRI DI PIU'"
-                    android:backgroundTint="@android:color/black">
+                    android:layout_margin="25dp"
+                    android:text="@string/scopridipiùbutton"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/purplebutton2"
+                    android:layout_gravity="center">
+
                 </Button>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginEnd="16dp"
-                android:background="@android:color/holo_green_light">
+                android:background="@color/purplebackground2">
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="32dp"
-                    android:text="RITRATTO LINGUISTICO"
-                    android:backgroundTint="@android:color/darker_gray">
+                    android:layout_margin="25dp"
+                    android:text="@string/ritrattolinguisticobutton"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/purplebutton2"
+                    android:layout_gravity="center">
+
                 </Button>
             </LinearLayout>
+
+
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:background="@color/purplebackground2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="@color/purplebackground2">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="25dp"
+                    android:text="@string/giardinolinguisticobutton"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/purplebutton2"
+                    android:layout_gravity="center">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="16dp"
+                android:background="@color/purplebackground2">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="25dp"
+                    android:text="@string/sistemiscritturabutton"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/purplebutton2"
+                    android:layout_gravity="center">
+
+                </Button>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/textview_first"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="@string/hello_first_fragment"/>-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textview_first"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:text="@string/hello_first_fragment"/>-->
 
-<!--    <Button-->
-<!--        android:id="@+id/button_first"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/next"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/textview_first" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/button_first"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/next"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/textview_first" />-->
 </LinearLayout>
+

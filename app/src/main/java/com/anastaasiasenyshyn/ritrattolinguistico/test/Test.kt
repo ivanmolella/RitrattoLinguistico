@@ -19,9 +19,59 @@ fun main() {
 
     //calcolaSommaNumeriSenzaArray()
 
+
+
     //calcolaSommaNumeriConArray()
 
-    calcolaSommaNumeriConArrayIndefinito()
+    //calcolaSommaNumeriConArrayIndefinito()
+
+    //calcoladoppioNumero()
+
+    //calcolailquadratodellasommanumeri()
+
+    //calcolaQuadratodellaSommaNumeriIndefiniti()
+
+    //NumeriOrdineCrescente()
+
+
+}
+
+fun NumeriOrdineCrescente() {
+    
+    println("Inserisci dei numeri: \n")
+    val lista : List<String> = readLine()!!.split(' ')
+    lista.forEach { numero ->
+        numero.toDouble()
+        println("numeri inseriti sono: $numero")
+
+    }
+
+}
+
+fun calcolaQuadratodellaSommaNumeriIndefiniti(){
+    println("Inserisci dei numeri reali: \n")
+    val lista : List<String> = readLine()!!.split(' ')
+    var somma = 0.0
+    lista.forEach {
+        somma = somma + it.toDouble()
+    }
+    var doppiosomma = somma * 2
+    println("il doppio della somma dei numeri è $doppiosomma")
+}
+
+fun calcolailquadratodellasommanumeri() {
+    println("inserisci tre numeri reali: \n")
+    val (a,b,c) = readLine()!!.split(' ')
+    val somma = a.toDouble() + b.toDouble() + c.toDouble()
+    val doppiosomma= somma * 2
+    println("il doppio della somma dei numeri è $doppiosomma")
+}
+
+fun calcoladoppioNumero() {
+    println("Inserisci un numero")
+    val numero = readLine()!!
+    val doppio = numero.toDouble() * 2
+    println("il doppio di $numero è $doppio")
 }
 
 fun calcolaSommaNumeriConArrayIndefinito() {
