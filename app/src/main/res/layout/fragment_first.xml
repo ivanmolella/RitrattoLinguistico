@@ -13,15 +13,19 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="@color/purple_100"
+        android:background="@drawable/bg_gradient"
         android:gravity="center">
+
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/baseline_star_outline_24">
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/family_vector_icon_24">
+
         </ImageView>
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,7 +53,7 @@
                     android:layout_margin="25dp"
                     android:text="@string/scopridipiùbutton"
                     android:textSize="14sp"
-                    android:backgroundTint="@color/colorAccent_classic"
+                    android:background="@drawable/btn_bg_1"
                     android:layout_gravity="center">
                 </Button>
 
@@ -67,7 +71,7 @@
                     android:layout_margin="25dp"
                     android:text="@string/ritrattolinguisticobutton"
                     android:textSize="14sp"
-                    android:backgroundTint="@color/purplebutton2"
+                    android:background="@drawable/btn_bg_1"
                     android:layout_gravity="center">
 
                 </Button>
@@ -95,7 +99,7 @@
                     android:layout_margin="25dp"
                     android:text="@string/giardinolinguisticobutton"
                     android:textSize="14sp"
-                    android:backgroundTint="@color/purplebutton2"
+                    android:background="@drawable/btn_bg_1"
                     android:layout_gravity="center">
 
                 </Button>
@@ -114,7 +118,7 @@
                     android:layout_margin="25dp"
                     android:text="@string/sistemiscritturabutton"
                     android:textSize="14sp"
-                    android:backgroundTint="@color/purplebutton2"
+                    android:background="@drawable/btn_bg_1"
                     android:layout_gravity="center">
 
                 </Button>
