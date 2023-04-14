@@ -41,8 +41,26 @@ fun main() {
 
     //esercizioDiciotto()
 
+    //determinareNumMaxeNumMinConForEachProva()
 
 
+    //determinareNumMaxeNumMin()
+
+    //printAsciTable()
+    //min=-23
+    val array = mutableListOf(4,23,15,21,3,80,1800)
+
+    trovaMin(array)
+}
+
+fun printAsciTable() {
+
+    for (i in 0 .. 255){
+        println("Asci Character: ${i.toChar()} - Asci Code: $i")
+    }
+}
+
+fun trovaMin(array : List<Int>){
 }
 
 fun esercizioDiciotto() {
@@ -52,9 +70,6 @@ fun esercizioDiciotto() {
     val valoresterlina : Double = sterlina * 2.52
     val totaleeuro = valoredollaro + valoresterlina
     println("il valore euro che ha il sigonre è : $totaleeuro")
-
-
-
 }
 
 
@@ -74,13 +89,22 @@ fun determinareNumMaxeNumMinConForEachProva() {
 
 fun determinareNumMaxeNumMin() {
     println("Inserisci dei numeri: \n")
-    val lista : List<String> = readLine()!!.split(' ')
-    println("I numeri inseriti sono: $lista")
-    val newlista = lista.max().toDouble()
+    val listaStr : List<String> = readLine()!!.split(' ')
+    val listaInt : List<Int> = listStringToListInteger(listaStr)
+    println("I numeri inseriti sono: $listaInt")
+    val newlista = listaInt.max().toDouble()
     println("Il numero massimo è : $newlista")
-    val thenewestlista = lista.min().toDouble()
+    val thenewestlista = listaInt.min().toDouble()
     println("Il numero minimo è : $thenewestlista")
 
+}
+
+fun listStringToListInteger(lista: List<String>): List<Int> {
+    val listaInt : MutableList<Int> = mutableListOf()
+    lista.forEach { valoreStr ->
+        listaInt.add(valoreStr.toInt())
+    }
+    return listaInt
 }
 
 fun numeriOrdineDecrescenteProva() {
