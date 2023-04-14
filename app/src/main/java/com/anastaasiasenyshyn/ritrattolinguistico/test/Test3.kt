@@ -3,17 +3,17 @@ package com.anastaasiasenyshyn.ritrattolinguistico.test
 
 fun main() {
 
-    val unsortedArray = mutableListOf(4,23,15,21,3,80,1800)
+    val array = mutableListOf(4,23,15,21,3,80,1800)
 
     print("Unordered: ")
-    unsortedArray.forEach { element ->
+    array.forEach { element ->
         print("$element ")
     }
 
-    val sortedArray : List<Int> = bubleSort(unsortedArray)
+    bubleSort(array)
 
     print("\nOrdered: ")
-    sortedArray.forEach { element ->
+    array.forEach { element ->
         print("$element ")
     }
 
@@ -21,7 +21,7 @@ fun main() {
 
 }
 
-fun bubleSort(unsortedArray: MutableList<Int>): List<Int> {
+fun bubleSort(unsortedArray: MutableList<Int>){
 
     for(i in 0.. (unsortedArray.size -1)){
         for(j in i + 1 .. (unsortedArray.size -1)){
@@ -33,5 +33,4 @@ fun bubleSort(unsortedArray: MutableList<Int>): List<Int> {
         }
     }
 
-    return unsortedArray
 }
