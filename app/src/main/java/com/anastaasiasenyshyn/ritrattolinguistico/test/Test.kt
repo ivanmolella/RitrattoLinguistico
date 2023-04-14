@@ -31,8 +31,64 @@ fun main() {
 
     //calcolaQuadratodellaSommaNumeriIndefiniti()
 
-    numeriOrdineCrescente()
+    //numeriOrdineCrescente()
 
+    //numeriOrdineDecrescenteProva()
+
+    //determinareNumMaxeNumMin()
+
+    //determinareNumMaxeNumMinConForEachProva()
+
+    //esercizioDiciotto()
+
+
+
+}
+
+fun esercizioDiciotto() {
+    val dollaro : Double = 1.75
+    val sterlina : Double = 2.80
+    val valoredollaro : Double = dollaro * 1.514
+    val valoresterlina : Double = sterlina * 2.52
+    val totaleeuro = valoredollaro + valoresterlina
+    println("il valore euro che ha il sigonre è : $totaleeuro")
+
+
+
+}
+
+
+
+
+fun determinareNumMaxeNumMinConForEachProva() {
+    println("Inserisci dei numeri: \n")
+    val lista : List<String> = readLine()!!.split(' ')
+    println("I numeri inseriti sono: $lista")
+    lista.forEach {numeri->
+        val newlista = lista.min().toDouble()
+        println("Il numero minimo is: $newlista")
+        val thenewestlista = lista.max().toDouble()
+        println("Il numero massimo is: $thenewestlista")
+    }
+}
+
+fun determinareNumMaxeNumMin() {
+    println("Inserisci dei numeri: \n")
+    val lista : List<String> = readLine()!!.split(' ')
+    println("I numeri inseriti sono: $lista")
+    val newlista = lista.max().toDouble()
+    println("Il numero massimo è : $newlista")
+    val thenewestlista = lista.min().toDouble()
+    println("Il numero minimo è : $thenewestlista")
+
+}
+
+fun numeriOrdineDecrescenteProva() {
+    println("Inserisci dei numeri:\n")
+    val lista : List<String> = readLine()!!.split(' ')
+    println("numeri inseriti: $lista")
+    val newlista = lista.sortedByDescending { it.toDouble() }
+    println("numeri in descending order are: $newlista")
 
 }
 
@@ -52,10 +108,6 @@ fun numeriOrdineCrescente() {
     }
     println("${min} ${max}")
 
-//    lista.forEach { numero ->
-//        numero.toDouble()
-//        println("numeri inseriti sono: $numero")
-//    }
 
 }
 
