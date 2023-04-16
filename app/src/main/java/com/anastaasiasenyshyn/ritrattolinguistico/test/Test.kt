@@ -47,10 +47,123 @@ fun main() {
     //determinareNumMaxeNumMin()
 
     //printAsciTable()
-    //min=-23
-    val array = mutableListOf(4,23,15,21,3,80,1800)
+    //min=0
+    //val array = mutableListOf(4,23,15,21,3,80,1800)
 
-    trovaMin(array)
+    //trovaMax(array)
+    //trovaMin(array)
+
+    //esercizioTreVettoriconArrayCaricato()
+    //esercizioTreVettoriconArraydaCaricaredaTastiera()
+
+    //esercizioFiveVettori()
+
+    //esercizioDieciVettori()
+
+    //esercizioDieviVettoridaCaricaredaTasiera()
+
+
+
+}
+
+fun esercizioDieviVettoridaCaricaredaTasiera() {
+    println("Inserisci dei numeri: \n")
+    val listaStringhe : List<String> = readLine()!!.split(' ')
+    val listaInt : List<Int> = listStringToListInteger(listaStringhe)
+    println("I numeri inseriti sono: $listaInt")
+    val array = listaInt
+    var max = 0
+    var max2 = 0
+    var p = 0
+    var p2 = 0
+    for(i in 0..array.size - 1){
+        val valorecorrente = array[i]
+        if(max < valorecorrente){
+            max2 = max
+            p2 = p
+            max = valorecorrente
+            p = i
+        } else if (valorecorrente>max2){
+            max2=valorecorrente
+            p2=i
+
+        }
+
+    }
+    println("Il valore massimo è $max")
+    println("Il secondo massimo è $max2 nella posizione $p2")
+}
+
+fun esercizioDieciVettori() {
+    val array = mutableListOf(4,23,15,21,3,80,1800)
+    var max = 0
+    var max2 = 0
+    var p = 0
+    var p2 = 0
+    for(i in 0..array.size - 1){
+        val valorecorrente = array[i]
+        if(max < valorecorrente){
+            max2 = max
+            p2 = p
+            max = valorecorrente
+            p = i
+        } else if (valorecorrente>max2){
+            max2=valorecorrente
+            p2=i
+
+        }
+
+    }
+    println("Il valore massimo è $max")
+    println("Il secondo massimo è $max2 nella posizione di $p2")
+}
+
+fun esercizioFiveVettori() {
+    println("Inserisci dei numeri: \n")
+    val listaStringhe : List<String> = readLine()!!.split(' ')
+    val listaInt : List<Int> = listStringToListInteger(listaStringhe)
+    println("I numeri inseriti sono: $listaInt")
+    val array = listaInt
+    var somma = 0
+    for (i in 0..array.size -1){
+        val numerocorrente = array[i]
+        val numerodinonritorno = 0
+        if (numerocorrente == numerodinonritorno){
+            break
+       }
+        println("i numeri considerati $numerocorrente")
+
+
+        somma = somma + numerocorrente
+
+    }
+   println("somma numeri inseriti fino a 0 è $somma ")
+
+}
+
+fun esercizioTreVettoriconArraydaCaricaredaTastiera() {
+    println("Inserisci dei numeri: \n")
+    val listaStringhe : List<String> = readLine()!!.split(' ')
+    val listaInt : List<Int> = listStringToListInteger(listaStringhe)
+    println("I numeri inseriti sono: $listaInt")
+    val array = listaInt
+    var somma = 0
+    for (i in 0..array.size -1){
+        val numerocorrente = array[i]
+        somma = somma + numerocorrente
+    }
+    println("La somma degli elementi sopra riportati è $somma")
+
+}
+
+fun esercizioTreVettoriconArrayCaricato() {
+    val array = mutableListOf(4,23,15,21,3,80,1800)
+    var somma = 0
+    for (i in 0..array.size -1) {
+        val valorecorrente = array[i]
+        somma= somma+valorecorrente
+    }
+    println("La somma degli elementi è $somma")
 }
 
 fun printAsciTable() {
@@ -60,7 +173,31 @@ fun printAsciTable() {
     }
 }
 
-fun trovaMin(array : List<Int>){
+
+fun trovaMax(array: List<Int>){
+    var max = 0
+    for(i in 0..array.size - 1){
+        val valorecorrente = array[i]
+        if(max < valorecorrente){
+            max = valorecorrente
+        }
+
+    }
+    println("Il valore massimo è $max")
+}
+
+fun trovaMin(array: List<Int>){
+    var min = 0
+    for(i in 0..array.size -1){
+        val valorecorrente = array[i]
+        if (i == 0){
+            min = valorecorrente
+        }
+        if(min > valorecorrente){
+            min = valorecorrente
+        }
+    }
+    println("Il valore minimo è $min")
 }
 
 fun esercizioDiciotto() {
