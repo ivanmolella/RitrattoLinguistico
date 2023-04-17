@@ -17,10 +17,20 @@
             app:exitAnim="@anim/move_left_out_activity"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ritrattoLinguisticoFragment2"
+            app:destination="@id/ritrattoLinguisticoFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/scopriDiPiuFragment"
         android:name="com.anastaasiasenyshyn.ritrattolinguistico.ScopriDiPiuFragment"
         android:label="fragment_scopri_di_piu"
         tools:layout="@layout/fragment_scopri_di_piu" />
+    <fragment
+        android:id="@+id/ritrattoLinguisticoFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.RitrattoLinguisticoFragment"
+        android:label="fragment_ritratto_linguistico"
+        tools:layout="@layout/fragment_ritratto_linguistico" />
 </navigation>

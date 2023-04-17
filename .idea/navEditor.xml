@@ -17,6 +17,27 @@
                             <option name="y" value="-16" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_FirstFragment_to_scopriDiPiuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ritrattoLinguisticoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-287" />
+                            <option name="y" value="184" />
+                          </Point>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>

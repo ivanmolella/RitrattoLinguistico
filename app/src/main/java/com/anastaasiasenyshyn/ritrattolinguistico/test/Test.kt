@@ -63,7 +63,6 @@ fun main() {
     //esercizioDieviVettoridaCaricaredaTasiera()
 
 
-
 }
 
 fun esercizioDieviVettoridaCaricaredaTasiera() {
@@ -95,7 +94,7 @@ fun esercizioDieviVettoridaCaricaredaTasiera() {
 }
 
 fun esercizioDieciVettori() {
-    val array = mutableListOf(4,23,15,21,3,80,1800)
+    val array = mutableListOf(4,23,15,1800,21,3,80)
     var max = 0
     var max2 = 0
     var p = 0
@@ -107,7 +106,8 @@ fun esercizioDieciVettori() {
             p2 = p
             max = valorecorrente
             p = i
-        } else if (valorecorrente>max2){
+        }
+        else if (valorecorrente>max2){
             max2=valorecorrente
             p2=i
 
@@ -125,19 +125,22 @@ fun esercizioFiveVettori() {
     println("I numeri inseriti sono: $listaInt")
     val array = listaInt
     var somma = 0
+    var numeroElementi=0
+
     for (i in 0..array.size -1){
-        val numerocorrente = array[i]
-        val numerodinonritorno = 0
-        if (numerocorrente == numerodinonritorno){
+        //val numerocorrente = array[i]
+        if (array[i] == 0){
             break
        }
-        println("i numeri considerati $numerocorrente")
+        println("i numeri considerati ${array[i]}")
 
 
-        somma = somma + numerocorrente
+        somma = somma + array[i]
+        numeroElementi++ //numeroElementi = numeroElementi + 1
 
     }
    println("somma numeri inseriti fino a 0 è $somma ")
+   println("Il numero di elementi considerati è $numeroElementi ")
 
 }
 

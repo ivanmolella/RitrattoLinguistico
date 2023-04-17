@@ -36,6 +36,10 @@ class FirstFragment : Fragment() {
             findNavController().navigate(R.id.action_FirstFragment_to_scopriDiPiuFragment)
         }
 
+        binding.ritrattoLinguisticoBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2)
+        }
+
 //        binding.buttonFirst.setOnClickListener {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 //        }

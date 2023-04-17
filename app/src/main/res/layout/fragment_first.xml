@@ -66,6 +66,7 @@
                 android:background="@color/purplebackground2">
 
                 <Button
+                    android:id="@+id/ritrattoLinguisticoBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="25dp"
