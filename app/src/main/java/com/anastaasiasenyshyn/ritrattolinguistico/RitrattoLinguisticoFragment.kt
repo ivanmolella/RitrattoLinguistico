@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoLinguisticoBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,11 +18,18 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  * Use the [RitrattoLinguisticoFragment.newInstance] factory method to
  * create an instance of this fragment.
+ *
+ * Anastasia: Creare 3/4 immagini di spiegazione del Ritratto Linguistico da inserire nel carosello (Anche con PowerPoint)
+ * Ivan: Creazione del fragment del ritratto linguistico.
+ *
  */
+
 class RitrattoLinguisticoFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    lateinit var binding : FragmentRitrattoLinguisticoBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +44,10 @@ class RitrattoLinguisticoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentRitrattoLinguisticoBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ritratto_linguistico, container, false)
+
+        return binding.root
     }
 
     companion object {

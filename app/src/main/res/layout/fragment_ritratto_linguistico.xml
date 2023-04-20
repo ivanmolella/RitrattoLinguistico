@@ -41,26 +41,6 @@
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
             android:background="@color/purplebackground2">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent">
-                <Button
-                    android:id="@+id/Dicosasitrattabtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Di cosa si tratta?"
-                    android:background="@drawable/btn_ritrattolinguisticofragment"
-
-                    />
-
-            </LinearLayout>
-
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -69,24 +49,6 @@
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
             android:background="@color/purplebackground2">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_weight="1"
-                android:background="@color/purplebackground2">
-                <Button
-                    android:id="@+id/Comecrearlobtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Come crearlo?"
-                    android:background="@drawable/btn_ritrattolinguisticofragment"
-                    />
-
-
-            </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -95,29 +57,7 @@
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
             android:background="@color/purplebackground2">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_weight="1"
-                android:background="@color/purplebackground2">
-                <Button
-                    android:id="@+id/Creailtuoritrattobtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Crea il tuo ritratto"
-                    android:background="@drawable/btn_ritrattolinguisticofragment"
-                    />
-
-            </LinearLayout>
-
-
-
-
         </LinearLayout>
-
-
 
     </LinearLayout>
 

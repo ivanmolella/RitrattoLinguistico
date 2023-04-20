@@ -66,7 +66,28 @@ fun main() {
 
     //esercizioDodiciVettoriDaInserire()
 
+    esercizio15()
 
+
+}
+
+fun esercizio15() {
+
+    val elencoNome : List<String> = listOf("Pera","Mela","Automobile","Borraccia")
+
+    println("Inserisci la parola in input: \n")
+    val input = readLine()!!
+    var exist = false
+    elencoNome.forEach { nome ->
+        if (nome.equals(input,true)){
+            println("Il nome $nome è presente nell'elenco")
+            exist=true
+        }
+    }
+
+    if (exist == false){
+        println("Il nome $input non è presente nell'elenco")
+    }
 
 }
 
