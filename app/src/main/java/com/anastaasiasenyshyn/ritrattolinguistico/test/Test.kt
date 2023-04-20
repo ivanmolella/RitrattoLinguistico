@@ -60,12 +60,70 @@ fun main() {
 
     //esercizioDieciVettori()
 
-    //esercizioDieviVettoridaCaricaredaTasiera()
+    //esercizioDieciVettoridaCaricaredaTasiera()
+
+    //esercizioDodiciVettoriCaricati()
+
+    //esercizioDodiciVettoriDaInserire()
+
 
 
 }
 
-fun esercizioDieviVettoridaCaricaredaTasiera() {
+fun esercizioDodiciVettoriDaInserire() {
+    println("Inserisci dei numeri: \n")
+    val listaStringhe : List<String> = readLine()!!.split(' ')
+    val listaInt : List<Int> = listStringToListInteger(listaStringhe)
+    println("I numeri inseriti sono: $listaInt")
+    val array = listaInt
+    var posizioneNumDispari = 0
+    var numeroDispariIncontrato = 0
+
+    for (i in 0..array.size - 1){
+        if (array[i] % 2 !=0 ){
+            posizioneNumDispari = i
+            numeroDispariIncontrato = array[i]
+            break
+        }
+        if (array[i] != 0){
+            println("I numeri considerati sono: ${array[i]}")
+        }
+
+    }
+    println("Il numero dispari incontato: $numeroDispariIncontrato")
+    println("Posizione numero dispari: $posizioneNumDispari")
+
+
+
+}
+
+
+fun esercizioDodiciVettoriCaricati() {
+    val array = mutableListOf(4,0,23,15,1800,21,3,80)
+    println("I numeri inseriti sono: $array")
+    var posizioneNumDispari = 0
+    var numeroDispariIncontrato = 0
+
+    for (i in 0..array.size - 1){
+        if (array[i] % 2 !=0 ){
+            posizioneNumDispari = i
+            numeroDispariIncontrato = array[i]
+            break
+        }
+        if (array[i] != 0){
+            println("I numeri considerati sono: ${array[i]}")
+        }
+
+    }
+    println("Posizione numero dispari: $posizioneNumDispari")
+    println("Il numero dispari incontato: $numeroDispariIncontrato")
+
+
+
+
+}
+
+fun esercizioDieciVettoridaCaricaredaTasiera() {
     println("Inserisci dei numeri: \n")
     val listaStringhe : List<String> = readLine()!!.split(' ')
     val listaInt : List<Int> = listStringToListInteger(listaStringhe)

@@ -20,8 +20,24 @@
         <action
             android:id="@+id/action_FirstFragment_to_ritrattoLinguisticoFragment2"
             app:destination="@id/ritrattoLinguisticoFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:enterAnim="@anim/move_right_in_activity"
+            app:exitAnim="@anim/move_left_out_activity"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_FirstFragment_to_giardinoLinguisticoFragment22"
+            app:destination="@id/giardinoLinguisticoFragment2"
+            app:enterAnim="@anim/move_right_in_activity"
+            app:exitAnim="@anim/move_left_out_activity"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_FirstFragment_to_sistemiDiScritturaFragment"
+            app:destination="@id/sistemiDiScritturaFragment"
+            app:enterAnim="@anim/move_right_in_activity"
+            app:exitAnim="@anim/move_left_out_activity"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/scopriDiPiuFragment"
@@ -32,5 +48,40 @@
         android:id="@+id/ritrattoLinguisticoFragment"
         android:name="com.anastaasiasenyshyn.ritrattolinguistico.RitrattoLinguisticoFragment"
         android:label="fragment_ritratto_linguistico"
-        tools:layout="@layout/fragment_ritratto_linguistico" />
+        tools:layout="@layout/fragment_ritratto_linguistico" >
+        <action
+            android:id="@+id/action_ritrattoLinguisticoFragment_to_scopridiCosaSiTrattaFragment"
+            app:destination="@id/scopridiCosaSiTrattaFragment" />
+        <action
+            android:id="@+id/action_ritrattoLinguisticoFragment_to_comeCrearloFragment"
+            app:destination="@id/comeCrearloFragment" />
+        <action
+            android:id="@+id/action_ritrattoLinguisticoFragment_to_iniziaIlTuoRitrattoFragment"
+            app:destination="@id/iniziaIlTuoRitrattoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/giardinoLinguisticoFragment2"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.GiardinoLinguisticoFragment"
+        android:label="fragment_giardino_linguistico2"
+        tools:layout="@layout/fragment_giardino_linguistico2" />
+    <fragment
+        android:id="@+id/sistemiDiScritturaFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.SistemiDiScritturaFragment"
+        android:label="fragment_sistemi_di_scrittura"
+        tools:layout="@layout/fragment_sistemi_di_scrittura" />
+    <fragment
+        android:id="@+id/scopridiCosaSiTrattaFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.ScopridiCosaSiTrattaFragment"
+        android:label="fragment_scopridi_cosa_si_tratta"
+        tools:layout="@layout/fragment_scopridi_cosa_si_tratta" />
+    <fragment
+        android:id="@+id/comeCrearloFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.ComeCrearloFragment"
+        android:label="fragment_come_crearlo"
+        tools:layout="@layout/fragment_come_crearlo" />
+    <fragment
+        android:id="@+id/iniziaIlTuoRitrattoFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.IniziaIlTuoRitrattoFragment"
+        android:label="fragment_inizia_il_tuo_ritratto"
+        tools:layout="@layout/fragment_inizia_il_tuo_ritratto" />
 </navigation>

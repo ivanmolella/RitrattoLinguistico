@@ -40,6 +40,19 @@ class FirstFragment : Fragment() {
             findNavController().navigate(R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2)
         }
 
+        binding.GiardinoLinguisticoBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_giardinoLinguisticoFragment22)
+        }
+
+
+       binding.SistemidiScritturaBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_FirstFragment_to_sistemiDiScritturaFragment)
+        }
+
+
+
+
+
 //        binding.buttonFirst.setOnClickListener {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 //        }

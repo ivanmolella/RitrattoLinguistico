@@ -13,18 +13,69 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-575" />
-                            <option name="y" value="-16" />
+                            <option name="x" value="-765" />
+                            <option name="y" value="455" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_FirstFragment_to_giardinoLinguisticoFragment22">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_FirstFragment_to_ritrattoLinguisticoFragment2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_FirstFragment_to_scopriDiPiuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_FirstFragment_to_sistemiDiScritturaFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="comeCrearloFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="119" />
+                            <option name="y" value="155" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="giardinoLinguisticoFragment2">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-283" />
+                            <option name="y" value="497" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="iniziaIlTuoRitrattoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="124" />
+                            <option name="y" value="477" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -38,6 +89,25 @@
                             <option name="y" value="184" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_ritrattoLinguisticoFragment_to_comeCrearloFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_ritrattoLinguisticoFragment_to_iniziaIlTuoRitrattoFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_ritrattoLinguisticoFragment_to_scopridiCosaSiTrattaFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -48,6 +118,30 @@
                           <Point>
                             <option name="x" value="-292" />
                             <option name="y" value="-167" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="scopridiCosaSiTrattaFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="117" />
+                            <option name="y" value="-232" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="sistemiDiScritturaFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-279" />
+                            <option name="y" value="821" />
                           </Point>
                         </option>
                       </LayoutPositions>

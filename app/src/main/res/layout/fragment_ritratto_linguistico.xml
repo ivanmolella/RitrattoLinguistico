@@ -1,14 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RitrattoLinguisticoFragment">
+    tools:context=".RitrattoLinguisticoFragment"
+    android:background="@android:color/holo_purple"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Ritratto Linguistico" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_gradient"
+        android:gravity="center">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="RITRATTO LINGUSTICO"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.3"
+        android:orientation="vertical"
+        android:background="@color/purplebackground2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:background="@color/purplebackground2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent">
+                <Button
+                    android:id="@+id/Dicosasitrattabtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Di cosa si tratta?"
+                    android:background="@drawable/btn_ritrattolinguisticofragment"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:background="@color/purplebackground2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@color/purplebackground2">
+                <Button
+                    android:id="@+id/Comecrearlobtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Come crearlo?"
+                    android:background="@drawable/btn_ritrattolinguisticofragment"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:background="@color/purplebackground2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@color/purplebackground2">
+                <Button
+                    android:id="@+id/Creailtuoritrattobtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Crea il tuo ritratto"
+                    android:background="@drawable/btn_ritrattolinguisticofragment"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

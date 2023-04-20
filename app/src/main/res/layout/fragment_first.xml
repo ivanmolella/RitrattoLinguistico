@@ -95,6 +95,7 @@
                 android:layout_weight="1"
                 android:background="@color/purplebackground2">
                 <Button
+                    android:id="@+id/GiardinoLinguisticoBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="25dp"
@@ -114,6 +115,7 @@
                 android:background="@color/purplebackground2">
 
                 <Button
+                    android:id="@+id/SistemidiScritturaBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="25dp"
