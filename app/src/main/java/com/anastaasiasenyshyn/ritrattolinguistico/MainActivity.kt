@@ -1,6 +1,7 @@
 package com.anastaasiasenyshyn.ritrattolinguistico
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,12 +10,18 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.fragment.NavHostFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    companion object {
+        const val TAG = "MainActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,5 +61,13 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    override fun onSliderExit(sliderId : String) {
+        Log.i(TAG,"onSliderExit called! ($sliderId)")
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
+        val frag = navHostFragment?.childFragmentManager?.fragments?.get(0) as RitrattoLinguisticoFragment
+        frag.showRitratto()
+        Log.i(TAG,"onSliderExit, Found Fragment: ${frag}")
     }
 }

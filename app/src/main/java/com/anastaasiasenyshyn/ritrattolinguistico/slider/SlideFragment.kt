@@ -1,13 +1,13 @@
-package com.anastaasiasenyshyn.ritrattolinguistico.demoslider
+package com.anastaasiasenyshyn.ritrattolinguistico.slider
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentDemoBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment.Companion.SLIDER_IMG_ID
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment.Companion.SLIDER_TEXT
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -17,10 +17,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [DemoFragment.newInstance] factory method to
+ * Use the [SlideFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DemoFragment : Fragment() {
+class SlideFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -42,9 +42,11 @@ class DemoFragment : Fragment() {
         val binding: FragmentDemoBinding = FragmentDemoBinding.inflate(
             inflater, container, false)
 
-        val imgRes : Int = if (page == "0") R.drawable.rl_1 else if (page == "1") R.drawable.rl_2 else R.drawable.rl_3
-        binding.rlImage.setImageResource(imgRes)
-        binding.payoff.text = "Frase Presentazione ${page}"
+        val imgText = arguments?.getString(SLIDER_TEXT)
+        val imgId = arguments?.getInt(SLIDER_IMG_ID)
+
+        binding.rlImage.setImageResource(imgId!!)
+        binding.payoff.text = "${imgText}"
         return binding.root
     }
 
@@ -60,7 +62,7 @@ class DemoFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            DemoFragment().apply {
+            SlideFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

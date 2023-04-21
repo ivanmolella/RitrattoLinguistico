@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -37,7 +38,19 @@ class FirstFragment : Fragment() {
         }
 
         binding.ritrattoLinguisticoBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2)
+            //findNavController().navigate(R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2)
+            var sliderItems : MutableList<SliderFragment.SliderItem>? = mutableListOf(
+                SliderFragment.SliderItem(
+                    Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
+                    "Slide 1",
+                    R.drawable.rl_1
+                ),
+                SliderFragment.SliderItem(Constants.ID_SLIDER_RITRATTO_LINGUISTICO,"Slide 2", R.drawable.rl_2),
+                SliderFragment.SliderItem(Constants.ID_SLIDER_RITRATTO_LINGUISTICO,"Slide 3", R.drawable.rl_3)
+            )
+            val args = Bundle()
+            args.putParcelableArrayList(SliderFragment.SLIDERS, ArrayList(sliderItems))
+            findNavController().navigate(R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2,args)
         }
 
         binding.GiardinoLinguisticoBtn.setOnClickListener {
@@ -48,9 +61,6 @@ class FirstFragment : Fragment() {
        binding.SistemidiScritturaBtn.setOnClickListener{
             findNavController().navigate(R.id.action_FirstFragment_to_sistemiDiScritturaFragment)
         }
-
-
-
 
 
 //        binding.buttonFirst.setOnClickListener {
