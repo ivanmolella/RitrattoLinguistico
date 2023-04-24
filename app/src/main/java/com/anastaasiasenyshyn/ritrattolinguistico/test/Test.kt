@@ -66,9 +66,31 @@ fun main() {
 
     //esercizioDodiciVettoriDaInserire()
 
-    esercizio15()
+    //esercizio15()
+
+    esercizio25()
 
 
+}
+
+fun esercizio25() {
+    /*In un vettore alfanumerico trovare la stringa (o le stringhe) di lunghezza maggiore,
+precisandone la posizione occupata all'interno del vettore.*/
+    val vettorealfanumerico : List<String> = listOf("Nom25", "Sole24ore", "3daysgrays")
+    var max = 0
+    var p = 0
+    vettorealfanumerico.forEach{ item->
+        println("l'elenco è $item")
+        for (j in 0..item.length){
+            if (max < item.length){
+                max = item.length
+                p++
+            }
+        }
+
+    }
+    println("il valore max è $max")
+    println("la posizione è $p")
 }
 
 fun esercizio15() {
