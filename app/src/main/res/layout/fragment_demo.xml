@@ -5,20 +5,20 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@android:color/holo_red_dark"
     tools:context=".demoslider.DemoFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/rl_image"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:scaleType="centerCrop"
+        android:layout_height="match_parent"
         android:text="" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:gravity="center">
         <TextView
             android:id="@+id/payoff"

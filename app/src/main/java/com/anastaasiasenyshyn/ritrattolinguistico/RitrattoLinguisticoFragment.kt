@@ -32,8 +32,8 @@ class RitrattoLinguisticoFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit var binding : FragmentRitrattoLinguisticoBinding
-    private var sliderFragment : SliderFragment? = null
+    lateinit var binding: FragmentRitrattoLinguisticoBinding
+    private var sliderFragment: SliderFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,25 +56,25 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     private fun initView() {
         val isSlideRequired = checkSlideRequired()
-        if (isSlideRequired){
+        if (isSlideRequired) {
             initViewForSlider()
-        }else{
+        } else {
             initViewForRitratto()
         }
     }
 
-    fun showRitratto(){
+    fun showRitratto() {
         initViewForRitratto()
     }
 
     private fun initViewForRitratto() {
-        Log.i(TAG,"initViewForRitratto")
+        Log.i(TAG, "initViewForRitratto")
         binding.ritratto.visibility = View.VISIBLE
         binding.slider.visibility = View.GONE
     }
 
     private fun initViewForSlider() {
-        Log.i(TAG,"initViewForSlider")
+        Log.i(TAG, "initViewForSlider")
 
         binding.ritratto.visibility = View.GONE
         binding.slider.visibility = View.VISIBLE
@@ -87,14 +87,28 @@ class RitrattoLinguisticoFragment : Fragment() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.slider, sliderFragment!!)
 
-        var sliderItems : MutableList<SliderFragment.SliderItem>? = mutableListOf(
+        var sliderItems: MutableList<SliderFragment.SliderItem>? = mutableListOf(
             SliderFragment.SliderItem(
                 Constants.ID_SLIDER_AFTER_SPLASH,
-                "Slide 1",
-                R.drawable.rl_1
+                "",
+                R.drawable.carosello_ritratto_linguistico_1
             ),
-            SliderFragment.SliderItem(Constants.ID_SLIDER_RITRATTO_LINGUISTICO,"Slide 2", R.drawable.rl_2),
-            SliderFragment.SliderItem(Constants.ID_SLIDER_RITRATTO_LINGUISTICO,"Slide 3", R.drawable.rl_3)
+            SliderFragment.SliderItem(
+                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
+                "",
+                R.drawable.carosello_ritratto_linguistico_2
+            ),
+            SliderFragment.SliderItem(
+                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
+                "",
+                R.drawable.carosello_ritratto_linguistico_3
+            ),
+            SliderFragment.SliderItem(
+                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
+                "",
+                R.drawable.carosello_ritratto_linguistico_4
+            )
+
         )
         val args = Bundle()
         args.putParcelableArrayList(SliderFragment.SLIDERS, ArrayList(sliderItems))
@@ -105,14 +119,16 @@ class RitrattoLinguisticoFragment : Fragment() {
     }
 
     private fun checkSlideRequired(): Boolean {
-        val isRequired = Util.readBooleanSharedPreference(Constants.SHAR_SLIDE_RITRATTO_DONE,requireContext())
-        Log.i(TAG,"checkSlideRequired: $isRequired")
+        val isRequired =
+            Util.readBooleanSharedPreference(Constants.SHAR_SLIDE_RITRATTO_DONE, requireContext())
+        Log.i(TAG, "checkSlideRequired: $isRequired")
         return isRequired ?: true
     }
 
     companion object {
 
         const val TAG = "RitrattoLinguisticoFragment"
+
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

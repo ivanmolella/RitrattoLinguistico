@@ -130,7 +130,7 @@ class SliderFragment : Fragment() {
             //tab.text = "Tab $position"
         }.attach()
 
-        nextItem()
+        nextItem(sliderItems.size)
 
         binding.nextSlideBtn.setOnClickListener{
             if (currentPagerPosition == sliderItems.size -1){
@@ -146,13 +146,13 @@ class SliderFragment : Fragment() {
         return binding.root
     }
 
-    fun nextItem() {
+    fun nextItem(size: Int) {
         handler.postDelayed(object : Runnable {
             override fun run() {
                 counter++
                 viewPager?.currentItem = counter
-                if (counter < 2) {
-                    nextItem()
+                if (counter < size) {
+                    nextItem(size)
                 } else {
                     //TODO
                 }
