@@ -15,6 +15,7 @@ import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityDemoBindin
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SlideFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment.Companion.SLIDERS
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment.Companion.SLIDER_POLICY
 import com.anastaasiasenyshyn.ritrattolinguistico.util.AnimationUtil
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 
@@ -69,8 +70,10 @@ class DemoActivity : AppCompatActivity(), SliderFragment.SliderActions {
             SliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,"Slide 2", R.drawable.rl_2),
             SliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,"Slide 3", R.drawable.rl_3)
         )
+        val sliderPolicy : SliderFragment.SliderPolicy = SliderFragment.SliderPolicy(autostartSlideShow = true)
         val args = Bundle()
         args.putParcelableArrayList(SLIDERS, ArrayList(sliderItems))
+        args.putParcelable(SLIDER_POLICY, sliderPolicy)
 
         pagerFragment?.arguments = args
 

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@android:color/holo_red_dark"
     tools:context=".demoslider.DemoFragment">
 
     <!-- TODO: Update blank fragment layout -->

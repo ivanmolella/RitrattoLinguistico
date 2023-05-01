@@ -15,5 +15,6 @@
     <string name="giardinolinguisticobutton">Giardino Linguistico</string>
     <string name="sistemiscritturabutton">Sistemi di scrittura</string>
     <string name="scopridipiùbutton">Scopri di più</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>

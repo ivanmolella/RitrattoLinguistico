@@ -21,6 +21,6 @@ class SplashActivity : AppCompatActivity() {
                 AnimationUtil.startIntentWithSlideInRightAnimation(this@SplashActivity,Intent(this@SplashActivity, DemoActivity::class.java),null)
                 finish()
             }
-        },3000)
+        },1500)
     }
 }

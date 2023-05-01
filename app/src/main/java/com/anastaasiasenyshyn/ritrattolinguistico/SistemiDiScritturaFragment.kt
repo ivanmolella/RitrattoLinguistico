@@ -34,7 +34,7 @@ class SistemiDiScritturaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sistemi_di_scrittura, container, false)
+        return inflater.inflate(R.layout.fragment_sistemi_di_scrittura_test_motion, container, false)
     }
 
     companion object {

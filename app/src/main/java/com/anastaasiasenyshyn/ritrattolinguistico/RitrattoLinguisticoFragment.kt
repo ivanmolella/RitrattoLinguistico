@@ -110,8 +110,10 @@ class RitrattoLinguisticoFragment : Fragment() {
             )
 
         )
+        val sliderPolicy : SliderFragment.SliderPolicy = SliderFragment.SliderPolicy(autostartSlideShow = false)
         val args = Bundle()
         args.putParcelableArrayList(SliderFragment.SLIDERS, ArrayList(sliderItems))
+        args.putParcelable(SliderFragment.SLIDER_POLICY, sliderPolicy)
 
         sliderFragment?.arguments = args
 

@@ -37,9 +37,35 @@ class SliderFragment : Fragment() {
     var currentPagerPosition : Int = 0
 
     var sliderId : String? = null
+    var autostartSlideShow : Boolean? = null
 
     interface SliderActions{
         fun onSliderExit(pagerId : String)
+    }
+
+    data class SliderPolicy (
+        val autostartSlideShow : Boolean?
+    ) : Parcelable {
+        constructor(parcel: Parcel) : this(parcel.readValue(Boolean::class.java.classLoader) as? Boolean) {
+        }
+
+        override fun writeToParcel(parcel: Parcel, flags: Int) {
+            parcel.writeValue(autostartSlideShow)
+        }
+
+        override fun describeContents(): Int {
+            return 0
+        }
+
+        companion object CREATOR : Parcelable.Creator<SliderPolicy> {
+            override fun createFromParcel(parcel: Parcel): SliderPolicy {
+                return SliderPolicy(parcel)
+            }
+
+            override fun newArray(size: Int): Array<SliderPolicy?> {
+                return arrayOfNulls(size)
+            }
+        }
     }
 
     data class SliderItem(
@@ -111,6 +137,8 @@ class SliderFragment : Fragment() {
         viewPager = binding.pgrPager
 
         val sliderItems : List<SliderItem> = arguments?.getParcelableArrayList(SLIDERS)!!
+        val silderPolicy : SliderPolicy? = arguments?.getParcelable(SLIDER_POLICY)
+        autostartSlideShow = (silderPolicy?.autostartSlideShow) ?: true
         if (sliderItems.isNotEmpty()){
             sliderId = sliderItems[0].sliderId
         }
@@ -130,7 +158,9 @@ class SliderFragment : Fragment() {
             //tab.text = "Tab $position"
         }.attach()
 
-        nextItem(sliderItems.size)
+        if (autostartSlideShow == true) {
+            nextItem(sliderItems.size)
+        }
 
         binding.nextSlideBtn.setOnClickListener{
             if (currentPagerPosition == sliderItems.size -1){
@@ -165,6 +195,7 @@ class SliderFragment : Fragment() {
         const val TAG = "PagerFragment"
 
         const val SLIDERS = "SLIDERS"
+        const val SLIDER_POLICY = "SLIDER_POLICY"
         const val SLIDER_TEXT = "SLIDER_TEXT"
         const val SLIDER_IMG_ID = "SLIDER_IMG_ID"
         const val SLIDER_NUM_ITEM = "SLIDER_ITEMS"
