@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoLinguisticoBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.util.DeviceInfo
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,6 +35,8 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     lateinit var binding: FragmentRitrattoLinguisticoBinding
     private var sliderFragment: SliderFragment? = null
+
+    private var isFooterOpen : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,6 +74,24 @@ class RitrattoLinguisticoFragment : Fragment() {
         Log.i(TAG, "initViewForRitratto")
         binding.ritratto.visibility = View.VISIBLE
         binding.slider.visibility = View.GONE
+
+        initFooterPalette()
+    }
+
+    private fun initFooterPalette() {
+        hideFooterPalette(0)
+        binding.footerPalette.isClickable = true
+        binding.footerPalette.setOnClickListener {
+            if (isFooterOpen){
+                hideFooterPalette()
+            }else{
+                showFooterPalette()
+            }
+        }
+
+        binding.btnUndo.setOnClickListener {
+            binding.drawImageView.onClickUndo()
+        }
     }
 
     private fun initViewForSlider() {
@@ -79,6 +100,7 @@ class RitrattoLinguisticoFragment : Fragment() {
         binding.ritratto.visibility = View.GONE
         binding.slider.visibility = View.VISIBLE
         loadSliderFragment()
+        hideFooterPaletteTotal()
     }
 
     private fun loadSliderFragment() {
@@ -125,6 +147,29 @@ class RitrattoLinguisticoFragment : Fragment() {
             Util.readBooleanSharedPreference(Constants.SHAR_SLIDE_RITRATTO_DONE, requireContext())
         Log.i(TAG, "checkSlideRequired: $isRequired")
         return isRequired ?: true
+    }
+
+    private fun showFooterPalette() {
+        binding.footerPalette.visibility=View.VISIBLE
+        binding.footerPaletteFrame!!.animate().y(0.0f).duration = 200
+        isFooterOpen = true
+        Log.i(TAG,"showFooterPalette called")
+    }
+
+    private fun hideFooterPalette(duration : Long = 200) {
+        binding.footerPalette.visibility=View.VISIBLE
+        val numePrenotazioniPanelHeight = DeviceInfo.dpiToPx(60)
+        binding.footerPaletteFrame!!.animate().y(numePrenotazioniPanelHeight.toFloat()).duration = duration
+        isFooterOpen = false
+        Log.i(TAG,"hideFooterPalette called")
+    }
+
+    private fun hideFooterPaletteTotal(duration : Long = 200) {
+        binding.footerPalette.visibility=View.GONE
+        val numePrenotazioniPanelHeight = DeviceInfo.dpiToPx(120)
+        binding.footerPaletteFrame!!.animate().y(numePrenotazioniPanelHeight.toFloat()).duration = duration
+        isFooterOpen = false
+        Log.i(TAG,"hideFooterPalette called")
     }
 
     companion object {

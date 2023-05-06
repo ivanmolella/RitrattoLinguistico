@@ -1,5 +1,7 @@
 package com.anastaasiasenyshyn.ritrattolinguistico.test
 
+import android.util.Log
+
 fun main() {
 
 //    val temp1: Int = 10
@@ -69,7 +71,40 @@ fun main() {
     //esercizio15()
 
     //esercizio25()
-    esercizio25Ivan()
+    //esercizio25Ivan()
+
+    esercizio28()
+
+
+}
+
+fun esercizio28() {
+    val arrayMutable : MutableList<Int> = mutableListOf(20,32,45,80,800,25)
+    arrayMutable.add(500)
+    arrayMutable.add(1500)
+    arrayMutable.add(2500)
+
+    val arrayPari : MutableList<Int> = mutableListOf()
+    val arrayDispari : MutableList<Int> = mutableListOf()
+
+    arrayMutable.forEachIndexed{ index, value ->
+        //println("Elemento: $value at index ($index)")
+        if (index % 2 == 0){
+            arrayPari.add(value)
+        }else {
+            arrayDispari.add(value)
+        }
+    }
+    arrayPari.forEach { value ->
+        println("Valore a posizioni pari: $value")
+    }
+
+    arrayDispari.forEach { value ->
+        println("Valore a posizioni dispari: $value")
+    }
+
+
+
 
 
 }
