@@ -3,16 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RitrattoLinguisticoFragment"
+    tools:context=".ritratto.RitrattoLinguisticoFragment"
     android:orientation="vertical">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/ritratto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.anastaasiasenyshyn.ritrattolinguistico.drawing.DrawingImageView
+                    android:id="@+id/drawImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    android:src="@drawable/sagoma_ritratto">
+                </com.anastaasiasenyshyn.ritrattolinguistico.drawing.DrawingImageView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/footerPaletteFrame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:gravity="bottom">
+            <LinearLayout
+                android:id="@+id/paletteColorPanel"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:orientation="vertical"
+                android:background="@color/LightCyan"
+                android:layout_marginStart="64dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/paletteColorList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/footerPalette"
                 android:layout_width="match_parent"
@@ -62,30 +100,6 @@
                         android:background="@drawable/baseline_palette_24">>
                     </Button>
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ritratto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:visibility="gone">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <com.anastaasiasenyshyn.ritrattolinguistico.drawing.DrawingImageView
-                    android:id="@+id/drawImageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="9"
-                    android:src="@drawable/sagoma_ritratto">
-                </com.anastaasiasenyshyn.ritrattolinguistico.drawing.DrawingImageView>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:orientation="horizontal">
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <FrameLayout

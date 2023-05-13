@@ -1,22 +1,22 @@
-package com.anastaasiasenyshyn.ritrattolinguistico
+package com.anastaasiasenyshyn.ritrattolinguistico.ritratto
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.anastaasiasenyshyn.ritrattolinguistico.Constants
+import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoLinguisticoBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.DeviceInfo
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -28,6 +28,12 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 
+data class Color(val color: Int,val colorName: String)
+
+interface ColorSelectionListener {
+    fun onColorSelected(color : Int,colorName : String)
+}
+
 class RitrattoLinguisticoFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -35,15 +41,18 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     lateinit var binding: FragmentRitrattoLinguisticoBinding
     private var sliderFragment: SliderFragment? = null
+    private var isPaletteOpen : Boolean = false
 
     private var isFooterOpen : Boolean = false
 
+    private var adapter : ColorPaletteAdapter? = null
+
+    private var colorPalette : MutableList<Color>? = mutableListOf()
+
+    private val handler : Handler = Handler(Looper.getMainLooper())
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -79,7 +88,9 @@ class RitrattoLinguisticoFragment : Fragment() {
     }
 
     private fun initFooterPalette() {
+        initColorPalette()
         hideFooterPalette(0)
+        setPaletteRecycle()
         binding.footerPalette.isClickable = true
         binding.footerPalette.setOnClickListener {
             if (isFooterOpen){
@@ -92,11 +103,103 @@ class RitrattoLinguisticoFragment : Fragment() {
         binding.btnUndo.setOnClickListener {
             binding.drawImageView.onClickUndo()
         }
+
+        binding.root.viewTreeObserver.addOnGlobalLayoutListener{
+            hidePalettePanel(0)
+        }
+
+        binding.btnPalette.setOnClickListener {
+            if (isPaletteOpen){
+                hidePalettePanel(300)
+            }else{
+                showPalettePanel(300)
+            }
+        }
+    }
+
+    private fun initColorPalette() {
+
+        val colorNames = resources.getStringArray(com.anastaasiasenyshyn.ritrattolinguistico.R.array.colorNames)
+        for (i in colorNames.indices) {
+            //Getting the color resource id
+            val ta = resources.obtainTypedArray(com.anastaasiasenyshyn.ritrattolinguistico.R.array.colors)
+            val colorToUse = ta.getResourceId(i, 0)
+            Log.i(TAG,"### Color: ${colorNames[i]} - ${String.format("0x%08X",colorToUse)}")
+
+            colorPalette?.add(Color(colorToUse,colorNames[i]))
+        }
+    }
+
+    private fun setPaletteRecycle() {
+        var palette : MutableList<ColorItem> = mutableListOf()
+        var curColorItem : ColorItem? = ColorItem()
+        var colorItemIndex : Int = 0
+        colorPalette?.forEachIndexed { _, color ->
+            when(colorItemIndex){
+                0 -> {
+                    curColorItem?.color1 = color.color
+                    curColorItem?.color1Name = color.colorName
+                    colorItemIndex++
+                }
+
+                1 -> {
+                    curColorItem?.color2 = color.color
+                    curColorItem?.color2Name = color.colorName
+                    colorItemIndex++
+                }
+
+                2 -> {
+                    curColorItem?.color3 = color.color
+                    curColorItem?.color3Name = color.colorName
+                    palette.add(curColorItem!!)
+                    colorItemIndex=0
+                    curColorItem = ColorItem()
+                }
+            }
+        }
+
+        adapter = ColorPaletteAdapter(requireContext(), palette, object : ColorSelectionListener {
+            override fun onColorSelected(color: Int,colorName: String) {
+                Log.i(TAG,"onColorSelected: $colorName - ${String.format("0x%08X",color)}")
+                binding.drawImageView.setPaintColor(color)
+                hidePalettePanel(300)
+                val msg = "${getString(R.string.new_selected_color)} $colorName"
+                Toast.makeText(requireContext(),msg,Toast.LENGTH_SHORT).show()
+            }
+        })
+        binding.paletteColorList.adapter = adapter
+        binding.paletteColorList.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+    }
+
+    private fun hidePalettePanel(duration : Long) {
+
+        isPaletteOpen = false
+        binding.paletteColorPanel.animate()
+            .scaleX(0.0f)
+            .scaleY(0.0f)
+            .translationY(1 * (binding.paletteColorPanel?.height!!/2.0f))
+            .translationX(1 * (binding.paletteColorPanel?.width!!/2.0f))// move to bottom / right
+            .withEndAction{
+                binding.paletteColorPanel.visibility=View.INVISIBLE
+            }
+            .duration = duration
+    }
+
+    private fun showPalettePanel(duration : Long) {
+        isPaletteOpen = true
+        binding.paletteColorPanel.animate()
+            .scaleX(1.0f)
+            .scaleY(1.0f)
+            .translationY(-1 * (binding.paletteColorPanel?.height!!/16.0f).toFloat())
+            .translationX(-1 * (binding.paletteColorPanel?.width!!/256.0f).toFloat())
+            .withStartAction{
+                binding.paletteColorPanel.visibility=View.VISIBLE
+            }
+            .duration = duration
     }
 
     private fun initViewForSlider() {
         Log.i(TAG, "initViewForSlider")
-
         binding.ritratto.visibility = View.GONE
         binding.slider.visibility = View.VISIBLE
         loadSliderFragment()
@@ -111,7 +214,7 @@ class RitrattoLinguisticoFragment : Fragment() {
 
         var sliderItems: MutableList<SliderFragment.SliderItem>? = mutableListOf(
             SliderFragment.SliderItem(
-                Constants.ID_SLIDER_AFTER_SPLASH,
+                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "",
                 R.drawable.carosello_ritratto_linguistico_1
             ),
@@ -132,7 +235,8 @@ class RitrattoLinguisticoFragment : Fragment() {
             )
 
         )
-        val sliderPolicy : SliderFragment.SliderPolicy = SliderFragment.SliderPolicy(autostartSlideShow = false)
+        val sliderPolicy : SliderFragment.SliderPolicy =
+            SliderFragment.SliderPolicy(autostartSlideShow = false)
         val args = Bundle()
         args.putParcelableArrayList(SliderFragment.SLIDERS, ArrayList(sliderItems))
         args.putParcelable(SliderFragment.SLIDER_POLICY, sliderPolicy)
@@ -150,26 +254,29 @@ class RitrattoLinguisticoFragment : Fragment() {
     }
 
     private fun showFooterPalette() {
-        binding.footerPalette.visibility=View.VISIBLE
+        binding.footerPalette.visibility= View.VISIBLE
         binding.footerPaletteFrame!!.animate().y(0.0f).duration = 200
         isFooterOpen = true
-        Log.i(TAG,"showFooterPalette called")
+        Log.i(TAG, "showFooterPalette called")
     }
 
     private fun hideFooterPalette(duration : Long = 200) {
-        binding.footerPalette.visibility=View.VISIBLE
+        binding.footerPalette.visibility= View.VISIBLE
         val numePrenotazioniPanelHeight = DeviceInfo.dpiToPx(60)
         binding.footerPaletteFrame!!.animate().y(numePrenotazioniPanelHeight.toFloat()).duration = duration
         isFooterOpen = false
-        Log.i(TAG,"hideFooterPalette called")
+        Log.i(TAG, "hideFooterPalette called")
+        if (isPaletteOpen){
+            hidePalettePanel(300)
+        }
     }
 
     private fun hideFooterPaletteTotal(duration : Long = 200) {
-        binding.footerPalette.visibility=View.GONE
+        binding.footerPalette.visibility= View.GONE
         val numePrenotazioniPanelHeight = DeviceInfo.dpiToPx(120)
         binding.footerPaletteFrame!!.animate().y(numePrenotazioniPanelHeight.toFloat()).duration = duration
         isFooterOpen = false
-        Log.i(TAG,"hideFooterPalette called")
+        Log.i(TAG, "hideFooterPalette called")
     }
 
     companion object {
@@ -189,8 +296,6 @@ class RitrattoLinguisticoFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             RitrattoLinguisticoFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
     }

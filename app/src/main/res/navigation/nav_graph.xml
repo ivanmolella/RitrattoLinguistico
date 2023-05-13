@@ -46,7 +46,7 @@
         tools:layout="@layout/fragment_scopri_di_piu" />
     <fragment
         android:id="@+id/ritrattoLinguisticoFragment"
-        android:name="com.anastaasiasenyshyn.ritrattolinguistico.RitrattoLinguisticoFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment"
         android:label="fragment_ritratto_linguistico"
         tools:layout="@layout/fragment_ritratto_linguistico" />
     <fragment

@@ -6,36 +6,50 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
+
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
 import androidx.appcompat.widget.AppCompatImageView
 
+data class PathInfo (
+    var path : Path? = null,
+    var color : Int? = null,
+    var stroke : Float? = null
+)
 class DrawingImageView : AppCompatImageView, OnTouchListener {
     var startx = 50
     var starty = 90
     var endx = 350
     var endy = 90
     private var mCanvas: Canvas
-    var mPaint: Paint? = null
+    //var mPaint: Paint? = null
     private var mPath: Path
-    private val paths = ArrayList<Path>()
-    private val undonePaths = ArrayList<Path>()
+    private val paths = ArrayList<PathInfo>()
+    private val undonePaths = ArrayList<PathInfo>()
+
+    private var currentColor : Int = Color.BLACK
+    private var currentStroke : Float = 16f
+
 
     constructor(context: Context?) : super(context!!) {
         isFocusable = true
         isFocusableInTouchMode = true
         setOnTouchListener(this)
-        mPaint = Paint()
-        mPaint!!.isAntiAlias = true
-        mPaint!!.isDither = true
-        mPaint!!.color = -0x1
-        mPaint!!.style = Paint.Style.STROKE
-        mPaint!!.strokeJoin = Paint.Join.ROUND
-        mPaint!!.strokeCap = Paint.Cap.ROUND
-        mPaint!!.strokeWidth = 6f
         mCanvas = Canvas()
         mPath = Path()
+    }
+
+    fun getPaint(color : Int,stroke : Float) : Paint {
+        val paint = Paint()
+        paint.isAntiAlias = true
+        paint.isDither = true
+        paint.color = color
+        paint.style = Paint.Style.STROKE
+        paint.strokeJoin = Paint.Join.ROUND
+        paint.strokeCap = Paint.Cap.ROUND
+        paint.strokeWidth = stroke
+        return paint
     }
 
     constructor(context: Context?, attrs: AttributeSet?) : super(
@@ -44,14 +58,6 @@ class DrawingImageView : AppCompatImageView, OnTouchListener {
         isFocusable = true
         isFocusableInTouchMode = true
         setOnTouchListener(this)
-        mPaint = Paint()
-        mPaint!!.isAntiAlias = true
-        mPaint!!.isDither = true
-        mPaint!!.color = Color.BLACK
-        mPaint!!.style = Paint.Style.STROKE
-        mPaint!!.strokeJoin = Paint.Join.ROUND
-        mPaint!!.strokeCap = Paint.Cap.ROUND
-        mPaint!!.strokeWidth = 16f
         mCanvas = Canvas()
         mPath = Path()
     }
@@ -62,16 +68,16 @@ class DrawingImageView : AppCompatImageView, OnTouchListener {
         isFocusable = true
         isFocusableInTouchMode = true
         setOnTouchListener(this)
-        mPaint = Paint()
-        mPaint!!.isAntiAlias = true
-        mPaint!!.isDither = true
-        mPaint!!.color = -0x1
-        mPaint!!.style = Paint.Style.STROKE
-        mPaint!!.strokeJoin = Paint.Join.ROUND
-        mPaint!!.strokeCap = Paint.Cap.ROUND
-        mPaint!!.strokeWidth = 6f
         mCanvas = Canvas()
         mPath = Path()
+    }
+
+    fun setStrokeWidth(stroke : Float){
+       currentStroke = stroke
+    }
+
+    fun setPaintColor(colorResId : Int){
+        currentColor = context.getColor(colorResId)
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -81,9 +87,9 @@ class DrawingImageView : AppCompatImageView, OnTouchListener {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         for (p in paths) {
-            canvas.drawPath(p, mPaint!!)
+            canvas.drawPath(p.path!!, getPaint(p.color!!,p.stroke!!))
         }
-        canvas.drawPath(mPath, mPaint!!)
+        canvas.drawPath(mPath, getPaint(currentColor,currentStroke))
     }
 
     private var mX = 0f
@@ -127,9 +133,9 @@ class DrawingImageView : AppCompatImageView, OnTouchListener {
     private fun touchUp() {
         mPath.lineTo(mX, mY)
         // commit the path to our offscreen
-        mCanvas.drawPath(mPath, mPaint!!)
+        mCanvas.drawPath(mPath, getPaint(currentColor,currentStroke))
         // kill this so we don't double draw
-        paths.add(mPath)
+        paths.add(PathInfo(mPath,currentColor,currentStroke))
         mPath = Path()
     }
 

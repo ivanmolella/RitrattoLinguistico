@@ -10,9 +10,11 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import androidx.navigation.fragment.NavHostFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.Constants.Companion.ID_SLIDER_RITRATTO_LINGUISTICO
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 
 class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
 
@@ -65,9 +67,19 @@ class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
 
     override fun onSliderExit(sliderId : String) {
         Log.i(TAG,"onSliderExit called! ($sliderId)")
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
-        val frag = navHostFragment?.childFragmentManager?.fragments?.get(0) as RitrattoLinguisticoFragment
-        frag.showRitratto()
-        Log.i(TAG,"onSliderExit, Found Fragment: ${frag}")
+        when(sliderId){
+            ID_SLIDER_RITRATTO_LINGUISTICO -> {
+                val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
+                val frag = navHostFragment?.childFragmentManager?.fragments?.get(0) as RitrattoLinguisticoFragment
+                frag.showRitratto()
+                Log.i(TAG,"onSliderExit, Found Fragment: ${frag}")
+                Util.writeBooleanSharedPreference(Constants.SHAR_SLIDE_RITRATTO_DONE,false, this)
+            }
+
+            else -> {
+
+            }
+        }
+
     }
 }

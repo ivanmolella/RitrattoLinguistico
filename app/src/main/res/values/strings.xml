@@ -11,10 +11,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ritrattolinguisticobutton">Ritratto Linguistico</string>
-    <string name="giardinolinguisticobutton">Giardino Linguistico</string>
-    <string name="sistemiscritturabutton">Sistemi di scrittura</string>
-    <string name="scopridipiùbutton">Scopri di più</string>
+    <string name="ritrattolinguisticobutton">Language Portrait</string>
+    <string name="giardinolinguisticobutton">Language Garden</string>
+    <string name="sistemiscritturabutton">Writing Systems</string>
+    <string name="scopridipiùbutton">More</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="new_selected_color">Selected color</string>
 
 </resources>
