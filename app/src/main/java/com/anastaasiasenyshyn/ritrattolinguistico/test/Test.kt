@@ -73,10 +73,39 @@ fun main() {
     //esercizio25()
     //esercizio25Ivan()
 
-    esercizio28()
+    //esercizio28()
+
+    newesercizio()
 
 
 }
+
+fun newesercizio() {
+    /*Dato un vettore numerico di N posizioni calcolare la media aritmetica delle componenti*/
+    val list : List<Int> = listOf(20,32,45,80,800,25)
+    var sommaElementi = 0
+    var numeroElementi = 0
+
+    println("elementi inseriti: $list")
+
+    for (i in 0..list.size -1){
+        sommaElementi = sommaElementi + list[i]
+        numeroElementi = i
+
+    }
+    val mediaAritmetica = sommaElementi.toDouble() / numeroElementi.toDouble()
+    println("$sommaElementi")
+    println("$numeroElementi")
+    println ("$mediaAritmetica")
+
+
+
+
+
+
+
+}
+
 
 fun esercizio28() {
     val arrayMutable : MutableList<Int> = mutableListOf(20,32,45,80,800,25)
