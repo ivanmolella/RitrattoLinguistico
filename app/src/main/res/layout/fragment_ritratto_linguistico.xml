@@ -52,6 +52,26 @@
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/seekBarPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+                <SeekBar
+                    android:id="@+id/seekBarPainter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/custom_thumb"/>
+                <TextView
+                    android:id="@+id/seekBarCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/footerPalette"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -76,7 +96,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
                     <Button
-                        android:id="@+id/btnBorderColor"
+                        android:id="@+id/btnPaintSlider"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="8dp"

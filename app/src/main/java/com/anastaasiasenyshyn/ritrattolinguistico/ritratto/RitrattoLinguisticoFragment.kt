@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,11 +44,12 @@ class RitrattoLinguisticoFragment : Fragment() {
     lateinit var binding: FragmentRitrattoLinguisticoBinding
     private var sliderFragment: SliderFragment? = null
     private var isPaletteOpen : Boolean = false
+    private var isPaintSliderOpen : Boolean = false
+    private var painterSize : Float? = 6.0f
 
     private var isFooterOpen : Boolean = false
 
     private var adapter : ColorPaletteAdapter? = null
-
     private var colorPalette : MutableList<Color>? = mutableListOf()
 
     private val handler : Handler = Handler(Looper.getMainLooper())
@@ -89,8 +92,10 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     private fun initFooterPalette() {
         initColorPalette()
+        initPaintSlider()
         hideFooterPalette(0)
         setPaletteRecycle()
+        binding.seekBarPanel.isClickable = true
         binding.footerPalette.isClickable = true
         binding.footerPalette.setOnClickListener {
             if (isFooterOpen){
@@ -104,9 +109,16 @@ class RitrattoLinguisticoFragment : Fragment() {
             binding.drawImageView.onClickUndo()
         }
 
-        binding.root.viewTreeObserver.addOnGlobalLayoutListener{
-            hidePalettePanel(0)
+        val listener = object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                hidePalettePanel(0)
+                hidePaintSlider(0)
+                binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
+            }
         }
+        binding.root.viewTreeObserver.addOnGlobalLayoutListener(listener)
+
+
 
         binding.btnPalette.setOnClickListener {
             if (isPaletteOpen){
@@ -115,6 +127,40 @@ class RitrattoLinguisticoFragment : Fragment() {
                 showPalettePanel(300)
             }
         }
+
+        binding.btnPaintSlider.setOnClickListener {
+            if (isPaintSliderOpen){
+                hidePaintSlider(300)
+            }else{
+                showPaintSlider(300)
+            }
+        }
+
+
+    }
+
+    private fun initPaintSlider() {
+        val initStroke = 32.0f
+        binding.drawImageView.setPaintStroke(initStroke/2)
+        binding.seekBarPainter.progress = initStroke.toInt()
+        binding.seekBarCaption.text = "${getString(R.string.stroke)} ${initStroke/2}"
+
+        binding.seekBarPainter.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                val stroke = (p1/2).toFloat()
+                Log.i(TAG,"<seekBarPainter> onProgressChanged stroke: $stroke")
+                binding.drawImageView.setPaintStroke(stroke)
+                binding.seekBarCaption.text = "${getString(R.string.stroke)} $stroke"
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+                Log.i(TAG,"<seekBarPainter> onStartTrackingTouch: $p0")
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+                Log.i(TAG,"<seekBarPainter> onStopTrackingTouch: $p0")
+            }
+        })
     }
 
     private fun initColorPalette() {
@@ -181,6 +227,29 @@ class RitrattoLinguisticoFragment : Fragment() {
             .translationX(1 * (binding.paletteColorPanel?.width!!/2.0f))// move to bottom / right
             .withEndAction{
                 binding.paletteColorPanel.visibility=View.INVISIBLE
+            }
+            .duration = duration
+    }
+
+    private fun hidePaintSlider(duration : Long) {
+        Log.i(TAG,"hidePaintSlider called with duration: $duration")
+        isPaintSliderOpen = false
+        binding.seekBarPanel.animate()
+            .alpha(0.0f)
+            .withEndAction(){
+                binding.seekBarPanel.visibility=View.INVISIBLE
+            }
+            .duration = duration
+    }
+
+    private fun showPaintSlider(duration : Long) {
+        Log.i(TAG,"showPaintSlider called")
+
+        isPaintSliderOpen = true
+        binding.seekBarPanel.animate()
+            .alpha(1.0f)
+            .withStartAction{
+                binding.seekBarPanel.visibility=View.VISIBLE
             }
             .duration = duration
     }
@@ -268,6 +337,9 @@ class RitrattoLinguisticoFragment : Fragment() {
         Log.i(TAG, "hideFooterPalette called")
         if (isPaletteOpen){
             hidePalettePanel(300)
+        }
+        if (isPaintSliderOpen){
+            hidePaintSlider(300)
         }
     }
 

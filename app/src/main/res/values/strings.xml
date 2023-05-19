@@ -17,5 +17,10 @@
     <string name="scopridipiùbutton">More</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="new_selected_color">Selected color</string>
+    <string name="stroke">Stroke:</string>
+    <string name="assign_color_title">Assign a Color</string>
+    <string name="assign_language_to_color">Assign a language to this color</string>
+    <string name="dialog_done">Done</string>
+    <string name="dialog_cancel">Cancel</string>
 
 </resources>

@@ -80,6 +80,10 @@ class DrawingImageView : AppCompatImageView, OnTouchListener {
         currentColor = context.getColor(colorResId)
     }
 
+    fun setPaintStroke(stroke : Float){
+        currentStroke = stroke
+    }
+
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
     }

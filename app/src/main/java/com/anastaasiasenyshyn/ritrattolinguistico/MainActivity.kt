@@ -1,6 +1,9 @@
 package com.anastaasiasenyshyn.ritrattolinguistico
 
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +24,8 @@ class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    private val handler : Handler = Handler(Looper.getMainLooper())
+
     companion object {
         const val TAG = "MainActivity"
     }
@@ -36,6 +41,9 @@ class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        Log.i(TAG,"This is the Main activity")
+        Log.i(TAG,"appInfo called in 10 seconds...")
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

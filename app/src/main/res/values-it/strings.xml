@@ -15,4 +15,9 @@
     <string name="scopridipiùbutton">Scopri di più</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="new_selected_color">Nuovo colore</string>
+    <string name="stroke">Tratto:</string>
+    <string name="assign_color_title">Assegna un colore</string>
+    <string name="assign_language_to_color">Associa una lingua al colore</string>
+    <string name="dialog_done">Fatto</string>
+    <string name="dialog_cancel">Annulla</string>
 </resources>
