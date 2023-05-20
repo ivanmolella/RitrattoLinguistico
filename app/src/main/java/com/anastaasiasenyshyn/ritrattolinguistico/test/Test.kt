@@ -75,7 +75,48 @@ fun main() {
 
     //esercizio28()
 
-    newesercizio()
+    //newesercizio()
+
+    esercizio36()
+
+
+
+}
+
+
+
+fun esercizio36() {
+    /*Dato un vettore numerico di N posizioni calcolare la media aritmetica delle componenti in
+            posizione dispari e la media aritmetica di quelle in posizione pari. Determinare quale è la
+            media maggiore.*/
+    var arrayMutable : MutableList<Int> = mutableListOf(20,32,45,80,800,25)
+    var arrayPari : MutableList<Int> = mutableListOf()
+    var arrayDispari : MutableList<Int> = mutableListOf()
+    var sommaElementi = 0
+    var sommaElementi2 = 0
+
+    println("numeri inseriti: $arrayMutable")
+
+    arrayMutable.forEachIndexed { index, i ->
+        if (index % 2 ==0 ){
+            arrayPari.add(i)
+        }
+        else {
+            arrayDispari.add(i)
+        }
+    }
+    println("array pari : $arrayPari")
+    println("array Dispari : $arrayDispari")
+
+    arrayPari.forEach{i ->
+        sommaElementi = sommaElementi + arrayPari[i]
+        println("somma elementi array pari : $sommaElementi")
+    }
+
+    arrayDispari.forEach{i ->
+        sommaElementi2 = sommaElementi2 + arrayDispari[i]
+        println("somma elementi array dispari : $sommaElementi2")
+    }
 
 
 }
