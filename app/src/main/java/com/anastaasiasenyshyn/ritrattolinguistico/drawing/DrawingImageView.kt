@@ -115,6 +115,10 @@ class DrawingImageView : AppCompatImageView, OnTouchListener {
         //toast the user
     }
 
+    fun save(){
+
+    }
+
     fun onClickRedo() {
         if (undonePaths.size > 0) {
             paths.add(undonePaths.removeAt(undonePaths.size - 1))

@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
                 Log.i(TAG,"onSliderExit, Found Fragment: ${frag}")
                 Util.writeBooleanSharedPreference(Constants.SHAR_SLIDE_RITRATTO_DONE,false, this)
             }
-
             else -> {
 
             }

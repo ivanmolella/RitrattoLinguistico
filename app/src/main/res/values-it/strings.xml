@@ -20,4 +20,9 @@
     <string name="assign_language_to_color">Associa una lingua al colore</string>
     <string name="dialog_done">Fatto</string>
     <string name="dialog_cancel">Annulla</string>
+    <string name="choose_language_title">Scegli le lingue</string>
+    <string name="msg_choose_language_title">Seleziona le lingue parlate in famiglia</string>
+    <string name="family_languages">Lingue in Famiglia</string>
+    <string name="ritratto_saved">Ritratto linguistico salvato</string>
+
 </resources>

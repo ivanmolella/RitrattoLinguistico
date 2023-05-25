@@ -22,5 +22,9 @@
     <string name="assign_language_to_color">Assign a language to this color</string>
     <string name="dialog_done">Done</string>
     <string name="dialog_cancel">Cancel</string>
+    <string name="choose_language_title">Choose Languages</string>
+    <string name="msg_choose_language_title">Select languages spoken in family</string>
+    <string name="family_languages">Family Languages</string>
+    <string name="ritratto_saved">Your Linguistic portrait has been saved</string>
 
 </resources>

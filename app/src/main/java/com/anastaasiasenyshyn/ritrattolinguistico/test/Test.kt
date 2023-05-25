@@ -97,27 +97,26 @@ fun esercizio36() {
 
     println("numeri inseriti: $arrayMutable")
 
-    arrayMutable.forEachIndexed { index, i ->
+    arrayMutable.forEachIndexed { index, value ->
         if (index % 2 ==0 ){
-            arrayPari.add(i)
+            arrayPari.add(value)
         }
         else {
-            arrayDispari.add(i)
+            arrayDispari.add(value)
         }
     }
     println("array pari : $arrayPari")
     println("array Dispari : $arrayDispari")
 
-    arrayPari.forEach{i ->
-        sommaElementi = sommaElementi + arrayPari[i]
-        println("somma elementi array pari : $sommaElementi")
+    arrayPari.forEachIndexed{ index, value ->
+        sommaElementi = sommaElementi + value
     }
+    println("somma elementi array pari : $sommaElementi")
 
-    arrayDispari.forEach{i ->
-        sommaElementi2 = sommaElementi2 + arrayDispari[i]
-        println("somma elementi array dispari : $sommaElementi2")
+    arrayDispari.forEachIndexed{index,value ->
+        sommaElementi2 = sommaElementi2 + arrayDispari[index]
     }
-
+    println("somma elementi array dispari : $sommaElementi2")
 
 }
 

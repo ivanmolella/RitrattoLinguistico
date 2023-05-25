@@ -1,6 +1,10 @@
 package com.anastaasiasenyshyn.ritrattolinguistico.ritratto
 
+import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
@@ -10,14 +14,18 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.SeekBar
 import android.widget.Toast
+import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.anastaasiasenyshyn.ritrattolinguistico.BuildConfig
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants
 import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoLinguisticoBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.DeviceInfo
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
+import java.io.File
+import java.io.FileOutputStream
 
 
 /**
@@ -88,6 +96,64 @@ class RitrattoLinguisticoFragment : Fragment() {
         binding.slider.visibility = View.GONE
 
         initFooterPalette()
+        initHeaderButtons()
+    }
+
+    private fun initHeaderButtons() {
+        binding.btnSaveRitratto.setOnClickListener {
+            binding.drawImageView.isDrawingCacheEnabled = true
+            val bmp  = binding.drawImageView.drawingCache
+            //val bmp: Bitmap = drawable.bitmap
+
+            saveBitmapRitratto(bmp)
+        }
+
+        binding.btnShareRitratto.setOnClickListener {
+            shareBitmapRistratto()
+        }
+
+    }
+
+    private fun shareBitmapRistratto() {
+        binding.drawImageView.isDrawingCacheEnabled = true
+        val bmp  = binding.drawImageView.drawingCache
+        val share = Intent(Intent.ACTION_SEND)
+        share.type = "image/jpeg";
+        val sharingFile = getSharingFile(bmp)
+
+        val uri = FileProvider.getUriForFile(
+            requireContext(),
+            BuildConfig.APPLICATION_ID + ".provider",
+            sharingFile
+        )
+
+        share.putExtra(Intent.EXTRA_STREAM, uri);
+        startActivity(Intent.createChooser(share, "Share Image"));
+
+    }
+
+    private fun getSharingFile(bmp: Bitmap): File {
+        val dir = requireContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
+        if (!dir?.exists()!!) dir?.mkdirs()
+        val file = File(dir, "ritratto.png")
+        val fOut = FileOutputStream(file)
+        bmp.compress(Bitmap.CompressFormat.PNG, 85, fOut)
+        fOut.flush()
+        fOut.close()
+
+        return file
+    }
+
+    private fun saveBitmapRitratto(bmp: Bitmap) {
+        val dir = requireContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
+        if (!dir?.exists()!!) dir?.mkdirs()
+        val file = File(dir, "ritratto.png")
+        val fOut = FileOutputStream(file)
+        bmp.compress(Bitmap.CompressFormat.PNG, 85, fOut)
+        fOut.flush()
+        fOut.close()
+        Log.i(TAG,"saveBitmapRitratto in: ${file.path}")
+        Toast.makeText(requireContext(),getString(R.string.ritratto_saved),Toast.LENGTH_SHORT).show()
     }
 
     private fun initFooterPalette() {
