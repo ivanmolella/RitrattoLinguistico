@@ -77,12 +77,35 @@ fun main() {
 
     //newesercizio()
 
-    esercizio36()
+    //esercizio36()
 
-
+    esercizio41()
 
 }
 
+fun esercizio41() {
+    /*Dato un vettore numerico, di dimensione N, determinare il valore minore, quante volte
+questo ricorre e le posizioni all'interno della lista. */
+
+    val array : List<Int> = listOf(20,32,20,45,80,20,800,25)
+    var min = 0
+    for (i in 0..array.size -1){
+        if(i ==0){
+            min = array[i]
+        }
+        if (min > array[i]){
+            min = array[i]
+        }
+    }
+    println("valore minimo : $min")
+
+    array.forEachIndexed{index, value->
+        if(value == min){
+            println("minore trovato è $min nella posizione $index")
+        }
+
+    }
+}
 
 
 fun esercizio36() {
@@ -105,18 +128,34 @@ fun esercizio36() {
             arrayDispari.add(value)
         }
     }
-    println("array pari : $arrayPari")
-    println("array Dispari : $arrayDispari")
+    println("array posizioni pari : $arrayPari")
+    println("array posizioni dispari : $arrayDispari")
 
     arrayPari.forEachIndexed{ index, value ->
         sommaElementi = sommaElementi + value
     }
     println("somma elementi array pari : $sommaElementi")
+    println("array pari size : ${arrayPari.size}")
+
+    var mediaArrayPari = sommaElementi.toDouble() / arrayPari.size
+    println("media aritmetica array pari : $mediaArrayPari")
 
     arrayDispari.forEachIndexed{index,value ->
         sommaElementi2 = sommaElementi2 + arrayDispari[index]
     }
     println("somma elementi array dispari : $sommaElementi2")
+    println("array pari size : ${arrayDispari.size}")
+
+    var mediaArrayDispari = sommaElementi2.toDouble() / arrayDispari.size
+    println("media aritmetica array dispari : $mediaArrayDispari")
+
+    if(mediaArrayDispari>mediaArrayPari){
+        println("media maggiore : $mediaArrayDispari")
+    } else {
+        println("media maggiore : $mediaArrayPari")
+    }
+
+
 
 }
 
