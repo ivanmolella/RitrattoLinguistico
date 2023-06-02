@@ -87,7 +87,7 @@ fun esercizio41() {
     /*Dato un vettore numerico, di dimensione N, determinare il valore minore, quante volte
 questo ricorre e le posizioni all'interno della lista. */
 
-    val array : List<Int> = listOf(20,32,20,45,80,20,800,25)
+    val array : List<Int> = listOf(9,32,20,45,80,20,800,25)
     var min = 0
     for (i in 0..array.size -1){
         if(i ==0){
