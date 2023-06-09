@@ -60,11 +60,16 @@ class GiardinoLinguisticoFragment : Fragment() {
                 val screenY: Float = event.getY()
                 val viewX: Float = screenX - v.getLeft()
                 val viewY: Float = screenY - v.getTop()
-                Log.i(TAG,"OnTouchListener: screenX pixel ${screenX} screenY ${screenY} - viewX $viewX viewY $viewY")
-                Log.i(TAG,"OnTouchListener: screenX dp ${convertPixelsToDp(screenX,requireContext())} screenY ${convertPixelsToDp(screenY,requireContext())} - viewX $viewX viewY $viewY")
+                Log.i(TAG,"OnTouchListener ACTION_UP")
+//                Log.i(TAG,"OnTouchListener: screenX pixel ${screenX} screenY ${screenY} - viewX $viewX viewY $viewY")
+//                Log.i(TAG,"OnTouchListener: screenX dp ${convertPixelsToDp(screenX,requireContext())} screenY ${convertPixelsToDp(screenY,requireContext())} - viewX $viewX viewY $viewY")
                 true
-            }else{
-                Log.i(TAG,"OnTouchListener called");
+            }else if (event.getAction() === MotionEvent.ACTION_DOWN) {
+                Log.i(TAG,"OnTouchListener ACTION_DOWN")
+                true
+            }else if (event.getAction() === MotionEvent.ACTION_MOVE) {
+                Log.i(TAG,"OnTouchListener ACTION_MOVE")
+                true
             }
             false
         }
