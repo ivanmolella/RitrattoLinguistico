@@ -79,9 +79,149 @@ fun main() {
 
     //esercizio36()
 
-    esercizio41()
+    //esercizio41()
+
+    //esercizio41Modificato()
+
+    //esercizio40ConAiuto()
+
+    //esercizio40SenzaAiuto()
+
+    //esercizio26()
+
 
 }
+
+fun esercizio26() {
+    /*Ordinare un vettore alfanumerico in base alla lunghezza delle sue componenti (per prima
+            la stringa di lunghezza minore, e così via fino all'ultima stringa che è quella di lunghezza
+            maggiore).*/
+    val array : MutableList<String> = mutableListOf("nautili", "na", "naut", "nautilius", "nauti", "n", "nautil", "nau", "nautiliu")
+
+    for (i in 0..array.size-1){
+        for (j in i+1..array.size-1){
+            if (array[j] < array[i]){
+                val replace = array[j]
+                array[j]= array[i]
+                array[i] = replace
+            }
+        }
+    }
+
+    println("the sorted one $array")
+
+
+
+}
+
+fun esercizio40SenzaAiuto() {
+    /*Dati 2 vettori numerici B e E, di dimensione N, contenenti rispettivamente base ed
+esponente, determinare qual è la potenza maggiore, la potenza minore e i loro indici.*/
+
+    val arrayB: List<Int> = listOf(10, 30, 40, 12, 1)
+    val arrayE: List<Int> = listOf(1, 2, 3, 4, 5)
+    var potenzamin = 0
+    var potenzamax = 0
+    var posizionemin = 0
+    var posizionemax = 0
+    var nuovoArray : MutableList<Int> = mutableListOf()
+    arrayB.forEachIndexed { index, value ->
+        var potenza = Math.pow(arrayB[index].toDouble(), arrayE[index].toDouble())
+        println("potenza posizione $index: $potenza")
+        nuovoArray.add(potenza.toInt())
+    }
+    println("nuovo array $nuovoArray")
+
+    for (i in 0..nuovoArray.size-1){
+        if (i==0){
+            potenzamin = nuovoArray[i]
+        }
+        if (potenzamin>nuovoArray[i]){
+            potenzamin = nuovoArray[i]
+            posizionemin = i
+        }
+        if (potenzamax < nuovoArray[i]){
+            potenzamax = nuovoArray[i]
+            posizionemax = i
+        }
+    }
+    println("Potenza MINIMA trovata $potenzamin in $posizionemin")
+    println("Potenza MASSIMA trovata $potenzamax in $posizionemax")
+
+
+}
+
+fun esercizio40ConAiuto() {
+    /*Dati 2 vettori numerici B e E, di dimensione N, contenenti rispettivamente base ed
+esponente, determinare qual è la potenza maggiore, la potenza minore e i loro indici.*/
+    val arrayBase : List<Int> = listOf(10, 30, 40, 12, 1)
+    val arrayEsponente : List<Int> = listOf(1,2,3,4,5)
+    var nuovoArray : MutableList<Int> = mutableListOf()
+    var potenzamin = 0
+    var potenzamax = 0
+    arrayBase.forEachIndexed  { index, value ->
+        var potenza = Math.pow(arrayBase[index].toDouble(), arrayEsponente[index].toDouble())
+        println("potenza posizione $index: $potenza")
+        nuovoArray.add(potenza.toInt())
+    }
+    println("nuovo Array $nuovoArray")
+
+    nuovoArray.forEachIndexed { index, value ->
+        println("$value")
+        println("$index")
+        if (index==0){
+            potenzamin = nuovoArray[index]
+        }
+        if(index == 1 ) {
+            if (value > nuovoArray[index - 1]) {
+                potenzamin = nuovoArray[index-1]
+                potenzamax = value
+            }
+            if (value < nuovoArray[index - 1]) {
+                potenzamax = nuovoArray[index-1]
+                potenzamin = value
+            }
+            println("potenza min $potenzamin")
+            println("potenza max $potenzamax")
+        }
+        else {
+            if (value > potenzamax ) {
+                potenzamax = value
+            }
+            if (value < potenzamin) {
+                potenzamin = value
+
+            }
+        }}
+
+    println("potenza min $potenzamin")
+    println("potenza max $potenzamax")
+
+
+}
+
+fun esercizio41Modificato() {
+    /*Dato un vettore numerico, di dimensione N, determinare il valore minore, quante volte
+questo ricorre e le posizioni all'interno della lista. */
+
+    val array : List<Int> = listOf(20,32,20,45,80,20,800,25)
+    var min = 0
+    for (i in 0..array.size -1){
+        if(i ==0){
+            min = array[i]
+        }
+        if (min > array[i]){
+            min = array[i]
+        }
+        if (array[i]==min){
+            println("il minimo trovato ${array[i]} nella posizione $i")
+        }
+    }
+
+
+}
+
+
 
 fun esercizio41() {
     /*Dato un vettore numerico, di dimensione N, determinare il valore minore, quante volte
