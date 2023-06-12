@@ -87,7 +87,7 @@ fun main() {
 
     //esercizio40SenzaAiuto()
 
-    //esercizio26()
+    esercizio26()
 
 
 }
@@ -96,11 +96,11 @@ fun esercizio26() {
     /*Ordinare un vettore alfanumerico in base alla lunghezza delle sue componenti (per prima
             la stringa di lunghezza minore, e così via fino all'ultima stringa che è quella di lunghezza
             maggiore).*/
-    val array : MutableList<String> = mutableListOf("nautili", "na", "naut", "nautilius", "nauti", "n", "nautil", "nau", "nautiliu")
+    val array : MutableList<String> = mutableListOf("nautili", "ana", "naut", "anautilius", "znauti", "n", "nautil", "nau", "nautiliu")
 
     for (i in 0..array.size-1){
         for (j in i+1..array.size-1){
-            if (array[j] < array[i]){
+            if (array[j].length < array[i].length){
                 val replace = array[j]
                 array[j]= array[i]
                 array[i] = replace
@@ -147,7 +147,6 @@ esponente, determinare qual è la potenza maggiore, la potenza minore e i loro i
     }
     println("Potenza MINIMA trovata $potenzamin in $posizionemin")
     println("Potenza MASSIMA trovata $potenzamax in $posizionemax")
-
 
 }
 
@@ -204,18 +203,28 @@ fun esercizio41Modificato() {
     /*Dato un vettore numerico, di dimensione N, determinare il valore minore, quante volte
 questo ricorre e le posizioni all'interno della lista. */
 
-    val array : List<Int> = listOf(20,32,20,45,80,20,800,25)
+    val array : List<Int> = listOf(20,32,22,45,80,20,800,25)
     var min = 0
+    var minPosArray : MutableList<Int> = mutableListOf()
     for (i in 0..array.size -1){
-        if(i ==0){
+        if(i==0){
             min = array[i]
         }
         if (min > array[i]){
             min = array[i]
+            minPosArray.clear()
         }
-        if (array[i]==min){
-            println("il minimo trovato ${array[i]} nella posizione $i")
+
+        if (min == array[i]){
+            minPosArray.add(i)
         }
+    }
+
+
+    println("il minimo trovato ${min}")
+
+    minPosArray.forEach {pos ->
+        println("il minimo ${min} è stato trovato nella posizione $pos")
     }
 
 
