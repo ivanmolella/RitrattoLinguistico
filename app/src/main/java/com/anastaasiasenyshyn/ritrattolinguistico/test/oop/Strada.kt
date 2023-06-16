@@ -51,7 +51,6 @@ class Strada(var nome : String, var larghezza: Double, var ponte: Ponte, var tun
             isAllowed = (ponte.isVeicoloAllowed(veicolo) && tunnel.isVeicoloAllowed(veicolo))
         }else{
             println("Il veicolo non può passare la strada $nome")
-
         }
         return isAllowed
     }
