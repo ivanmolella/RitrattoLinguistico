@@ -1,0 +1,78 @@
+package com.anastaasiasenyshyn.ritrattolinguistico.test.oop
+
+open class Shape(var nome : String) {
+
+    open fun area() : Float {
+        println("L'area di una figura $nome, non può essere calcolata")
+        return -1.0f
+    }
+
+    open fun perimetro() : Float {
+        println("Il perimetro di una figura non definita, non può essere calcolata")
+        return -1.0f
+    }
+}
+
+class Square2(var nomeFigura : String,var lato : Float) : Shape(nomeFigura){
+
+    override fun area() : Float {
+        return (lato * lato)
+    }
+
+    override fun perimetro() : Float {
+        return (lato * 4)
+    }
+
+}
+
+class Triangle2(var nomeFigura : String,var base : Float,var altezza : Float) : Shape(nomeFigura) {
+
+    var lato1 : Float = base
+    var lato2 : Float = base
+
+    constructor(nomeFigura: String,base: Float,alt: Float,lato1: Float,lato2: Float) : this(nomeFigura,base,alt){
+        this.lato1 = lato1
+        this.lato2 = lato2
+    }
+
+    override fun area() : Float {
+        return (base * altezza) / 2
+    }
+
+    override fun perimetro(): Float {
+        return (base + lato1 + lato2)
+    }
+}
+
+class Rectangle(var nomeFigura : String,var base : Float,var altezza: Float) : Shape(nomeFigura) {
+
+    override fun area() : Float{
+        return (base * altezza)
+    }
+
+    override fun perimetro() : Float {
+        return (base * 2) + (altezza * 2)
+    }
+}
+
+fun main(){
+    val shape : Shape = Shape("Undefined")
+    val square2 : Square2 = Square2("Square",5.0f)
+    val triangle2EQ  :Triangle2 = Triangle2("TriangleEQ",5.0f,10.0f)
+    val triangle2NEQ : Triangle2 = Triangle2("TriangleNEQ",6.0f,10.0f,15.0f,12.0f)
+
+    val rectangle : Rectangle = Rectangle("Rectangle",10.0f,20.0f)
+
+    shape.area()
+
+    printShapeInfo(square2)
+    printShapeInfo(triangle2EQ)
+    printShapeInfo(triangle2NEQ)
+    //printShapeInfo(rectangle)
+
+}
+
+fun printShapeInfo(square2: Shape) {
+    println("L'area di ${square2.nome} è: ${square2.area()} il perimetro di square2 è: ${square2.perimetro()}")
+}
+
