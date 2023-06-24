@@ -9,7 +9,22 @@ Per testare la classe, scrivere un programma TestRettangolo che crea tre rettang
 classe Rettangolo) ne calcola la somma delle aree e la somma dei perimetri (stampando i risultati),
 ridimensiona uno dei tre rettangoli e ristampa le somme.*/
 
-open class Rettangolo(base: Double, altezza: Double) {
+interface ShapeInterface {
+    fun ridimensiona(newBase: Double, newAltezza: Double)
+    fun perimetro(): Double
+
+    fun area() : Double
+}
+
+fun printShapeInfo(shape : ShapeInterface){
+    println("Area: ${shape.area()} perimetro: ${shape.perimetro()}")
+}
+
+fun printRectInfo(rect : Rettangolo){
+    println("Area: ${rect.area()} perimetro: ${rect.perimetro()} diagonale: ${rect.calcolaDiagonale()}")
+}
+
+open class Rettangolo(base: Double, altezza: Double) : ShapeInterface {
     var base: Double? = null
     var altezza: Double? = null
 
@@ -18,21 +33,23 @@ open class Rettangolo(base: Double, altezza: Double) {
         this.altezza = altezza
     }
 
-    open fun ridimensiona(newBase: Double, newAltezza: Double): Double{
+    override fun ridimensiona(newBase: Double, newAltezza: Double){
         this.base = newBase
         this.altezza = newAltezza
-        return newBase
-
     }
 
-    fun perimetro(rettangolo: Rettangolo): Double {
+    override fun perimetro(): Double {
         val perimetro = (base!! + altezza!!) * 2
         return perimetro
     }
 
-    fun area(rettangolo : Rettangolo): Double {
+    override fun area(): Double {
         val area = base!! * altezza!!
         return area
+    }
+
+    fun calcolaDiagonale() : Float {
+        return -1.0f
     }
 
 }
@@ -45,32 +62,39 @@ fun main(){
     val rettangolo2 = Rettangolo(4.0, 6.0)
     val rettangolo3 = Rettangolo(7.0,9.0)
 
-    val areaPrimoRettangolo = rettangolo1.area(rettangolo1)
-    val areaSecondoRettangolo = rettangolo2.area(rettangolo2)
-    val areaTerzoRettangolo = rettangolo3.area(rettangolo3)
+    val areaPrimoRettangolo = rettangolo1.area()
+    val areaSecondoRettangolo = rettangolo2.area()
+    val areaTerzoRettangolo = rettangolo3.area()
 
     println("Area primo rettangolo: $areaPrimoRettangolo")
     println("Area secondo rettangolo: $areaSecondoRettangolo")
     println("Area terzo rettangolo: $areaTerzoRettangolo")
 
-    val calcolaSommaAreaRettangoli = rettangolo1.area(rettangolo1) + rettangolo2.area(rettangolo2) + rettangolo3.area(rettangolo3)
+    val calcolaSommaAreaRettangoli = rettangolo1.area() + rettangolo2.area() + rettangolo3.area()
 
     println("somma area rettangoli : $calcolaSommaAreaRettangoli")
 
-    val perimetroPrimoRettangolo = rettangolo1.perimetro(rettangolo1)
-    val perimetroSecondoRettangolo = rettangolo2.perimetro(rettangolo2)
-    val perimetroTerzoRettangolo = rettangolo3.perimetro(rettangolo3)
+    val perimetroSecondoRettangolo = rettangolo2.perimetro()
+    val perimetroTerzoRettangolo = rettangolo3.perimetro()
 
-    println("Perimetro primo rettangolo: $perimetroPrimoRettangolo")
+    println("Perimetro primo rettangolo: ${rettangolo1.perimetro()}")
     println("Perimetro secondo rettangolo: $perimetroSecondoRettangolo")
     println("Perimetro terzo rettangolo: $perimetroTerzoRettangolo")
 
-    val calcolaSommaPerimetri = rettangolo1.perimetro(rettangolo1) + rettangolo2.perimetro(rettangolo2) + rettangolo3.perimetro(rettangolo3)
+    val calcolaSommaPerimetri = rettangolo1.perimetro() + rettangolo2.perimetro() + rettangolo3.perimetro()
 
     println("somma perimetri rettangoli : $calcolaSommaPerimetri")
 
-    val ridimensionarettangolo = rettangolo1.ridimensiona(3.0, 1.0)
-    println("$ridimensionarettangolo")
+    rettangolo1.ridimensiona(3.0, 1.0)
+
+    val sommaAree2 = rettangolo1.area() + rettangolo2.area() + rettangolo3.area()
+    val sommaPerimetri2 = rettangolo1.perimetro() + rettangolo2.perimetro() + rettangolo3.perimetro()
+
+    println("Nuova area rettangolo1 : ${rettangolo1.area()}")
+    println("somma area2 rettangoli : $sommaAree2")
+    println("somma perimetri2 rettangoli : $sommaPerimetri2")
+
+
 
 
 }

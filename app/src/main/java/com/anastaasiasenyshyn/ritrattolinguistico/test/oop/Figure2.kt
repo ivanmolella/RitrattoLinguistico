@@ -68,10 +68,10 @@ class Circle(var nomeFigura: String, var raggio:Float, var pigreco :Float) : Sha
     }
 }
 
-class Rhombus(var nomeFigura: String, var lato: Float, var base: Float, var altezza: Float) : Shape(nomeFigura){
+class Rhombus(var nomeFigura: String, var lato: Float, var diag1: Float, var diag2: Float) : Shape(nomeFigura){
 
     override fun area(): Float{
-        return base * altezza
+        return diag1 * diag2
     }
 
     override fun perimetro(): Float {
@@ -88,21 +88,20 @@ fun main(){
     val rectangle : Rectangle = Rectangle("Rectangle",10.0f,20.0f)
 
     val circle : Shape = Circle("Circle",3.0f,3.14159f)
-
     val rhombus : Shape = Rhombus("Rhombus", 6.0f,3.0f,7.0f)
 
     shape.area()
 
-    printShapeInfo(square2)
-    printShapeInfo(triangle2EQ)
-    printShapeInfo(triangle2NEQ)
+//    printShapeInfo(square2)
+//    printShapeInfo(triangle2EQ)
+//    printShapeInfo(triangle2NEQ)
     //printShapeInfo(rectangle)
     printShapeInfo(circle)
     printShapeInfo(rhombus)
 
 }
 
-fun printShapeInfo(square2: Shape) {
-    println("L'area di ${square2.nome} è: ${square2.area()} il perimetro di square2 è: ${square2.perimetro()}")
+fun printShapeInfo(shape: Shape) {
+    println("L'area di ${shape.nome} è: ${shape.area()} il perimetro di ${shape.nome} è: ${shape.perimetro()}")
 }
 
