@@ -3,68 +3,9 @@ package com.anastaasiasenyshyn.ritrattolinguistico.calcolatrice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.EditText
+import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityCalcolatriceBinding
-
-class CalcolatriceStatus(var displayTV : EditText) {
-
-    private val displayStatus : StringBuffer = StringBuffer()
-
-    private var operation : String? = null
-    private var operando1 : Float? = null
-    private var operando2 : Float? = null
-
-    fun appendNumberOrComma(value : String?){
-        displayStatus.append(value)
-    }
-
-    fun evaluateOperandoAndDisplay() {
-        displayTV.setText(getDisplay())
-        if (operation == null){
-            operando1=getDisplay()?.toFloat()
-            Log.i(CalcolatriceActivity.TAG,"operando1 valorizzato: $operando1")
-        }else {
-            operando2=getDisplay()?.toFloat()
-            Log.i(CalcolatriceActivity.TAG,"operando2 valorizzato: $operando2")
-        }
-    }
-
-    fun evaluateOperation(): Float {
-        var result : Float? = 0.0f
-        when(operation) {
-            "-" -> {
-                if (operando1 != null && operando2 != null) {
-                    result = operando1!! - operando2!!
-                }
-            }
-        }
-
-        return result!!
-    }
-
-    fun getDisplay() : String? {
-        return displayStatus.toString()
-    }
-
-    fun deleteLast(){
-        displayStatus.deleteCharAt(displayStatus.length-1)
-    }
-
-    fun clearDisplayStatus() {
-        displayStatus.delete(0,displayStatus.length)
-    }
-
-    fun clearStatus() {
-       operation=null
-        operando1=null
-        operando2=null
-    }
-
-    fun setOperation(op: String) {
-        operation=op
-    }
-
-}
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
 
 class CalcolatriceActivity : AppCompatActivity() {
 
@@ -72,15 +13,17 @@ class CalcolatriceActivity : AppCompatActivity() {
         val TAG = "CalcolatriceActivity"
     }
 
-    lateinit var `calStatus` : CalcolatriceStatus2
-
     private lateinit var binding: ActivityCalcolatriceBinding
 
+    val displayStatus : StringBuffer = StringBuffer()
+    var operation : String? = null
+
+    var operando1 : Float? = null
+    var operando2 : Float? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalcolatriceBinding.inflate(layoutInflater)
-        calStatus = CalcolatriceStatus2(binding.tvDisplay)
         setContentView(binding.root)
 
         initCalcolatrice()
@@ -93,59 +36,70 @@ class CalcolatriceActivity : AppCompatActivity() {
 
     private fun initPanelNumbers() {
         binding.btnNum7.setOnClickListener { tasto7 ->
-            `calStatus`.appendNumberOrComma("7")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("7")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum8.setOnClickListener { tasto8 ->
-            calStatus.appendNumberOrComma("8")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("8")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum9.setOnClickListener { tasto9 ->
-            calStatus.appendNumberOrComma("9")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("9")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum4.setOnClickListener { tasto4 ->
-            calStatus.appendNumberOrComma("4")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("4")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum5.setOnClickListener { tasto5 ->
-            calStatus.appendNumberOrComma("5")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("5")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum6.setOnClickListener { tasto6 ->
-            calStatus.appendNumberOrComma("6")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("6")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum1.setOnClickListener { tasto1 ->
-            calStatus.appendNumberOrComma("1")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("1")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum2.setOnClickListener { tasto2 ->
-            calStatus.appendNumberOrComma("2")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("2")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnNum3.setOnClickListener { tasto3 ->
-            calStatus.appendNumberOrComma("3")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("3")
+            evaluateOperandoAndDisplay()
         }
 
 
         binding.btnNum0.setOnClickListener { tasto0 ->
-            calStatus.appendNumberOrComma("0")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append("0")
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnVirgola.setOnClickListener { tastoVirgola ->
-            calStatus.appendNumberOrComma(".")
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append(".")
+            evaluateOperandoAndDisplay()
+        }
+    }
+
+    private fun evaluateOperandoAndDisplay() {
+        binding.tvDisplay.setText(displayStatus.toString())
+        if (operation == null){
+            operando1=displayStatus.toString().toFloat()
+            Log.i(TAG,"operando1 valorizzato: $operando1")
+        }else {
+            operando2=displayStatus.toString().toFloat()
+            Log.i(TAG,"operando2 valorizzato: $operando2")
         }
     }
 
@@ -153,41 +107,99 @@ class CalcolatriceActivity : AppCompatActivity() {
 
         binding.btnCancel.setOnClickListener { tastoCancel ->
             clearDisplay(false)
-            binding.tvDisplay.setText(calStatus.getDisplay().toString())
+            binding.tvDisplay.setText(displayStatus.toString())
         }
 
         binding.btnUndo.setOnClickListener { tastoUndo ->
             Log.i(TAG,"-- Undo called")
-            calStatus.deleteLast()
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.deleteCharAt(displayStatus.length-1)
+            evaluateOperandoAndDisplay()
         }
 
         binding.btnMeno.setOnClickListener { tastoMeno ->
             Log.i(TAG,"-- Subtraction Operation called")
-            calStatus.setOperation("-")
+            operation="-"
             clearDisplay(true)
         }
 
-        binding.btnPi.setOnClickListener { tastoPiù ->
-            calStatus.appendNumberOrComma("+")
-            binding.tvDisplay.setText(calStatus.getDisplay().toString())
+        binding.btnPi.setOnClickListener { tastoPi ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="+"
+            clearDisplay(true)
 
+        }
+
+        binding.btnDiv.setOnClickListener {tastoDiv ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="/"
+            clearDisplay(true)
+        }
+
+        binding.btnMul.setOnClickListener {tastoMul ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="*"
+            clearDisplay(true)
+        }
+
+        binding.btnPercento.setOnClickListener {tastoPercento ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="%"
+            clearDisplay(true)
         }
 
         binding.btnUguale.setOnClickListener { tastoUguale ->
-            val result : Float = calStatus.evaluateOperation()
+            val result : Float = evaluateOperation()
             clearDisplay(false)
-            calStatus.appendNumberOrComma(result.toString())
-            calStatus.evaluateOperandoAndDisplay()
+            displayStatus.append(result.toString())
+            evaluateOperandoAndDisplay()
         }
+
+
+    }
+
+    private fun evaluateOperation(): Float {
+        var result : Float? = 0.0f
+        when(operation) {
+            "-" -> {
+                if (operando1 != null && operando2 != null) {
+                    result = operando1!! - operando2!!
+                }
+            }
+            "+" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! + operando2!!
+                }
+            }
+            "*" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! * operando2!!
+                }
+            }
+
+            "/" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! / operando2!!
+                }
+            }
+
+            "%" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! * operando2!! / 100
+                }
+            }
+        }
+
+        return result!!
     }
 
     fun clearDisplay(clearOnly : Boolean){
         Log.i(TAG,"-- clearDisplay called")
-        calStatus.clearDisplayStatus()
-        binding.tvDisplay.setText(calStatus.getDisplay().toString())
+        displayStatus.delete(0,displayStatus.length)
+        binding.tvDisplay.setText(displayStatus.toString())
         if (clearOnly == false){
-            calStatus.clearStatus()
+            operando1 = null
+            operando2 = null
+            operation = null
         }
     }
 }
