@@ -122,10 +122,29 @@ class CalcolatriceActivity : AppCompatActivity() {
             clearDisplay(true)
         }
 
-        binding.btnPi.setOnClickListener { tastoPiù ->
-            displayStatus.append("+")
-            binding.tvDisplay.setText(displayStatus.toString())
+        binding.btnPi.setOnClickListener { tastoPi ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="+"
+            clearDisplay(true)
 
+        }
+
+        binding.btnDiv.setOnClickListener {tastoDiv ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="/"
+            clearDisplay(true)
+        }
+
+        binding.btnMul.setOnClickListener {tastoMul ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="*"
+            clearDisplay(true)
+        }
+
+        binding.btnPercento.setOnClickListener {tastoPercento ->
+            Log.i(TAG,"-- Subtraction Operation called")
+            operation="%"
+            clearDisplay(true)
         }
 
         binding.btnUguale.setOnClickListener { tastoUguale ->
@@ -134,6 +153,8 @@ class CalcolatriceActivity : AppCompatActivity() {
             displayStatus.append(result.toString())
             evaluateOperandoAndDisplay()
         }
+
+
     }
 
     private fun evaluateOperation(): Float {
@@ -142,6 +163,28 @@ class CalcolatriceActivity : AppCompatActivity() {
             "-" -> {
                 if (operando1 != null && operando2 != null) {
                     result = operando1!! - operando2!!
+                }
+            }
+            "+" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! + operando2!!
+                }
+            }
+            "*" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! * operando2!!
+                }
+            }
+
+            "/" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! / operando2!!
+                }
+            }
+
+            "%" -> {
+                if (operando1 != null && operando2 != null){
+                    result = operando1!! * operando2!! / 100
                 }
             }
         }
