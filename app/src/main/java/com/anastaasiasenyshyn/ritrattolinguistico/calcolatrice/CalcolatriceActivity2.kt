@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.EditText
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityCalcolatriceBinding
 
-class CalcolatriceStatus(var displayTV : EditText) {
+class CalcolatriceStatus2(var displayTV : EditText) {
 
     private val displayStatus : StringBuffer = StringBuffer()
 
@@ -72,7 +72,7 @@ class CalcolatriceActivity2 : AppCompatActivity() {
         val TAG = "CalcolatriceActivity"
     }
 
-    lateinit var `calStatus` : CalcolatriceStatus
+    lateinit var `calStatus` : CalcolatriceStatus2
 
     private lateinit var binding: ActivityCalcolatriceBinding
 
@@ -80,7 +80,7 @@ class CalcolatriceActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalcolatriceBinding.inflate(layoutInflater)
-        calStatus = CalcolatriceStatus(binding.tvDisplay)
+        calStatus = CalcolatriceStatus2(binding.tvDisplay)
         setContentView(binding.root)
 
         initCalcolatrice()

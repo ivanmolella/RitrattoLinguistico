@@ -72,7 +72,7 @@ class CalcolatriceActivity : AppCompatActivity() {
         val TAG = "CalcolatriceActivity"
     }
 
-    lateinit var `calStatus` : CalcolatriceStatus
+    lateinit var `calStatus` : CalcolatriceStatus2
 
     private lateinit var binding: ActivityCalcolatriceBinding
 
@@ -80,7 +80,7 @@ class CalcolatriceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalcolatriceBinding.inflate(layoutInflater)
-        calStatus = CalcolatriceStatus(binding.tvDisplay)
+        calStatus = CalcolatriceStatus2(binding.tvDisplay)
         setContentView(binding.root)
 
         initCalcolatrice()
