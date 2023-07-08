@@ -1,6 +1,5 @@
 package com.anastaasiasenyshyn.ritrattolinguistico
 
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -16,10 +15,11 @@ import android.view.MenuItem
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants.Companion.ID_SLIDER_RITRATTO_LINGUISTICO
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment
-import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderActions
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 
-class MainActivity : AppCompatActivity(), SliderFragment.SliderActions {
+class MainActivity : AppCompatActivity(), SliderActions {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding

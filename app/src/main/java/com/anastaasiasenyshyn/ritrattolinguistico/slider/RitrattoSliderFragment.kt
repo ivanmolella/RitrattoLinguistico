@@ -1,28 +1,30 @@
 package com.anastaasiasenyshyn.ritrattolinguistico.slider
 
-import android.os.*
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentPagerBinding
-
 import com.google.android.material.tabs.TabLayoutMediator
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SliderFragment.newInstance] factory method to
+ * Use the [RitrattoSliderFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SliderFragment : Fragment() {
+class RitrattoSliderFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -39,9 +41,6 @@ class SliderFragment : Fragment() {
     var sliderId : String? = null
     var autostartSlideShow : Boolean? = null
 
-    interface SliderActions{
-        fun onSliderExit(pagerId : String)
-    }
 
     data class SliderPolicy (
         val autostartSlideShow : Boolean?
@@ -106,7 +105,13 @@ class SliderFragment : Fragment() {
         override fun getItemCount(): Int = sliderItems?.size!!
 
         override fun createFragment(position: Int): Fragment {
-            val frag = SlideFragment()
+            var frag : Fragment? = null
+
+            if (position == 0){
+                frag = RitrattoSlideFragment1()
+            }else{
+                frag = RitrattoSlideFragment2()
+            }
             val sliderItem = sliderItems?.get(position)
             val bundle = Bundle()
             bundle.putString(SLIDER_TEXT, sliderItem?.sliderText)
@@ -114,7 +119,7 @@ class SliderFragment : Fragment() {
             bundle.putInt(SLIDER_NUM_ITEM, sliderItems?.size!!)
             bundle.putInt(SLIDER_POSITION, position)
             frag.arguments = bundle
-            Log.i(TAG,"createFragment $position")
+            Log.i(TAG, "createFragment $position")
 
             return frag
         }
@@ -163,8 +168,11 @@ class SliderFragment : Fragment() {
         }
 
         binding.nextSlideBtn.setOnClickListener{
+            Log.i(TAG,"nextSlideBtn called with currentPagerPosition: $currentPagerPosition")
             if (currentPagerPosition == sliderItems.size -1){
+                Log.i(TAG,"nextSlideBtn called with onSliderExit calling")
                 if ((requireActivity() is SliderActions)){
+                    Log.i(TAG,"nextSlideBtn called with onSliderExit called")
                     (requireActivity() as SliderActions).onSliderExit(sliderId!!)
                 }
             }else{
@@ -213,7 +221,7 @@ class SliderFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String?, param2: String?) =
-            SliderFragment().apply {
+            RitrattoSliderFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -20,7 +20,7 @@
         android:theme="@style/Theme.RitrattoLinguistico"
         tools:targetApi="31">
         <activity
-            android:name=".calcolatrice.CalcolatriceActivity"
+            android:name=".calcolatrice.CalcolatriceActivity2"
             android:exported="true" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->

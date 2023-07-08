@@ -6,21 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentDemoBinding
-import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment.Companion.SLIDER_IMG_ID
-import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment.Companion.SLIDER_TEXT
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoslide1Binding
 
+/**
+ * A simple [Fragment] subclass.
+ * Use the [RitrattoSlideFragment1.newInstance] factory method to
+ * create an instance of this fragment.
+ */
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SlideFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SlideFragment : Fragment() {
+class RitrattoSlideFragment1 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -39,14 +38,15 @@ class SlideFragment : Fragment() {
     ): View? {
         val page = arguments?.getString("PAGE")
         // Inflate the layout for this fragment
-        val binding: FragmentDemoBinding = FragmentDemoBinding.inflate(
-            inflater, container, false)
+        val binding: FragmentRitrattoslide1Binding = FragmentRitrattoslide1Binding.inflate(
+            inflater, container, false
+        )
 
-        val imgText = arguments?.getString(SLIDER_TEXT)
-        val imgId = arguments?.getInt(SLIDER_IMG_ID)
+        val imgText = arguments?.getString(RitrattoSliderFragment.SLIDER_TEXT)
+        val imgId = arguments?.getInt(RitrattoSliderFragment.SLIDER_IMG_ID)
 
         binding.rlImage.setImageResource(imgId!!)
-        binding.payoff.text = "${imgText}"
+        binding.payoff.text = "$imgText"
         return binding.root
     }
 
@@ -62,7 +62,7 @@ class SlideFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SlideFragment().apply {
+            RitrattoSlideFragment1().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

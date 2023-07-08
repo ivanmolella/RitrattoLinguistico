@@ -66,7 +66,7 @@ class CalcolatriceStatus(var displayTV : EditText) {
 
 }
 
-class CalcolatriceActivity : AppCompatActivity() {
+class CalcolatriceActivity2 : AppCompatActivity() {
 
     companion object {
         val TAG = "CalcolatriceActivity"

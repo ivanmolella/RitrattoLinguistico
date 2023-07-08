@@ -2,7 +2,6 @@ package com.anastaasiasenyshyn.ritrattolinguistico.ritratto
 
 import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
@@ -21,7 +20,8 @@ import com.anastaasiasenyshyn.ritrattolinguistico.BuildConfig
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants
 import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoLinguisticoBinding
-import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.RitrattoSliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.DeviceInfo
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 import java.io.File
@@ -50,7 +50,7 @@ class RitrattoLinguisticoFragment : Fragment() {
     private var param2: String? = null
 
     lateinit var binding: FragmentRitrattoLinguisticoBinding
-    private var sliderFragment: SliderFragment? = null
+    private var sliderFragment: RitrattoSliderFragment? = null
     private var isPaletteOpen : Boolean = false
     private var isPaintSliderOpen : Boolean = false
     private var painterSize : Float? = 6.0f
@@ -78,7 +78,8 @@ class RitrattoLinguisticoFragment : Fragment() {
     }
 
     private fun initView() {
-        val isSlideRequired = checkSlideRequired()
+        //TODO Scommentare
+        val isSlideRequired = true //checkSlideRequired()
         if (isSlideRequired) {
             initViewForSlider()
         } else {
@@ -342,39 +343,39 @@ class RitrattoLinguisticoFragment : Fragment() {
     }
 
     private fun loadSliderFragment() {
-        sliderFragment = SliderFragment.newInstance(null, null)
+        sliderFragment = RitrattoSliderFragment.newInstance(null, null)
         val fragmentManager = parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.slider, sliderFragment!!)
 
-        var sliderItems: MutableList<SliderFragment.SliderItem>? = mutableListOf(
-            SliderFragment.SliderItem(
+        var sliderItems: MutableList<RitrattoSliderFragment.SliderItem>? = mutableListOf(
+            RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "",
-                R.drawable.carosello_ritratto_linguistico_1
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.sagoma_ritratto
             ),
-            SliderFragment.SliderItem(
+            RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "",
                 R.drawable.carosello_ritratto_linguistico_2
             ),
-            SliderFragment.SliderItem(
+            RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "",
                 R.drawable.carosello_ritratto_linguistico_3
             ),
-            SliderFragment.SliderItem(
+            RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "",
                 R.drawable.carosello_ritratto_linguistico_4
             )
 
         )
-        val sliderPolicy : SliderFragment.SliderPolicy =
-            SliderFragment.SliderPolicy(autostartSlideShow = false)
+        val sliderPolicy : RitrattoSliderFragment.SliderPolicy =
+            RitrattoSliderFragment.SliderPolicy(autostartSlideShow = false)
         val args = Bundle()
-        args.putParcelableArrayList(SliderFragment.SLIDERS, ArrayList(sliderItems))
-        args.putParcelable(SliderFragment.SLIDER_POLICY, sliderPolicy)
+        args.putParcelableArrayList(RitrattoSliderFragment.SLIDERS, ArrayList(sliderItems))
+        args.putParcelable(RitrattoSliderFragment.SLIDER_POLICY, sliderPolicy)
 
         sliderFragment?.arguments = args
 
@@ -410,6 +411,7 @@ class RitrattoLinguisticoFragment : Fragment() {
     }
 
     private fun hideFooterPaletteTotal(duration : Long = 200) {
+        hidePalettePanel(0)
         binding.footerPalette.visibility= View.GONE
         val numePrenotazioniPanelHeight = DeviceInfo.dpiToPx(120)
         binding.footerPaletteFrame!!.animate().y(numePrenotazioniPanelHeight.toFloat()).duration = duration

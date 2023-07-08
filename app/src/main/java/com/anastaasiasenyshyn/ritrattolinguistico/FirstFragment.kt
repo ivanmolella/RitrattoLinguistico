@@ -15,7 +15,7 @@ import com.afollestad.materialdialogs.list.listItemsMultiChoice
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.model.FamilyLanguages
 import com.anastaasiasenyshyn.ritrattolinguistico.model.Languages
-import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 import com.google.gson.Gson
 
@@ -73,25 +73,25 @@ class FirstFragment : Fragment() {
 
         binding.ritrattoLinguisticoBtn.setOnClickListener {
             //findNavController().navigate(R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2)
-            var sliderItems: MutableList<SliderFragment.SliderItem>? = mutableListOf(
-                SliderFragment.SliderItem(
+            var sliderItems: MutableList<StartAppSliderFragment.SliderItem>? = mutableListOf(
+                StartAppSliderFragment.SliderItem(
                     Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                     "Slide 1",
                     R.drawable.rl_1
                 ),
-                SliderFragment.SliderItem(
+                StartAppSliderFragment.SliderItem(
                     Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                     "Slide 2",
                     R.drawable.rl_2
                 ),
-                SliderFragment.SliderItem(
+                StartAppSliderFragment.SliderItem(
                     Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                     "Slide 3",
                     R.drawable.rl_3
                 )
             )
             val args = Bundle()
-            args.putParcelableArrayList(SliderFragment.SLIDERS, ArrayList(sliderItems))
+            args.putParcelableArrayList(StartAppSliderFragment.SLIDERS, ArrayList(sliderItems))
             findNavController().navigate(
                 R.id.action_FirstFragment_to_ritrattoLinguisticoFragment2,
                 args
