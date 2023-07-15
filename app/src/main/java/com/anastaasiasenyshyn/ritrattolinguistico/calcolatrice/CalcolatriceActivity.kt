@@ -112,8 +112,16 @@ class CalcolatriceActivity : AppCompatActivity() {
 
         binding.btnUndo.setOnClickListener { tastoUndo ->
             Log.i(TAG,"-- Undo called")
-            displayStatus.deleteCharAt(displayStatus.length-1)
-            evaluateOperandoAndDisplay()
+            binding.btnUndo.setOnClickListener { tastoUndo ->
+                Log.i(TAG, "-- Undo called")
+                if (displayStatus.length == 1  ) {
+                    clearDisplay(false)
+                }
+                if (displayStatus.length in 2..displayStatus.length && displayStatus.length != null){
+                    displayStatus.deleteCharAt(displayStatus.length - 1)
+                    evaluateOperandoAndDisplay()}
+
+            }
         }
 
         binding.btnMeno.setOnClickListener { tastoMeno ->

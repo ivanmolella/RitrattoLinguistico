@@ -47,8 +47,16 @@ class CalcolatriceStatus2(var displayTV : EditText) {
     }
 
     fun deleteLast(){
-        displayStatus.deleteCharAt(displayStatus.length-1)
-    }
+            Log.i(CalcolatriceActivity.TAG, "-- Undo called")
+            if (displayStatus.length == 1  ) {
+                //displayStatus.delete(0, displayStatus.length)
+                clearDisplayStatus()
+            }
+            if (displayStatus.length in 2..displayStatus.length && displayStatus.length != null){
+                displayStatus.deleteCharAt(displayStatus.length - 1)
+                evaluateOperandoAndDisplay()}
+
+        }
 
     fun clearDisplayStatus() {
         displayStatus.delete(0,displayStatus.length)
