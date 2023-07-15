@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
+import com.anastaasiasenyshyn.ritrattolinguistico.calcolatrice.CalcolatriceActivityIvan.Companion.TAG
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityCalcolatriceBinding
 
 class CalcolatriceStatus3(var displayTV : EditText) {
@@ -26,10 +27,10 @@ class CalcolatriceStatus3(var displayTV : EditText) {
         displayTV.setText(displayStatus.toString())
         if (operation == null){
             operando1=displayStatus.toString().toFloat()
-            Log.i(CalcolatriceActivity.TAG,"operando1 valorizzato: $operando1")
+            Log.i(TAG,"operando1 valorizzato: $operando1")
         }else {
             operando2=displayStatus.toString().toFloat()
-            Log.i(CalcolatriceActivity.TAG,"operando2 valorizzato: $operando2")
+            Log.i(TAG,"operando2 valorizzato: $operando2")
         }
     }
 
@@ -96,7 +97,7 @@ class CalcolatriceStatus3(var displayTV : EditText) {
 class CalcolatriceActivityIvan : AppCompatActivity() {
 
     companion object {
-        val TAG = "CalcolatriceActivity"
+        val TAG = "CalcolatriceActivityIvan"
     }
 
     private lateinit var binding: ActivityCalcolatriceBinding

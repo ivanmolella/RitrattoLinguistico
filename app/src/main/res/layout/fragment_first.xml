@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     android:orientation="vertical"
-    android:background="@color/purplebackground2"
     tools:context=".FirstFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
         android:background="@drawable/bg_gradient"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/family_vector_icon_24">
+            android:background="@drawable/tmp_img_mappamondo">
 
         </ImageView>
 
@@ -31,126 +31,63 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.3"
-        android:orientation="vertical"
-        android:background="@color/purplebackground2">
+        android:background="?attr/colorSecondary"
+        android:orientation="vertical">
 
-        <LinearLayout
+
+        <Button
+            android:id="@+id/scopriDiPiuBtn"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="32dp"
-            android:orientation="horizontal"
-            android:background="@color/purplebackground2">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent">
-                <Button
-                    android:id="@+id/scopriDiPiuBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="25dp"
-                    android:text="@string/scopridipiùbutton"
-                    android:textSize="14sp"
-                    android:background="@drawable/btn_bg_1"
-                    android:layout_gravity="center">
-                </Button>
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:backgroundTint="#FFFFFF"
+            android:drawableLeft="@drawable/tmp_img_scopri_di_piu"
+            android:text="@string/scopridipiùbutton"
+            android:textColor="@color/black"
+            android:textSize="14sp"></Button>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="16dp"
-                android:background="@color/purplebackground2">
-
-                <Button
-                    android:id="@+id/ritrattoLinguisticoBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="25dp"
-                    android:text="@string/ritrattolinguisticobutton"
-                    android:textSize="14sp"
-                    android:background="@drawable/btn_bg_1"
-                    android:layout_gravity="center">
-
-                </Button>
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
+        <Button
+            android:id="@+id/ritrattoLinguisticoBtn"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="32dp"
-            android:orientation="horizontal"
-            android:background="@color/purplebackground2">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:background="@color/purplebackground2">
-                <Button
-                    android:id="@+id/GiardinoLinguisticoBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="25dp"
-                    android:text="@string/giardinolinguisticobutton"
-                    android:textSize="14sp"
-                    android:background="@drawable/btn_bg_1"
-                    android:layout_gravity="center">
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/ritrattolinguisticobutton"
+            android:textColor="@color/black"
+            android:textSize="14sp">
 
-                </Button>
+        </Button>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="16dp"
-                android:background="@color/purplebackground2">
+        <Button
+            android:id="@+id/GiardinoLinguisticoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/giardinolinguisticobutton"
+            android:textColor="@color/black"
+            android:textSize="14sp">
 
-                <Button
-                    android:id="@+id/SistemidiScritturaBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="25dp"
-                    android:text="@string/sistemiscritturabutton"
-                    android:textSize="14sp"
-                    android:background="@drawable/btn_bg_1"
-                    android:layout_gravity="center">
-
-                </Button>
-            </LinearLayout>
+        </Button>
 
 
+        <Button
+            android:id="@+id/SistemidiScritturaBtn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/sistemiscritturabutton"
+            android:textColor="@color/black"
+            android:textSize="14sp">
 
-        </LinearLayout>
-
-
+        </Button>
 
     </LinearLayout>
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/textview_first"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:text="@string/hello_first_fragment"/>-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_first"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/next"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/textview_first" />-->
 </LinearLayout>
 

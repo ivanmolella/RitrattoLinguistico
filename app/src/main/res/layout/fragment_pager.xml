@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PagerFragment">
 
@@ -14,6 +15,7 @@
         android:layout_weight="1"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
+        android:background="?attr/colorPrimary"
         app:tabIndicatorHeight="0dp"/>
     <androidx.viewpager2.widget.ViewPager2
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,21 +23,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="?attr/colorSecondary"
         android:orientation="horizontal"
         android:gravity="center">
         <TextView
             android:id="@+id/nextSlideBtn"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textAlignment="center"
+            android:paddingTop="10dp"
             android:background="@drawable/btn_bg_primary"
-            android:textColor="@color/white">
+            android:textColor="@color/black">
         </TextView>
     </LinearLayout>
 
