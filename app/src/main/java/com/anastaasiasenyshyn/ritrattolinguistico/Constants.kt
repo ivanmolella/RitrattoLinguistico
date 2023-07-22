@@ -10,6 +10,7 @@ class Constants {
 
         //Shared Preferences Keys
         const val SHAR_SLIDE_RITRATTO_DONE="RL_SHAR_SLIDE_RITRATTO_DONE"
+        const val SHAR_SLIDE_MAIN_DONE="RL_SHAR_SLIDE_MAIN_DONE"
         const val SHAR_LANG_SELECTED="RL_SHAR_LANG_SELECTED"
 
     }

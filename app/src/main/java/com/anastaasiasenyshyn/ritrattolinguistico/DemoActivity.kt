@@ -83,8 +83,10 @@ class DemoActivity : AppCompatActivity(), SliderActions {
 
     override fun onSliderExit(pagerId : String) {
         Log.i(TAG,"onSliderExit called! ($pagerId)")
+        Util.writeBooleanSharedPreference(Constants.SHAR_SLIDE_MAIN_DONE,false,this)
         AnimationUtil.startIntentWithSlideInRightAnimation(this,
             Intent(this, MainActivity::class.java),null)
+        finish()
     }
 
 }

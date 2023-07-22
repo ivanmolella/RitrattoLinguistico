@@ -1,0 +1,28 @@
+[
+   {
+      "color": "01aef0",
+      "mapping": [
+         {
+            "item_code": "0",
+            "item_name": "cielo",
+            "x-init": 0,
+            "y-init": 0,
+            "x-end": 100,
+            "y-end": 60
+         }
+      ]
+   },
+   {
+      "color": "f5f9f8",
+      "mapping": [
+         {
+            "item_code": "0",
+            "item_name": "nuvole",
+            "x-init": 0,
+            "y-init": 0,
+            "x-end": 100,
+            "y-end": 60
+         }
+      ]
+   }
+]

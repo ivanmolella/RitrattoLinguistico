@@ -51,7 +51,7 @@
         tools:layout="@layout/fragment_ritratto_linguistico" />
     <fragment
         android:id="@+id/giardinoLinguisticoFragment2"
-        android:name="com.anastaasiasenyshyn.ritrattolinguistico.GiardinoLinguisticoFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.giardino.GiardinoLinguisticoFragment"
         android:label="fragment_giardino_linguistico2"
         tools:layout="@layout/fragment_giardino_linguistico2" />
     <fragment

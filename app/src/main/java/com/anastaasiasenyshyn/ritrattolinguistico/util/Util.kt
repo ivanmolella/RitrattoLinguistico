@@ -3,11 +3,15 @@ package com.anastaasiasenyshyn.ritrattolinguistico.util
 import android.app.Activity
 import android.content.Context
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.fragment.app.FragmentTransaction
+import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.ImageMapping
 
 class Util {
 
     companion object {
+
+        const val TAG = "Util"
         fun commitIfActivityAlive(activity: Activity, fragmentTransaction: FragmentTransaction) {
             if (isActivityAlive(activity)) {
                 try {
@@ -16,6 +20,21 @@ class Util {
                     e.printStackTrace()
                 }
             }
+        }
+
+        fun findMappedObject(
+            currentImageMapping: ImageMapping?,
+            pixelRGBCode: String,
+            xPerc: Int,
+            yPerc: Int
+        ): String? {
+            Log.i(TAG,"<findMappedObject> pixelRGBCode: $pixelRGBCode")
+            val imageMappingList = currentImageMapping?.filter { it.color == pixelRGBCode  }
+            return if (!imageMappingList.isNullOrEmpty()){
+                val imageMapping=imageMappingList[0]
+                val objMapping = imageMapping.mapping?.filter { xPerc >= it?.xInit!! && xPerc <= it?.xEnd!! && yPerc >= it?.yInit!! && yPerc <= it?.yEnd!!}
+                if (objMapping != null) objMapping[0]?.itemName else null
+            } else null
         }
 
         private fun isActivityAlive(activity: Activity?): Boolean {

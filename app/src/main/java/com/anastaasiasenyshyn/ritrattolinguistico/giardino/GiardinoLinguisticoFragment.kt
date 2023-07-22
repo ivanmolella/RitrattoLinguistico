@@ -1,6 +1,8 @@
-package com.anastaasiasenyshyn.ritrattolinguistico
+package com.anastaasiasenyshyn.ritrattolinguistico.giardino
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.util.Log
@@ -8,15 +10,15 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
+import android.view.ViewTreeObserver
+import android.widget.ImageView
+import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentGiardinoLinguistico2Binding
+import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.ImageMapping
+import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
+import com.google.gson.Gson
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -30,12 +32,15 @@ class GiardinoLinguisticoFragment : Fragment() {
 
     var binding : FragmentGiardinoLinguistico2Binding? = null
 
+    var imageX : Int? = null
+    var imageY : Int? = null
+
+    var bitmap : Bitmap?=null
+
+    var currentImageMapping : ImageMapping? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -44,37 +49,62 @@ class GiardinoLinguisticoFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentGiardinoLinguistico2Binding.inflate(inflater, container, false)
+        bitmap = binding!!.imgGiardino.drawable.toBitmap()
 
-        binding?.imgGiardino?.viewTreeObserver?.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+        binding?.imgGiardino?.viewTreeObserver?.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 binding?.imgGiardino?.viewTreeObserver?.removeGlobalOnLayoutListener(this)
-                val w: Int? = binding?.imgGiardino?.width
-                val h: Int? = binding?.imgGiardino?.height
-                Log.i(TAG,"w($w}) h(${h})")
+                imageX = binding?.imgGiardino?.width
+                imageY = binding?.imgGiardino?.height
+                Log.i(TAG, "<image> w($imageX}) h(${imageY})")
             }
         })
 
+        loadMappingPositions()
+
         binding?.imgGiardino?.setOnTouchListener { v, event ->
             if (event.getAction() === MotionEvent.ACTION_UP) {
-                val screenX: Float = event.getX()
-                val screenY: Float = event.getY()
-                val viewX: Float = screenX - v.getLeft()
-                val viewY: Float = screenY - v.getTop()
-                Log.i(TAG,"OnTouchListener ACTION_UP")
-//                Log.i(TAG,"OnTouchListener: screenX pixel ${screenX} screenY ${screenY} - viewX $viewX viewY $viewY")
-//                Log.i(TAG,"OnTouchListener: screenX dp ${convertPixelsToDp(screenX,requireContext())} screenY ${convertPixelsToDp(screenY,requireContext())} - viewX $viewX viewY $viewY")
-                true
-            }else if (event.getAction() === MotionEvent.ACTION_DOWN) {
-                Log.i(TAG,"OnTouchListener ACTION_DOWN")
-                true
-            }else if (event.getAction() === MotionEvent.ACTION_MOVE) {
-                Log.i(TAG,"OnTouchListener ACTION_MOVE")
-                true
+                val viewX = event.x.toInt()
+                val viewY = event.y.toInt()
+
+                val viewWidth: Int = v.getWidth()
+                val viewHeight: Int = v.getHeight()
+
+                val image = ((v as ImageView).drawable as BitmapDrawable).bitmap
+
+                val imageWidth = image.width
+                val imageHeight = image.height
+
+                val imageX =
+                    (viewX.toFloat() * (imageWidth.toFloat() / viewWidth.toFloat())).toInt()
+                val imageY =
+                    (viewY.toFloat() * (imageHeight.toFloat() / viewHeight.toFloat())).toInt()
+
+                val xPerc=(imageX*100)/imageWidth
+                val yPerc=(imageY*100)/imageHeight
+
+                val currPixel = image.getPixel(imageX, imageY)
+                val pixelRGBCode = "${Integer.toHexString(currPixel)}".substring(2)
+
+                val objectName = Util.findMappedObject(currentImageMapping,pixelRGBCode,xPerc,yPerc)
+
+                Log.i(TAG, "<image> bitmap width:${imageWidth} height:${imageHeight} touch x:$imageX($xPerc%) touch y:$imageY($yPerc%) color:#$pixelRGBCode objectName: $objectName")
             }
-            false
+
+            true
         }
 
         return binding?.root
+    }
+
+    private fun loadMappingPositions() {
+
+        val langJson = context?.assets?.open("mapping_giardino_1.json")?.bufferedReader().use { it?.readText() }
+
+        val gson = Gson()
+        currentImageMapping = gson.fromJson(langJson, ImageMapping::class.java)
+        Log.i(TAG,"currentImageMapping: $currentImageMapping")
     }
 
     fun convertDpToPixel(dp: Float, context: Context): Float {
@@ -106,10 +136,7 @@ class GiardinoLinguisticoFragment : Fragment() {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             GiardinoLinguisticoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+//
             }
     }
 }

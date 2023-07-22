@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GiardinoLinguisticoFragment"
+    tools:context=".giardino.GiardinoLinguisticoFragment"
     android:background="@android:color/holo_green_light">
 
     <LinearLayout
@@ -15,8 +15,9 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
             android:scaleType="centerCrop"
-            android:src="@drawable/giardino_delle_parole">
+            android:src="@drawable/giardino_linguistico_1">
         </ImageView>
 
     </LinearLayout>
