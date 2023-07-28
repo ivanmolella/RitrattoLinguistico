@@ -7,7 +7,7 @@ data class Mapping(
     @SerializedName("item_code")
     var itemCode: String?,
     @SerializedName("item_name")
-    var itemName: String?,
+    var itemItalianName: String?,
     @SerializedName("x-end")
     var xEnd: Int?,
     @SerializedName("x-init")

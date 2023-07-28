@@ -24,5 +24,10 @@
     <string name="msg_choose_language_title">Seleziona le lingue parlate in famiglia</string>
     <string name="family_languages">Lingue in Famiglia</string>
     <string name="ritratto_saved">Ritratto linguistico salvato</string>
+    <string name="no_image_detected">Nessuna immagine rilevata</string>
+    <string name="btn_close">Chiudi</string>
+    <string name="in_lang">In</string>
+    <string name="translated_word_is" formatted="false">%s in %s è %s</string>
+    <string name="write_translation" formatted="false">Scrivi %s in %s</string>
 
 </resources>

@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import android.util.Log
 import androidx.fragment.app.FragmentTransaction
 import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.ImageMapping
+import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.Mapping
 
 class Util {
 
@@ -27,13 +28,13 @@ class Util {
             pixelRGBCode: String,
             xPerc: Int,
             yPerc: Int
-        ): String? {
+        ): Mapping? {
             Log.i(TAG,"<findMappedObject> pixelRGBCode: $pixelRGBCode")
             val imageMappingList = currentImageMapping?.filter { it.color == pixelRGBCode  }
             return if (!imageMappingList.isNullOrEmpty()){
                 val imageMapping=imageMappingList[0]
                 val objMapping = imageMapping.mapping?.filter { xPerc >= it?.xInit!! && xPerc <= it?.xEnd!! && yPerc >= it?.yInit!! && yPerc <= it?.yEnd!!}
-                if (objMapping != null) objMapping[0]?.itemName else null
+                if (objMapping != null) objMapping[0] else null
             } else null
         }
 

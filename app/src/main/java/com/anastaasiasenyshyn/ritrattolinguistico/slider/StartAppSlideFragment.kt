@@ -1,12 +1,14 @@
 package com.anastaasiasenyshyn.ritrattolinguistico.slider
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentStartappslideBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment.Companion.SLIDER_IMG_ID
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment.Companion.SLIDER_POSITION
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment.Companion.SLIDER_TEXT
 
 
@@ -44,13 +46,19 @@ class StartAppSlideFragment : Fragment() {
 
         val imgText = arguments?.getString(SLIDER_TEXT)
         val imgId = arguments?.getInt(SLIDER_IMG_ID)
+        val position = arguments?.getInt(SLIDER_POSITION)
+
+        Log.i(TAG,"StartAppSlideFragment id: $position")
 
         binding.rlImage.setImageResource(imgId!!)
         binding.payoff.text = "${imgText}"
+
         return binding.root
     }
 
     companion object {
+
+        const val TAG = "StartAppSlideFragment"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

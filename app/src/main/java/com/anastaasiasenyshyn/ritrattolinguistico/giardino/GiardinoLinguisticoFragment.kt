@@ -12,10 +12,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.customview.customView
+import com.afollestad.materialdialogs.customview.getCustomView
+import com.anastaasiasenyshyn.ritrattolinguistico.Constants
+import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentGiardinoLinguistico2Binding
+import com.anastaasiasenyshyn.ritrattolinguistico.model.FamilyLanguages
 import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.ImageMapping
+import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.Mapping
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 import com.google.gson.Gson
 
@@ -38,6 +48,9 @@ class GiardinoLinguisticoFragment : Fragment() {
     var bitmap : Bitmap?=null
 
     var currentImageMapping : ImageMapping? = null
+    var currentGiardinoPage : Int = 0
+
+    var wordListAdapter : WordListAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,18 +97,69 @@ class GiardinoLinguisticoFragment : Fragment() {
                 val xPerc=(imageX*100)/imageWidth
                 val yPerc=(imageY*100)/imageHeight
 
-                val currPixel = image.getPixel(imageX, imageY)
+                val currPixel = image.getPixel(imageX, imageY )
                 val pixelRGBCode = "${Integer.toHexString(currPixel)}".substring(2)
 
-                val objectName = Util.findMappedObject(currentImageMapping,pixelRGBCode,xPerc,yPerc)
-
-                Log.i(TAG, "<image> bitmap width:${imageWidth} height:${imageHeight} touch x:$imageX($xPerc%) touch y:$imageY($yPerc%) color:#$pixelRGBCode objectName: $objectName")
+                val objMapping = Util.findMappedObject(currentImageMapping,pixelRGBCode,xPerc,yPerc)
+                if (objMapping == null){
+                    Toast.makeText(requireContext(),getString(R.string.no_image_detected),Toast.LENGTH_SHORT).show()
+                }else {
+                    showTranslateWordDialog(objMapping)
+                }
+                Log.i(TAG, "<image> bitmap width:${imageWidth} height:${imageHeight} touch x:$imageX($xPerc%) touch y:$imageY($yPerc%) color:#$pixelRGBCode objectName: $objMapping")
             }
 
             true
         }
 
         return binding?.root
+    }
+
+    private fun showTranslateWordDialog(objMapping: Mapping) {
+
+        val dialog = MaterialDialog(requireActivity())
+            .title(text = objMapping.itemItalianName?.capitalize())
+            .customView(R.layout.translate_word_dialog)
+            .positiveButton(text = getString(R.string.btn_close).toUpperCase())
+            .cancelable(false)
+        val viewDialog = dialog.getCustomView()
+        
+        loadCustomView(viewDialog,objMapping)
+
+        dialog.show {
+
+        }
+
+        //mPromemoriaInDialog = viewDialog!!.findViewById(R.id.dialog_promemoria_text_promemoria)
+
+    }
+
+    private fun loadCustomView(viewDialog: View, objMapping: Mapping) {
+        val familyLanguage =
+            Util.readStringSharedPreference(Constants.SHAR_LANG_SELECTED, requireContext())
+
+        val gson = Gson()
+        val selectedLanguages = gson.fromJson(familyLanguage,FamilyLanguages::class.java)
+        if (selectedLanguages != null) {
+            Log.i(TAG, "familyLanguage: $selectedLanguages")
+        }
+        val itemList = buildWordItemList(selectedLanguages)
+        val wordListRecycler : RecyclerView = viewDialog.findViewById(R.id.word_list) as RecyclerView
+
+        wordListAdapter = WordListAdapter(requireContext(),itemList,currentGiardinoPage,objMapping)
+        wordListRecycler.adapter=wordListAdapter
+        wordListRecycler.layoutManager=LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+
+    }
+
+    private fun buildWordItemList(selectedLanguages: FamilyLanguages?) : List<WordListItem>{
+        val itemList : MutableList<WordListItem> = mutableListOf()
+        selectedLanguages?.languages?.forEach {
+            val item = WordListItem()
+            item.message=it
+            itemList.add(item)
+        }
+        return itemList
     }
 
     private fun loadMappingPositions() {

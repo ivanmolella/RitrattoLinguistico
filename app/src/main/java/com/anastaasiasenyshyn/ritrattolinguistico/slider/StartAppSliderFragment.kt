@@ -149,6 +149,38 @@ class StartAppSliderFragment : Fragment() {
                 val btn_msg = if (position == sliderItems.size -1) "FINE" else "AVANTI"
                 currentPagerPosition = position
                 binding.nextSlideBtn.text = btn_msg
+                when(position){
+                    0 -> {
+                        binding.startSlideArrowLeft.visibility=View.GONE
+                        binding.startSlideArrowRight.visibility=View.VISIBLE
+                        binding.startSlideArrowRight.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition + 1)?.select()
+                        }
+                    }
+
+                    1 -> {
+                        binding.startSlideArrowLeft.visibility=View.VISIBLE
+                        binding.startSlideArrowRight.visibility=View.VISIBLE
+                        binding.startSlideArrowLeft.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition - 1)?.select()
+                        }
+                        binding.startSlideArrowRight.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition + 1)?.select()
+                        }
+                    }
+
+                    2 -> {
+                        binding.startSlideArrowLeft.visibility=View.VISIBLE
+                        binding.startSlideArrowRight.visibility=View.GONE
+                        binding.startSlideArrowLeft.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition - 1)?.select()
+                        }
+                    }
+                }
             }
         })
 
