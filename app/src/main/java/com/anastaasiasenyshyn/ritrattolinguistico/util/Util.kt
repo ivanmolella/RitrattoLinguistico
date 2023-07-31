@@ -5,6 +5,7 @@ import android.content.Context
 import android.preference.PreferenceManager
 import android.util.Log
 import androidx.fragment.app.FragmentTransaction
+import com.anastaasiasenyshyn.ritrattolinguistico.giardino.WordListItem
 import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.ImageMapping
 import com.anastaasiasenyshyn.ritrattolinguistico.model.imagemapping.Mapping
 
@@ -13,6 +14,13 @@ class Util {
     companion object {
 
         const val TAG = "Util"
+
+        fun trim(s: String): String {
+            return s.filter { it.isLetterOrDigit() }
+        }
+        fun getTranslatedObjectName(){
+
+        }
         fun commitIfActivityAlive(activity: Activity, fragmentTransaction: FragmentTransaction) {
             if (isActivityAlive(activity)) {
                 try {
@@ -93,6 +101,10 @@ class Util {
             val editor = preferences.edit()
             editor.putLong(sharedKey, value!!)
             editor.commit()
+        }
+
+        fun getTranslatedWordKey(currentGiardinoPage: Int, itemItalianName: String, itemLang: String): String {
+            return "${currentGiardinoPage}_${itemItalianName}_${trim(itemLang)}"
         }
     }
 }

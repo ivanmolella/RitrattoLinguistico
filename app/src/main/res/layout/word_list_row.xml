@@ -25,6 +25,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
             <LinearLayout
+                android:id="@+id/btn_write_translation"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -32,7 +33,7 @@
                 android:gravity="center"
                 android:background="@drawable/btn_bg_white_outline">
                 <TextView
-                    android:id="@+id/btn_write_translation"
+                    android:id="@+id/btn_write_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Scrivi"

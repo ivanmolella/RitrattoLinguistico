@@ -29,5 +29,8 @@
     <string name="in_lang">In</string>
     <string name="translated_word_is" formatted="false">%s in %s è %s</string>
     <string name="write_translation" formatted="false">Scrivi %s in %s</string>
+    <string name="btn_modify">Modifica</string>
+    <string name="btn_write">Scrivi</string>
+    <string name="btnSave">Salva</string>
 
 </resources>

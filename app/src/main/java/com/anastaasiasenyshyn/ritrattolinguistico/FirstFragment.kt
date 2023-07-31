@@ -157,7 +157,7 @@ class FirstFragment : Fragment() {
             .cancelable(false)
             .show {
                 val myItems = listOf("Hello", "World")
-                listItemsMultiChoice(initialSelection = initSelection,items = languages.map { it.name as CharSequence }) { _, selectedIndex, text ->
+                listItemsMultiChoice(initialSelection = initSelection,items = languages.map { it.nativeName as CharSequence }) { _, selectedIndex, text ->
                     Log.i(TAG, "Choosen Item: $text ($selectedIndex)")
                     val familyLanguages = FamilyLanguages()
                     text.forEachIndexed { index, lang ->

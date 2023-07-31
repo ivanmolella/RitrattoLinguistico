@@ -31,5 +31,8 @@
     <string name="in_lang">In</string>
     <string name="translated_word_is" formatted="false">%s in %s is %s</string>
     <string name="write_translation" formatted="false">Write %s in %s</string>
+    <string name="btn_modify">Update</string>
+    <string name="btn_write">Write</string>
+    <string name="btnSave">Save</string>
 
 </resources>

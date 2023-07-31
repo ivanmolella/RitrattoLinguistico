@@ -13,10 +13,10 @@ import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 
 class WordListItem {
 
-    var message: String? = null
+    var word: String? = null
 
     constructor(message: String) {
-        this.message = message
+        this.word = message
     }
 
     constructor() {}
@@ -27,7 +27,8 @@ class WordListAdapter(
     private val mContext: Context,
     private var modelList: List<WordListItem>?,
     private var currentGiardinoPage: Int,
-    private var wordMapping: Mapping
+    private var wordMapping: Mapping,
+    private var onButtonClick : (Int,String,String) -> (Unit)
 ) : RecyclerView.Adapter<WordListAdapter.ViewHolder>() {
 
     companion object {
@@ -59,23 +60,26 @@ class WordListAdapter(
             val wordTranslation : String? = findWordTranslation(item,currentGiardinoPage,wordMapping)
             var displayedItem = ""
             if (wordTranslation != null){
-                displayedItem=String.format(mContext.getString(R.string.translated_word_is),"${wordMapping.itemItalianName?.capitalize()}","${item.message?.capitalize()}","${wordTranslation.capitalize()}")
+                displayedItem=String.format(mContext.getString(R.string.translated_word_is),"${wordMapping.itemItalianName?.capitalize()}","${item.word?.capitalize()}","${wordTranslation.capitalize()}")
                 setBtnAsModify(holder,item)
             }else {
-                displayedItem=String.format(mContext.getString(R.string.write_translation),"${wordMapping.itemItalianName?.capitalize()}","${item.message?.capitalize()}")
+                displayedItem=String.format(mContext.getString(R.string.write_translation),"${wordMapping.itemItalianName?.capitalize()}","${item.word?.capitalize()}")
                 setBtnAsWrite(holder,item)
             }
             Log.i(TAG,"displayedItem: $displayedItem")
             holder.word?.text = displayedItem
+            holder.btnWrite?.setOnClickListener {
+                onButtonClick(currentGiardinoPage,wordMapping.itemItalianName!!,Util.trim(item.word!!))
+            }
         }
     }
 
-    private fun setBtnAsModify(holder: WordListAdapter.ViewHolder, item: WordListItem) {
-
+    private fun setBtnAsModify(holder: ViewHolder, item: WordListItem) {
+        holder.btnText?.text = mContext.getString(R.string.btn_modify)
     }
 
-    private fun setBtnAsWrite(holder: WordListAdapter.ViewHolder, item: WordListItem) {
-
+    private fun setBtnAsWrite(holder: ViewHolder, item: WordListItem) {
+        holder.btnText?.text = mContext.getString(R.string.btn_write)
     }
 
     private fun findWordTranslation(
@@ -83,9 +87,8 @@ class WordListAdapter(
         currentGiardinoPage: Int,
         wordMapping: Mapping
     ): String? {
-        val savedTranslatedWordKey =
-            "${currentGiardinoPage}_${wordMapping.itemItalianName}_${item.message}"
-        Log.i(TAG, "findWordTranslation key: $savedTranslatedWordKey")
+        val savedTranslatedWordKey = Util.getTranslatedWordKey(currentGiardinoPage,wordMapping.itemItalianName!!,item.word!!)
+        Log.i(TAG, "Translated key (read): $savedTranslatedWordKey")
 
         return Util.readStringSharedPreference(savedTranslatedWordKey, mContext)
     }
@@ -103,8 +106,12 @@ class WordListAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var word : TextView?=null
+        var btnWrite : View?=null
+        var btnText : TextView?=null
         init {
             word = itemView.findViewById(R.id.word)
+            btnWrite = itemView.findViewById(R.id.btn_write_translation)
+            btnText = itemView.findViewById(R.id.btn_write_text)
         }
     }
 

@@ -11,6 +11,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.graphics.drawable.toBitmap
@@ -145,18 +146,37 @@ class GiardinoLinguisticoFragment : Fragment() {
         }
         val itemList = buildWordItemList(selectedLanguages)
         val wordListRecycler : RecyclerView = viewDialog.findViewById(R.id.word_list) as RecyclerView
-
-        wordListAdapter = WordListAdapter(requireContext(),itemList,currentGiardinoPage,objMapping)
+        val saveWordPanel : View = viewDialog.findViewById(R.id.saveWordPanel)
+        val editWord : EditText = viewDialog.findViewById(R.id.editWord)
+        val btnSave : View = viewDialog.findViewById(R.id.btnSaveWord)
+        btnSave.isClickable = true
+        wordListAdapter = WordListAdapter(requireContext(),itemList,currentGiardinoPage,objMapping){ itemPage,itemItalianName,itemLang ->
+            Log.i(TAG,"OnClick pressed: $itemPage-$itemItalianName-${Util.trim(itemLang)}")
+            saveWordPanel.visibility=View.VISIBLE
+            btnSave.setOnClickListener {
+                saveWordPanel.visibility=View.GONE
+                val itemTranslated = editWord.text.toString()
+                editWord.setText("")
+                saveTranslatedWord(itemPage,itemItalianName,itemLang,itemTranslated)
+            }
+        }
         wordListRecycler.adapter=wordListAdapter
         wordListRecycler.layoutManager=LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
 
+    }
+
+    private fun saveTranslatedWord(itemPage: Int, itemItalianName: String, itemLang: String, itemTranslated: String?) {
+        val key = Util.getTranslatedWordKey(itemPage,itemItalianName,itemLang)
+        Log.i(TAG,"Translated key (write): $key --> $itemTranslated")
+        Util.writeStringSharedPreference(key,itemTranslated!!,requireContext())
+        wordListAdapter?.notifyDataSetChanged()
     }
 
     private fun buildWordItemList(selectedLanguages: FamilyLanguages?) : List<WordListItem>{
         val itemList : MutableList<WordListItem> = mutableListOf()
         selectedLanguages?.languages?.forEach {
             val item = WordListItem()
-            item.message=it
+            item.word=it
             itemList.add(item)
         }
         return itemList
