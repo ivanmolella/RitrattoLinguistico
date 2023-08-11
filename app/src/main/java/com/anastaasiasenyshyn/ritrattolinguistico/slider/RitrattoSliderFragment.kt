@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentPagerBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentPagerRitrattoBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 
@@ -29,7 +30,7 @@ class RitrattoSliderFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit var binding: FragmentPagerBinding
+    lateinit var binding: FragmentPagerRitrattoBinding
     private var viewPager: ViewPager2? = null
 
     val handler : Handler = Handler(Looper.getMainLooper())
@@ -69,11 +70,15 @@ class RitrattoSliderFragment : Fragment() {
 
     data class SliderItem(
         val sliderId : String? = null,
-        val sliderText: String? = null,
-        val sliderImageId: Int? = null
+        val sliderText1: String? = null,
+        val sliderImageId1: Int? = null,
+        val sliderText2: String? = null,
+        val sliderImageId2: Int? = null
     ) : Parcelable {
         constructor(parcel: Parcel) : this(
             parcel.readString(),
+            parcel.readString(),
+            parcel.readValue(Int::class.java.classLoader) as? Int,
             parcel.readString(),
             parcel.readValue(Int::class.java.classLoader) as? Int
         ) {
@@ -81,8 +86,10 @@ class RitrattoSliderFragment : Fragment() {
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
             parcel.writeString(sliderId)
-            parcel.writeString(sliderText)
-            parcel.writeValue(sliderImageId)
+            parcel.writeString(sliderText1)
+            parcel.writeValue(sliderImageId1)
+            parcel.writeString(sliderText2)
+            parcel.writeValue(sliderImageId2)
         }
 
         override fun describeContents(): Int {
@@ -108,14 +115,16 @@ class RitrattoSliderFragment : Fragment() {
             var frag : Fragment? = null
 
             if (position == 0){
-                frag = RitrattoSlideFragment1()
+                frag = RitrattoSlideFragment2()
             }else{
                 frag = RitrattoSlideFragment2()
             }
             val sliderItem = sliderItems?.get(position)
             val bundle = Bundle()
-            bundle.putString(SLIDER_TEXT, sliderItem?.sliderText)
-            bundle.putInt(SLIDER_IMG_ID, sliderItem?.sliderImageId!!)
+            bundle.putString(SLIDER_TEXT_1, sliderItem?.sliderText1)
+            bundle.putInt(SLIDER_IMG_ID_1, sliderItem?.sliderImageId1!!)
+            bundle.putString(SLIDER_TEXT_2, sliderItem?.sliderText2)
+            bundle.putInt(SLIDER_IMG_ID_2, sliderItem?.sliderImageId2!!)
             bundle.putInt(SLIDER_NUM_ITEM, sliderItems?.size!!)
             bundle.putInt(SLIDER_POSITION, position)
             frag.arguments = bundle
@@ -138,7 +147,7 @@ class RitrattoSliderFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentPagerBinding.inflate(layoutInflater)
+        binding = FragmentPagerRitrattoBinding.inflate(layoutInflater)
         viewPager = binding.pgrPager
 
         val sliderItems : List<SliderItem> = arguments?.getParcelableArrayList(SLIDERS)!!
@@ -154,6 +163,38 @@ class RitrattoSliderFragment : Fragment() {
                 val btn_msg = if (position == sliderItems.size -1) "FINE" else "AVANTI"
                 currentPagerPosition = position
                 binding.nextSlideBtn.text = btn_msg
+                when(position){
+                    0 -> {
+                        binding.startSlideArrowLeft.visibility=View.GONE
+                        binding.startSlideArrowRight.visibility=View.VISIBLE
+                        binding.startSlideArrowRight.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition + 1)?.select()
+                        }
+                    }
+
+                    1,2 -> {
+                        binding.startSlideArrowLeft.visibility=View.VISIBLE
+                        binding.startSlideArrowRight.visibility=View.VISIBLE
+                        binding.startSlideArrowLeft.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition - 1)?.select()
+                        }
+                        binding.startSlideArrowRight.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition + 1)?.select()
+                        }
+                    }
+
+                    3 -> {
+                        binding.startSlideArrowLeft.visibility=View.VISIBLE
+                        binding.startSlideArrowRight.visibility=View.GONE
+                        binding.startSlideArrowLeft.setOnClickListener {
+                            handler.removeCallbacksAndMessages(null)
+                            binding.pgrTabs.getTabAt(currentPagerPosition - 1)?.select()
+                        }
+                    }
+                }
             }
         })
 
@@ -204,8 +245,10 @@ class RitrattoSliderFragment : Fragment() {
 
         const val SLIDERS = "SLIDERS"
         const val SLIDER_POLICY = "SLIDER_POLICY"
-        const val SLIDER_TEXT = "SLIDER_TEXT"
-        const val SLIDER_IMG_ID = "SLIDER_IMG_ID"
+        const val SLIDER_TEXT_1 = "SLIDER_TEXT_1"
+        const val SLIDER_IMG_ID_1 = "SLIDER_IMG_ID_1"
+        const val SLIDER_TEXT_2 = "SLIDER_TEXT_2"
+        const val SLIDER_IMG_ID_2 = "SLIDER_IMG_ID_2"
         const val SLIDER_NUM_ITEM = "SLIDER_ITEMS"
         const val SLIDER_POSITION = "SLIDER_POSITION"
         const val SLIDER_ID = "SLIDER_ID"

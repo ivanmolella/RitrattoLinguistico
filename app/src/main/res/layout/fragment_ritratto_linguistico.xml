@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="9"
-                    android:src="@drawable/sagoma_ritratto">
+                    android:src="@drawable/tmp_sagoma_ritratto">
                 </com.anastaasiasenyshyn.ritrattolinguistico.drawing.DrawingImageView>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -109,37 +109,49 @@
                         android:text="PALETTE">
                     </TextView>
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
-                    <Button
-                        android:id="@+id/btnPaintSlider"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/baseline_border_color_24">
-                    </Button>
-                    <Button
-                        android:id="@+id/btnUndo"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/baseline_undo_24">
-                    </Button>
-                    <Button
-                        android:id="@+id/btnPalette"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/baseline_palette_24">>
-                    </Button>
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:id="@+id/btnPaintSlider"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/btn_paint_small">
+                        </ImageButton>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:id="@+id/btnUndo"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/btn_undo_small">
+                        </ImageButton>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:id="@+id/btnPalette"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/btn_palette_small">>
+                        </ImageButton>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <FrameLayout

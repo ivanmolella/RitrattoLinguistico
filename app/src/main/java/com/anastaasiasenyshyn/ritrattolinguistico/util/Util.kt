@@ -42,7 +42,7 @@ class Util {
             return if (!imageMappingList.isNullOrEmpty()){
                 val imageMapping=imageMappingList[0]
                 val objMapping = imageMapping.mapping?.filter { xPerc >= it?.xInit!! && xPerc <= it?.xEnd!! && yPerc >= it?.yInit!! && yPerc <= it?.yEnd!!}
-                if (objMapping != null) objMapping[0] else null
+                if (!objMapping.isNullOrEmpty()) objMapping[0] else null
             } else null
         }
 

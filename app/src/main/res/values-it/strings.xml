@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">RitrattoLinguistico</string>
     <string name="action_settings">Impostazioni</string>
-    <string name="first_fragment_label">Primo Fragment</string>
+    <string name="first_fragment_label">Ritratto Linguistico</string>
     <string name="second_fragment_label">Secondo Fragment</string>
     <string name="next">Successivo</string>
     <string name="previous">Precedente</string>
@@ -32,5 +32,12 @@
     <string name="btn_modify">Modifica</string>
     <string name="btn_write">Scrivi</string>
     <string name="btnSave">Salva</string>
+    <string name="consapevolezza_linguistica">Consapevolezza linquistica. Scopri i vantaggi del plurilinguismo e migliora la consapevolezza linguistica della tua famiglia.</string>
+    <string name="identita_linguistica">Identità linguistica. Favorisci la scoperta dell\'identità linguistica e culturale del tuo bambino.</string>
+    <string name="lessico_plurilinguistico">Il lessico plurilinguistico a portata di mano.</string>
+    <string name="how_to_create_portrait">Come creare il tuo ritratto</string>
+    <string name="giardino_linguistico">Giardino Linguistico</string>
+    <string name="sistemi_di_scrittura">Sistemi di scrittura</string>
+    <string name="scopri_di_piu">Scopri di più</string>
 
 </resources>

@@ -79,7 +79,7 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     private fun initView() {
         //TODO Scommentare
-        val isSlideRequired = checkSlideRequired()
+        val isSlideRequired = true //checkSlideRequired()
         if (isSlideRequired) {
             initViewForSlider()
         } else {
@@ -351,25 +351,32 @@ class RitrattoLinguisticoFragment : Fragment() {
         var sliderItems: MutableList<RitrattoSliderFragment.SliderItem>? = mutableListOf(
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                R.drawable.sagoma_ritratto
+                "1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
+                "2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
+                ),
+            RitrattoSliderFragment.SliderItem(
+                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
+                "3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
+                "4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
             ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "",
-                R.drawable.carosello_ritratto_linguistico_2
+                "5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
+                "6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
             ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "",
-                R.drawable.carosello_ritratto_linguistico_3
-            ),
-            RitrattoSliderFragment.SliderItem(
-                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "",
-                R.drawable.carosello_ritratto_linguistico_4
+                "7 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
+                "8 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                R.drawable.img_avatar_ritratto_linguistico,
             )
-
         )
         val sliderPolicy : RitrattoSliderFragment.SliderPolicy =
             RitrattoSliderFragment.SliderPolicy(autostartSlideShow = false)

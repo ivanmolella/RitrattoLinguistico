@@ -42,11 +42,11 @@ class RitrattoSlideFragment1 : Fragment() {
             inflater, container, false
         )
 
-        val imgText = arguments?.getString(RitrattoSliderFragment.SLIDER_TEXT)
-        val imgId = arguments?.getInt(RitrattoSliderFragment.SLIDER_IMG_ID)
+        val imgText1 = arguments?.getString(RitrattoSliderFragment.SLIDER_TEXT_1)
+        val imgId1 = arguments?.getInt(RitrattoSliderFragment.SLIDER_IMG_ID_1)
 
-        binding.rlImage.setImageResource(imgId!!)
-        binding.payoff.text = "$imgText"
+        binding.rlImage.setImageResource(imgId1!!)
+        binding.payoff.text = "$imgText1"
         return binding.root
     }
 

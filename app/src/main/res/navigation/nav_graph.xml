@@ -42,21 +42,21 @@
     <fragment
         android:id="@+id/scopriDiPiuFragment"
         android:name="com.anastaasiasenyshyn.ritrattolinguistico.ScopriDiPiuFragment"
-        android:label="fragment_scopri_di_piu"
+        android:label="@string/scopri_di_piu"
         tools:layout="@layout/fragment_scopri_di_piu" />
     <fragment
         android:id="@+id/ritrattoLinguisticoFragment"
         android:name="com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment"
-        android:label="fragment_ritratto_linguistico"
+        android:label="@string/how_to_create_portrait"
         tools:layout="@layout/fragment_ritratto_linguistico" />
     <fragment
         android:id="@+id/giardinoLinguisticoFragment2"
         android:name="com.anastaasiasenyshyn.ritrattolinguistico.giardino.GiardinoLinguisticoFragment"
-        android:label="fragment_giardino_linguistico2"
+        android:label="@string/giardino_linguistico"
         tools:layout="@layout/fragment_giardino_linguistico2" />
     <fragment
         android:id="@+id/sistemiDiScritturaFragment"
         android:name="com.anastaasiasenyshyn.ritrattolinguistico.SistemiDiScritturaFragment"
-        android:label="fragment_sistemi_di_scrittura"
+        android:label="@string/sistemi_di_scrittura"
         tools:layout="@layout/fragment_sistemi_di_scrittura" />
 </navigation>

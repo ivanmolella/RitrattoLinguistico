@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/home_bg">
+<!--        android:background="@drawable/home_bg">-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -28,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/tmp_img_mappamondo">
+                android:background="@drawable/logo_small">
             </ImageView>
 
         </LinearLayout>
@@ -37,7 +38,6 @@
             android:layout_height="0dp"
             android:layout_weight="2.3"
             android:orientation="vertical">
-
 
             <Button
                 android:id="@+id/scopriDiPiuBtn"
@@ -48,9 +48,10 @@
                 android:layout_marginEnd="25dp"
                 android:layout_marginTop="25dp"
                 android:backgroundTint="#FFFFFF"
-                android:drawableLeft="@drawable/tmp_img_scopri_di_piu"
+                android:drawableLeft="@drawable/ico_btn_scopri_home_small"
                 android:text="@string/scopridipiùbutton"
                 android:textColor="@color/black"
+                android:fontFamily="@font/notoserif_semibold"
                 android:textSize="14sp"></Button>
 
             <Button
@@ -62,7 +63,8 @@
                 android:layout_marginEnd="25dp"
                 android:layout_marginTop="25dp"
                 android:backgroundTint="#FFFFFF"
-                android:drawableLeft="@drawable/tmp_img_ritratto_linguistico"
+                android:drawableLeft="@drawable/ico_btn_ritratto_home_small"
+                android:fontFamily="@font/notoserif_semibold"
                 android:text="@string/ritrattolinguisticobutton"
                 android:textColor="@color/black"
                 android:textSize="14sp">
@@ -78,9 +80,10 @@
                 android:layout_marginEnd="25dp"
                 android:layout_marginTop="25dp"
                 android:backgroundTint="#FFFFFF"
-                android:drawableLeft="@drawable/tmp_img_giardino_linguistico"
+                android:drawableLeft="@drawable/ico_btn_giardino_home_small"
                 android:text="@string/giardinolinguisticobutton"
                 android:textColor="@color/black"
+                android:fontFamily="@font/notoserif_semibold"
                 android:textSize="14sp">
 
             </Button>
@@ -95,11 +98,11 @@
                 android:layout_marginEnd="25dp"
                 android:layout_marginTop="25dp"
                 android:backgroundTint="#FFFFFF"
-                android:drawableLeft="@drawable/tmp_img_sistemi_scrittura"
+                android:drawableLeft="@drawable/ico_btn_sistemi_home_small"
                 android:text="@string/sistemiscritturabutton"
                 android:textColor="@color/black"
+                android:fontFamily="@font/notoserif_semibold"
                 android:textSize="14sp">
-
             </Button>
 
         </LinearLayout>

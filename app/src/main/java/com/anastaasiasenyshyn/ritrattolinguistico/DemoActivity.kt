@@ -65,11 +65,11 @@ class DemoActivity : AppCompatActivity(), SliderActions {
         var sliderItems : MutableList<StartAppSliderFragment.SliderItem>? = mutableListOf(
             StartAppSliderFragment.SliderItem(
                 Constants.ID_SLIDER_AFTER_SPLASH,
-                "Consapevolezza linqua. Scopri i vantaggi del plurilinguismo e migliora la consapevolezza linguistica della tua famiglia.",
+                getString(R.string.consapevolezza_linguistica),
                 R.drawable.rl_1
             ),
-            StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,"Identità linguistica. Favorisci la scoperta dell'identità linguistica e culturale del tuo bambino.", R.drawable.rl_2),
-            StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,"Il lessico plurilingue a portata di mano.", R.drawable.rl_3)
+            StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,getString(R.string.identita_linguistica), R.drawable.rl_2),
+            StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,getString(R.string.lessico_plurilinguistico), R.drawable.rl_3)
         )
         val sliderPolicy : StartAppSliderFragment.SliderPolicy = StartAppSliderFragment.SliderPolicy(autostartSlideShow = true)
         val args = Bundle()

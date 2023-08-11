@@ -2,7 +2,7 @@
     <string name="app_name">RitrattoLinguistico</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
+    <string name="first_fragment_label">Language Portrait</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -34,5 +34,12 @@
     <string name="btn_modify">Update</string>
     <string name="btn_write">Write</string>
     <string name="btnSave">Save</string>
+    <string name="consapevolezza_linguistica">Linquistic awareness. Discover the benefits of multilingualism and improve your family\'s language awareness.</string>
+    <string name="identita_linguistica">Linguistic identity. Encourage the discovery of your child\'s linguistic and cultural identity.</string>
+    <string name="lessico_plurilinguistico">The multilingual lexicon at your fingertips.</string>
+    <string name="how_to_create_portrait">How to create your Portrait</string>
+    <string name="giardino_linguistico">Language Garden</string>
+    <string name="sistemi_di_scrittura">Writing systems</string>
+    <string name="scopri_di_piu">Discover more</string>
 
 </resources>

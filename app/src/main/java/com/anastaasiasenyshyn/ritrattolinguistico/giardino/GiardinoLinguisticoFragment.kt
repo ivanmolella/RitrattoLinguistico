@@ -122,7 +122,7 @@ class GiardinoLinguisticoFragment : Fragment() {
             .title(text = objMapping.itemItalianName?.capitalize())
             .customView(R.layout.translate_word_dialog)
             .positiveButton(text = getString(R.string.btn_close).toUpperCase())
-            .cancelable(false)
+            .cancelable(true)
         val viewDialog = dialog.getCustomView()
         
         loadCustomView(viewDialog,objMapping)
