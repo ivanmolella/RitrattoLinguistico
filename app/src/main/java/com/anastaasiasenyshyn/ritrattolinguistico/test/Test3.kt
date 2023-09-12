@@ -6,17 +6,21 @@ fun main() {
     //val array = mutableListOf(4,23,15,21,3,80,1800)
     val array = mutableListOf(3,4,15,21,23,80,1800)
 
-    print("Unordered: ")
-    array.forEach { element ->
-        print("$element ")
-    }
+    val date = "20230910"
 
-    bubleSort(array)
+    println("Substring date: ${date.substring(0,6)}")
 
-    print("\nOrdered: ")
-    array.forEach { element ->
-        print("$element ")
-    }
+//    print("Unordered: ")
+//    array.forEach { element ->
+//        print("$element ")
+//    }
+//
+//    bubleSort(array)
+//
+//    print("\nOrdered: ")
+//    array.forEach { element ->
+//        print("$element ")
+//    }
 
 
 
