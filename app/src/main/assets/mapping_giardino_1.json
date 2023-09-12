@@ -461,5 +461,44 @@
         "y-end": 45
       }
     ]
+  },
+  {
+    "color": "e44f50",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "coccinella",
+        "x-init": 75,
+        "y-init": 89,
+        "x-end": 84,
+        "y-end": 95
+      }
+    ]
+  },
+  {
+    "color": "4d2c2d",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "coccinella",
+        "x-init": 75,
+        "y-init": 89,
+        "x-end": 84,
+        "y-end": 95
+      }
+    ]
+  },
+  {
+    "color": "1a1a1a",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "coccinella",
+        "x-init": 75,
+        "y-init": 89,
+        "x-end": 84,
+        "y-end": 95
+      }
+    ]
   }
 ]
