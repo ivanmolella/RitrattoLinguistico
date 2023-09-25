@@ -1,27 +1,28 @@
 [
+
   {
-    "color": "00aeef",
+    "color": "fbd873",
     "mapping": [
       {
         "item_code": "0",
-        "item_name": "cielo",
+        "item_name": "muro",
         "x-init": 0,
         "y-init": 0,
         "x-end": 100,
-        "y-end": 54
+        "y-end": 35
       }
     ]
   },
   {
-    "color": "ffffff",
+    "color": "c2d952",
     "mapping": [
       {
         "item_code": "1",
-        "item_name": "nuvola",
+        "item_name": "credenza",
         "x-init": 0,
-        "y-init": 0,
-        "x-end": 100,
-        "y-end": 36
+        "y-init": 27,
+        "x-end": 42,
+        "y-end": 42
       }
     ]
   },
@@ -29,358 +30,436 @@
     "color": "8eb936",
     "mapping": [
       {
-        "item_code": "2",
-        "item_name": "albero",
+        "item_code": "1",
+        "item_name": "credenza",
         "x-init": 0,
-        "y-init": 0,
-        "x-end": 60,
-        "y-end": 50
+        "y-init": 27,
+        "x-end": 42,
+        "y-end": 43
       }
     ]
   },
   {
-    "color": "67933e",
+    "color": "f7f6f5",
     "mapping": [
       {
         "item_code": "2",
-        "item_name": "albero",
-        "x-init": 0,
-        "y-init": 0,
-        "x-end": 51,
-        "y-end": 50
+        "item_name": "bicchiere",
+        "x-init": 29,
+        "y-init": 30,
+        "x-end": 37,
+        "y-end": 32
       }
     ]
   },
   {
-    "color": "67923d",
+    "color": "f2f1f0",
     "mapping": [
       {
         "item_code": "2",
-        "item_name": "albero",
-        "x-init": 0,
-        "y-init": 0,
-        "x-end": 26,
-        "y-end": 77
+        "item_name": "bicchiere",
+        "x-init": 29,
+        "y-init": 30,
+        "x-end": 37,
+        "y-end": 32
       }
     ]
   },
   {
-    "color": "5a3b00",
+    "color": "f2f1f0",
     "mapping": [
       {
         "item_code": "2",
-        "item_name": "albero",
-        "x-init": 0,
-        "y-init": 0,
-        "x-end": 15,
-        "y-end": 78
+        "item_name": "bicchiere",
+        "x-init": 29,
+        "y-init": 30,
+        "x-end": 37,
+        "y-end": 32
       }
     ]
   },
   {
-    "color": "855914",
-    "mapping": [
-      {
-        "item_code": "2",
-        "item_name": "albero",
-        "x-init": 0,
-        "y-init": 0,
-        "x-end": 25,
-        "y-end": 78
-      }
-    ]
-  },
-  {
-    "color": "ec148e",
+    "color": "ddefb1",
     "mapping": [
       {
         "item_code": "3",
-        "item_name": "finestra",
-        "x-init": 16,
-        "y-init": 39,
-        "x-end": 89,
-        "y-end": 69
+        "item_name": "spezie",
+        "x-init": 29,
+        "y-init": 33,
+        "x-end": 36,
+        "y-end": 36
       }
     ]
   },
   {
-    "color": "00a8de",
+    "color": "f5846f",
     "mapping": [
       {
         "item_code": "3",
-        "item_name": "finestra",
-        "x-init": 16,
-        "y-init": 39,
-        "x-end": 89,
-        "y-end": 69
+        "item_name": "spezie",
+        "x-init": 29,
+        "y-init": 33,
+        "x-end": 36,
+        "y-end": 36
       }
     ]
   },
   {
-    "color": "8b4324",
+    "color": "f2ede9",
     "mapping": [
       {
         "item_code": "4",
-        "item_name": "porta",
-        "x-init": 36,
-        "y-init": 48,
-        "x-end": 63,
-        "y-end": 73
+        "item_name": "piatti",
+        "x-init": 28,
+        "y-init": 38,
+        "x-end": 36,
+        "y-end": 40
       }
     ]
   },
   {
-    "color": "aa7455",
+    "color": "e4dcd7",
     "mapping": [
       {
         "item_code": "4",
-        "item_name": "porta",
-        "x-init": 36,
-        "y-init": 48,
-        "x-end": 63,
-        "y-end": 73
+        "item_name": "piatti",
+        "x-init": 28,
+        "y-init": 38,
+        "x-end": 36,
+        "y-end": 40
       }
     ]
   },
   {
-    "color": "f4df87",
+    "color": "ebe4e0",
     "mapping": [
       {
         "item_code": "4",
-        "item_name": "porta",
-        "x-init": 36,
-        "y-init": 48,
-        "x-end": 63,
-        "y-end": 73
-      },
-      {
-        "item_code": "6",
-        "item_name": "viale",
-        "x-init": 21,
-        "y-init": 72,
-        "x-end": 61,
-        "y-end": 100
+        "item_name": "piatti",
+        "x-init": 28,
+        "y-init": 38,
+        "x-end": 36,
+        "y-end": 40
       }
     ]
   },
-   {
-      "color": "fff200",
-      "mapping": [
-         {
-            "item_code": "5",
-            "item_name": "maniglia",
-            "x-init": 37,
-            "y-init": 57,
-            "x-end": 45,
-            "y-end": 65
-         }
-      ]
-   },
-   {
-      "color": "3f2500",
-      "mapping": [
-         {
-            "item_code": "5",
-            "item_name": "maniglia",
-            "x-init": 37,
-            "y-init": 57,
-            "x-end": 45,
-            "y-end": 65
-         }
-      ]
-   },
-   {
-      "color": "f9cc10",
-      "mapping": [
-         {
-            "item_code": "5",
-            "item_name": "maniglia",
-            "x-init": 37,
-            "y-init": 57,
-            "x-end": 45,
-            "y-end": 65
-         }
-      ]
-   },
   {
-    "color": "ef9b06",
+    "color": "f9f5f2",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "piatti",
+        "x-init": 28,
+        "y-init": 38,
+        "x-end": 36,
+        "y-end": 40
+      }
+    ]
+  },
+  {
+    "color": "4f0925",
     "mapping": [
       {
         "item_code": "5",
-        "item_name": "maniglia",
-        "x-init": 37,
-        "y-init": 57,
-        "x-end": 45,
-        "y-end": 65
+        "item_name": "kappa",
+        "x-init": 47,
+        "y-init": 27,
+        "x-end": 70,
+        "y-end": 43
       }
     ]
   },
   {
-    "color": "91be4a",
+    "color": "42071f",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "tenda",
+        "x-init": 68,
+        "y-init": 28,
+        "x-end": 100,
+        "y-end": 29
+      },
+      {
+        "item_code": "7",
+        "item_name": "finestra",
+        "x-init": 68,
+        "y-init": 28,
+        "x-end": 100,
+        "y-end": 49
+      }
+    ]
+  },
+  {
+    "color": "9e6f49",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "tenda",
+        "x-init": 68,
+        "y-init": 28,
+        "x-end": 100,
+        "y-end": 29
+      }
+    ]
+  },
+  {
+    "color": "e5dfe1",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "tenda",
+        "x-init": 68,
+        "y-init": 28,
+        "x-end": 100,
+        "y-end": 49
+      }
+    ]
+  },
+  {
+    "color": "d85d5d",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "tenda",
+        "x-init": 68,
+        "y-init": 28,
+        "x-end": 100,
+        "y-end": 49
+      }
+    ]
+  },
+  {
+    "color": "e2bec0",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "tenda",
+        "x-init": 68,
+        "y-init": 28,
+        "x-end": 100,
+        "y-end": 49
+      }
+    ]
+  },
+  {
+    "color": "00ffff",
     "mapping": [
       {
         "item_code": "7",
-        "item_name": "giardino",
-        "x-init": 0,
-        "y-init": 61,
+        "item_name": "finestra",
+        "x-init": 68,
+        "y-init": 28,
         "x-end": 100,
-        "y-end": 100
+        "y-end": 49
       }
     ]
   },
   {
-    "color": "659357",
-    "mapping": [
-      {
-        "item_code": "7",
-        "item_name": "giardino",
-        "x-init": 0,
-        "y-init": 87,
-        "x-end": 100,
-        "y-end": 100
-      }
-    ]
-  },
-  {
-    "color": "004b23",
+    "color": "3989b5",
     "mapping": [
       {
         "item_code": "8",
-        "item_name": "alberi",
-        "x-init": 0,
-        "y-init": 53,
-        "x-end": 100,
-        "y-end": 66
+        "item_name": "tostapane",
+        "x-init": 6,
+        "y-init": 43,
+        "x-end": 12,
+        "y-end": 45
       }
     ]
   },
   {
-    "color": "e87c9c",
+    "color": "36769d",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "tostapane",
+        "x-init": 6,
+        "y-init": 43,
+        "x-end": 12,
+        "y-end": 45
+      }
+    ]
+  },
+  {
+    "color": "f7f7e7",
     "mapping": [
       {
         "item_code": "9",
-        "item_name": "fiori",
+        "item_name": "frigorifero",
         "x-init": 0,
-        "y-init": 82,
-        "x-end": 100,
-        "y-end": 100
+        "y-init": 44,
+        "x-end": 26,
+        "y-end": 73
       }
     ]
   },
   {
-    "color": "f59cb0",
+    "color": "997f60",
     "mapping": [
       {
         "item_code": "9",
-        "item_name": "fiori",
+        "item_name": "frigorifero",
         "x-init": 0,
-        "y-init": 82,
-        "x-end": 100,
-        "y-end": 100
+        "y-init": 44,
+        "x-end": 26,
+        "y-end": 73
       }
     ]
   },
   {
-    "color": "db5c87",
+    "color": "cec8a7",
     "mapping": [
       {
         "item_code": "9",
-        "item_name": "fiori",
+        "item_name": "frigorifero",
         "x-init": 0,
-        "y-init": 82,
-        "x-end": 100,
-        "y-end": 100
+        "y-init": 44,
+        "x-end": 26,
+        "y-end": 73
       }
     ]
   },
   {
-    "color": "f5faf8",
+    "color": "331904",
     "mapping": [
       {
         "item_code": "10",
-        "item_name": "staccionata",
-        "x-init": 0,
-        "y-init": 78,
-        "x-end": 100,
-        "y-end": 90
+        "item_name": "forno a microonde",
+        "x-init": 26,
+        "y-init": 50,
+        "x-end": 41,
+        "y-end": 54
       }
     ]
   },
   {
-    "color": "2e3192",
+    "color": "fff4e9",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "forno a microonde",
+        "x-init": 26,
+        "y-init": 50,
+        "x-end": 41,
+        "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "adacac",
     "mapping": [
       {
         "item_code": "11",
-        "item_name": "farfalla",
-        "x-init": 0,
-        "y-init": 77,
-        "x-end": 94,
-        "y-end": 87
+        "item_name": "utensile",
+        "x-init": 37,
+        "y-init": 44,
+        "x-end": 58,
+        "y-end": 50
       }
     ]
   },
   {
-    "color": "ed1e79",
+    "color": "921921",
     "mapping": [
       {
         "item_code": "11",
-        "item_name": "farfalla",
-        "x-init": 0,
-        "y-init": 77,
-        "x-end": 94,
-        "y-end": 87
+        "item_name": "utensile",
+        "x-init": 37,
+        "y-init": 44,
+        "x-end": 58,
+        "y-end": 50
       }
     ]
   },
   {
-    "color": "d34f1d",
+    "color": "f4b821",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "utensile",
+        "x-init": 37,
+        "y-init": 44,
+        "x-end": 58,
+        "y-end": 50
+      }
+    ]
+  },
+  {
+    "color": "fce3a7",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "utensile",
+        "x-init": 37,
+        "y-init": 44,
+        "x-end": 58,
+        "y-end": 50
+      }
+    ]
+  },
+  {
+    "color": "16080f",
     "mapping": [
       {
         "item_code": "12",
-        "item_name": "lumaca",
-        "x-init": 41,
-        "y-init": 87,
-        "x-end": 55,
-        "y-end": 95
+        "item_name": "pentola",
+        "x-init": 44,
+        "y-init": 50,
+        "x-end": 57,
+        "y-end": 54
       }
     ]
   },
   {
-    "color": "942923",
+    "color": "ce3045",
     "mapping": [
       {
         "item_code": "12",
-        "item_name": "lumaca",
-        "x-init": 41,
-        "y-init": 87,
-        "x-end": 55,
-        "y-end": 95
+        "item_name": "pentola",
+        "x-init": 44,
+        "y-init": 50,
+        "x-end": 57,
+        "y-end": 54
       }
     ]
   },
   {
-    "color": "b07e09",
+    "color": "b3b3b3",
     "mapping": [
       {
         "item_code": "12",
-        "item_name": "lumaca",
-        "x-init": 41,
-        "y-init": 87,
-        "x-end": 55,
-        "y-end": 95
+        "item_name": "pentola",
+        "x-init": 44,
+        "y-init": 50,
+        "x-end": 57,
+        "y-end": 54
       }
     ]
   },
   {
-    "color": "c7c7c7",
+    "color": "3dc4ad",
     "mapping": [
       {
         "item_code": "13",
-        "item_name": "sasso",
-        "x-init": 6,
-        "y-init": 75,
-        "x-end": 76,
-        "y-end": 80
+        "item_name": "teiera",
+        "x-init": 60,
+        "y-init": 50,
+        "x-end": 65,
+        "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "f7f5df",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "lavandino",
+        "x-init": 82,
+        "y-init": 53,
+        "x-end": 91,
+        "y-end": 54
       }
     ]
   },
@@ -388,116 +467,51 @@
     "color": "cccccc",
     "mapping": [
       {
-        "item_code": "13",
-        "item_name": "sasso",
-        "x-init": 6,
-        "y-init": 74,
-        "x-end": 76,
-        "y-end": 80
-      }
-    ]
-  },
-  {
-    "color": "808080",
-    "mapping": [
-      {
-        "item_code": "13",
-        "item_name": "sasso",
-        "x-init": 6,
-        "y-init": 75,
-        "x-end": 76,
-        "y-end": 80
-      }
-    ]
-  },
-  {
-    "color": "fffde1",
-    "mapping": [
-      {
         "item_code": "14",
-        "item_name": "casa",
-        "x-init": 8,
-        "y-init": 26,
-        "x-end": 97,
-        "y-end": 71
+        "item_name": "lavandino",
+        "x-init": 68,
+        "y-init": 52,
+        "x-end": 91,
+        "y-end": 54
       }
     ]
   },
   {
-    "color": "f4da92",
-    "mapping": [
-      {
-        "item_code": "14",
-        "item_name": "casa",
-        "x-init": 8,
-        "y-init": 26,
-        "x-end": 97,
-        "y-end": 71
-      }
-    ]
-  },
-  {
-    "color": "86328c",
+    "color": "4b846a",
     "mapping": [
       {
         "item_code": "15",
-        "item_name": "tetto",
-        "x-init": 41,
-        "y-init": 23,
+        "item_name": "detersivo",
+        "x-init": 82,
+        "y-init": 50,
+        "x-end": 98,
+        "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "9b5d70",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "piastrella",
+        "x-init": 0,
+        "y-init": 35,
         "x-end": 100,
-        "y-end": 45
+        "y-end": 54
       }
     ]
   },
   {
-    "color": "f190ac",
+    "color": "dbb75c",
     "mapping": [
       {
-        "item_code": "15",
-        "item_name": "tetto",
-        "x-init": 41,
-        "y-init": 23,
+        "item_code": "16",
+        "item_name": "piastrella",
+        "x-init": 0,
+        "y-init": 35,
         "x-end": 100,
-        "y-end": 45
-      }
-    ]
-  },
-  {
-    "color": "e44f50",
-    "mapping": [
-      {
-        "item_code": "16",
-        "item_name": "coccinella",
-        "x-init": 75,
-        "y-init": 89,
-        "x-end": 84,
-        "y-end": 95
-      }
-    ]
-  },
-  {
-    "color": "4d2c2d",
-    "mapping": [
-      {
-        "item_code": "16",
-        "item_name": "coccinella",
-        "x-init": 75,
-        "y-init": 89,
-        "x-end": 84,
-        "y-end": 95
-      }
-    ]
-  },
-  {
-    "color": "1a1a1a",
-    "mapping": [
-      {
-        "item_code": "16",
-        "item_name": "coccinella",
-        "x-init": 75,
-        "y-init": 89,
-        "x-end": 84,
-        "y-end": 95
+        "y-end": 54
       }
     ]
   }

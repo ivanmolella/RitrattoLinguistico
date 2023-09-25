@@ -63,19 +63,9 @@ class GiardinoLinguisticoFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentGiardinoLinguistico2Binding.inflate(inflater, container, false)
-        bitmap = binding!!.imgGiardino.drawable.toBitmap()
 
-        binding?.imgGiardino?.viewTreeObserver?.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                binding?.imgGiardino?.viewTreeObserver?.removeGlobalOnLayoutListener(this)
-                imageX = binding?.imgGiardino?.width
-                imageY = binding?.imgGiardino?.height
-                Log.i(TAG, "<image> w($imageX}) h(${imageY})")
-            }
-        })
 
-        loadMappingPositions()
+        loadGardenView(1)
 
         binding?.imgGiardino?.setOnTouchListener { v, event ->
             if (event.getAction() === MotionEvent.ACTION_UP) {
@@ -114,6 +104,41 @@ class GiardinoLinguisticoFragment : Fragment() {
         }
 
         return binding?.root
+    }
+
+    private fun loadGardenView(viewNumber: Int) {
+        Log.i(TAG,"loadGardenView: $viewNumber")
+        loadView(viewNumber)
+        loadMappingPositions(viewNumber)
+
+        bitmap = binding!!.imgGiardino.drawable.toBitmap()
+
+        binding?.imgGiardino?.viewTreeObserver?.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                binding?.imgGiardino?.viewTreeObserver?.removeGlobalOnLayoutListener(this)
+                imageX = binding?.imgGiardino?.width
+                imageY = binding?.imgGiardino?.height
+                Log.i(TAG, "<image> w($imageX}) h(${imageY})")
+            }
+        })
+    }
+
+    private fun loadView(viewNumber: Int) : Boolean{
+
+        var viewFound = false
+        when(viewNumber){
+            0 -> {
+                binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_0)
+                viewFound=true
+            }
+            1 -> {
+                binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_1)
+                viewFound=true
+            }
+        }
+
+        return viewFound
     }
 
     private fun showTranslateWordDialog(objMapping: Mapping) {
@@ -182,9 +207,9 @@ class GiardinoLinguisticoFragment : Fragment() {
         return itemList
     }
 
-    private fun loadMappingPositions() {
+    private fun loadMappingPositions(viewNumber: Int) {
 
-        val langJson = context?.assets?.open("mapping_giardino_1.json")?.bufferedReader().use { it?.readText() }
+        val langJson = context?.assets?.open("mapping_giardino_${viewNumber}.json")?.bufferedReader().use { it?.readText() }
 
         val gson = Gson()
         currentImageMapping = gson.fromJson(langJson, ImageMapping::class.java)
