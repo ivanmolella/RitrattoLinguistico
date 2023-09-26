@@ -23,6 +23,14 @@
         "y-init": 27,
         "x-end": 42,
         "y-end": 42
+      },
+      {
+        "item_code": "1",
+        "item_name": "credenza",
+        "x-init": 26,
+        "y-init": 56,
+        "x-end": 100,
+        "y-end": 72
       }
     ]
   },
@@ -408,6 +416,14 @@
         "y-init": 50,
         "x-end": 57,
         "y-end": 54
+      },
+      {
+        "item_code": "12",
+        "item_name": "pentola",
+        "x-init": 29,
+        "y-init": 61,
+        "x-end": 38,
+        "y-end": 63
       }
     ]
   },
@@ -425,6 +441,19 @@
     ]
   },
   {
+    "color": "c63e3e",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "pentola",
+        "x-init": 29,
+        "y-init": 61,
+        "x-end": 38,
+        "y-end": 63
+      }
+    ]
+  },
+  {
     "color": "b3b3b3",
     "mapping": [
       {
@@ -434,6 +463,19 @@
         "y-init": 50,
         "x-end": 57,
         "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "c6bdbd",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "pentola",
+        "x-init": 29,
+        "y-init": 61,
+        "x-end": 38,
+        "y-end": 63
       }
     ]
   },
@@ -512,6 +554,204 @@
         "y-init": 35,
         "x-end": 100,
         "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "e4f2c2",
+    "mapping": [
+      {
+        "item_code": "17",
+        "item_name": "aromi",
+        "x-init": 29,
+        "y-init": 57,
+        "x-end": 39,
+        "y-end": 60
+      }
+    ]
+  },
+  {
+    "color": "fcd9eb",
+    "mapping": [
+      {
+        "item_code": "18",
+        "item_name": "forno",
+        "x-init": 43,
+        "y-init": 58,
+        "x-end": 68,
+        "y-end": 73
+      },
+      {
+        "item_code": "19",
+        "item_name": "fornelli",
+        "x-init": 43,
+        "y-init": 55,
+        "x-end": 68,
+        "y-end": 58
+      }
+    ]
+  },
+  {
+    "color": "5b0929",
+    "mapping": [
+      {
+        "item_code": "18",
+        "item_name": "forno",
+        "x-init": 43,
+        "y-init": 58,
+        "x-end": 68,
+        "y-end": 73
+      },
+      {
+        "item_code": "19",
+        "item_name": "fornelli",
+        "x-init": 43,
+        "y-init": 55,
+        "x-end": 68,
+        "y-end": 58
+      }
+    ]
+  },
+  {
+    "color": "683913",
+    "mapping": [
+      {
+        "item_code": "20",
+        "item_name": "sedia",
+        "x-init": 11,
+        "y-init": 72,
+        "x-end": 89,
+        "y-end": 93
+      }
+    ]
+  },
+  {
+    "color": "bc313c",
+    "mapping": [
+      {
+        "item_code": "20",
+        "item_name": "sedia",
+        "x-init": 11,
+        "y-init": 72,
+        "x-end": 89,
+        "y-end": 93
+      }
+    ]
+  },
+  {
+    "color": "5b3010",
+    "mapping": [
+      {
+        "item_code": "21",
+        "item_name": "tavolo",
+        "x-init": 11,
+        "y-init": 72,
+        "x-end": 89,
+        "y-end": 93
+      }
+    ]
+  },
+  {
+    "color": "ffebe1",
+    "mapping": [
+      {
+        "item_code": "22",
+        "item_name": "tovaglia",
+        "x-init": 11,
+        "y-init": 72,
+        "x-end": 89,
+        "y-end": 93
+      }
+    ]
+  },
+  {
+    "color": "d9e021",
+    "mapping": [
+      {
+        "item_code": "22",
+        "item_name": "tovaglia",
+        "x-init": 11,
+        "y-init": 72,
+        "x-end": 89,
+        "y-end": 93
+      }
+    ]
+  },
+  {
+    "color": "f2edf0",
+    "mapping": [
+      {
+        "item_code": "23",
+        "item_name": "piatto",
+        "x-init": 27,
+        "y-init": 73,
+        "x-end": 70,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "cecece",
+    "mapping": [
+      {
+        "item_code": "24",
+        "item_name": "bicchiere",
+        "x-init": 27,
+        "y-init": 73,
+        "x-end": 70,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "685a61",
+    "mapping": [
+      {
+        "item_code": "25",
+        "item_name": "posate",
+        "x-init": 27,
+        "y-init": 73,
+        "x-end": 70,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "1d7c47",
+    "mapping": [
+      {
+        "item_code": "26",
+        "item_name": "bottiglia",
+        "x-init": 27,
+        "y-init": 73,
+        "x-end": 70,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "f15a24",
+    "mapping": [
+      {
+        "item_code": "26",
+        "item_name": "bottiglia",
+        "x-init": 27,
+        "y-init": 73,
+        "x-end": 70,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "f7941e",
+    "mapping": [
+      {
+        "item_code": "27",
+        "item_name": "pavimento",
+        "x-init": 0,
+        "y-init": 74,
+        "x-end": 100,
+        "y-end": 100
       }
     ]
   }
