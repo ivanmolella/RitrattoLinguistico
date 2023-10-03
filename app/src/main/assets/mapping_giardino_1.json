@@ -52,7 +52,7 @@
     "mapping": [
       {
         "item_code": "2",
-        "item_name": "bicchiere",
+        "item_name": "tazza",
         "x-init": 29,
         "y-init": 30,
         "x-end": 37,
@@ -169,7 +169,7 @@
     "mapping": [
       {
         "item_code": "5",
-        "item_name": "kappa",
+        "item_name": "cappa",
         "x-init": 47,
         "y-init": 27,
         "x-end": 70,
@@ -359,7 +359,7 @@
     "mapping": [
       {
         "item_code": "11",
-        "item_name": "utensile",
+        "item_name": "padella",
         "x-init": 37,
         "y-init": 44,
         "x-end": 58,
@@ -372,7 +372,7 @@
     "mapping": [
       {
         "item_code": "11",
-        "item_name": "utensile",
+        "item_name": "mestolo",
         "x-init": 37,
         "y-init": 44,
         "x-end": 58,
@@ -385,7 +385,7 @@
     "mapping": [
       {
         "item_code": "11",
-        "item_name": "utensile",
+        "item_name": "tagliere",
         "x-init": 37,
         "y-init": 44,
         "x-end": 58,
@@ -398,7 +398,7 @@
     "mapping": [
       {
         "item_code": "11",
-        "item_name": "utensile",
+        "item_name": "matterello",
         "x-init": 37,
         "y-init": 44,
         "x-end": 58,
