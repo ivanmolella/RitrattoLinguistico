@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.os.Handler
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.LayoutInflater
@@ -49,9 +50,13 @@ class GiardinoLinguisticoFragment : Fragment() {
     var bitmap : Bitmap?=null
 
     var currentImageMapping : ImageMapping? = null
-    var currentGiardinoPage : Int = 0
+    var currentGiardinoPage : Int = -1
 
     var wordListAdapter : WordListAdapter? = null
+
+    var isMapOpen : Boolean? = false
+
+    var handler : Handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +70,7 @@ class GiardinoLinguisticoFragment : Fragment() {
         binding = FragmentGiardinoLinguistico2Binding.inflate(inflater, container, false)
 
 
+        setMapBtn()
         loadGardenView(1)
 
         binding?.imgGiardino?.setOnTouchListener { v, event ->
@@ -106,6 +112,66 @@ class GiardinoLinguisticoFragment : Fragment() {
         return binding?.root
     }
 
+    private fun setMapBtn() {
+        binding?.btnMap?.viewTreeObserver?.addOnGlobalLayoutListener { hideMapPanel(0) }
+        binding?.btnMap?.setOnClickListener {
+            if (isMapOpen == true){
+                hideMapPanel(200)
+            }else{
+                showMapPanel(200)
+            }
+        }
+
+        binding?.map?.setOnTouchListener { view, event ->
+            if (event.getAction() === MotionEvent.ACTION_UP) {
+                when(currentGiardinoPage){
+                    0 -> {
+                        changeCurrentPage(1)
+                    }
+
+                    1 -> {
+                        changeCurrentPage(0)
+                    }
+                }
+            }
+
+            true
+        }
+    }
+
+    private fun changeCurrentPage(page: Int) {
+        loadGardenView(page)
+    }
+
+    private fun hideMapPanel(duration : Long) {
+
+        isMapOpen = false
+        binding?.mapPanel!!.animate()
+            .scaleX(0.0f)
+            .scaleY(0.0f)
+//            .translationY(1 * (binding?.mapPanel?.height!!/2.0f))
+//            .translationX(1 * (binding?.mapPanel?.width!!/2.0f))// move to bottom / right
+            .translationY(-1 * (binding?.mapPanel?.height!!.toFloat() / 2))
+            .translationX(1 * (binding?.mapPanel?.width!!.toFloat() / 2))// m
+            .withEndAction{
+                binding?.mapPanel?.visibility=View.INVISIBLE
+            }
+            .duration = duration
+    }
+
+    private fun showMapPanel(duration : Long) {
+        isMapOpen = true
+        binding?.mapPanel!!.animate()
+            .scaleX(1.0f)
+            .scaleY(1.0f)
+            .translationY(1 * (binding?.mapPanel?.height!!/16.0f).toFloat())
+            .translationX(1 * (binding?.mapPanel?.width!!/256.0f).toFloat())
+            .withStartAction{
+                binding?.mapPanel?.visibility=View.VISIBLE
+            }
+            .duration = duration
+    }
+
     private fun loadGardenView(viewNumber: Int) {
         Log.i(TAG,"loadGardenView: $viewNumber")
         loadView(viewNumber)
@@ -122,6 +188,7 @@ class GiardinoLinguisticoFragment : Fragment() {
                 Log.i(TAG, "<image> w($imageX}) h(${imageY})")
             }
         })
+        currentGiardinoPage=viewNumber
     }
 
     private fun loadView(viewNumber: Int) : Boolean{
@@ -129,16 +196,33 @@ class GiardinoLinguisticoFragment : Fragment() {
         var viewFound = false
         when(viewNumber){
             0 -> {
-                binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_0)
+                if (currentGiardinoPage != -1){
+                    loadImageWithAnimation(R.drawable.giardino_linguistico_0)
+                }else{
+                    binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_0)
+                }
                 viewFound=true
             }
             1 -> {
-                binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_1)
+                if (currentGiardinoPage != -1){
+                    loadImageWithAnimation(R.drawable.giardino_linguistico_1)
+                }else{
+                    binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_1)
+                }
                 viewFound=true
             }
         }
 
         return viewFound
+    }
+
+    private fun loadImageWithAnimation(imageId: Int) {
+        binding?.imgGiardino?.animate()?.alpha(0.6f)?.setDuration(200)?.withEndAction(Runnable {
+            handler.post {
+                binding?.imgGiardino?.setImageResource(imageId)
+                binding?.imgGiardino?.animate()?.alpha(1.0f)?.duration = 500
+            }
+        })
     }
 
     private fun showTranslateWordDialog(objMapping: Mapping) {
