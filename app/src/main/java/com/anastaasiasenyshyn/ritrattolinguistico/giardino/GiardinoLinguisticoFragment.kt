@@ -71,7 +71,7 @@ class GiardinoLinguisticoFragment : Fragment() {
 
 
         setMapBtn()
-        loadGardenView(1)
+        loadGardenView(2)
 
         binding?.imgGiardino?.setOnTouchListener { v, event ->
             if (event.getAction() === MotionEvent.ACTION_UP) {
@@ -130,6 +130,9 @@ class GiardinoLinguisticoFragment : Fragment() {
                     }
 
                     1 -> {
+                        changeCurrentPage(2)
+                    }
+                    2 -> {
                         changeCurrentPage(0)
                     }
                 }
@@ -208,6 +211,14 @@ class GiardinoLinguisticoFragment : Fragment() {
                     loadImageWithAnimation(R.drawable.giardino_linguistico_1)
                 }else{
                     binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_1)
+                }
+                viewFound=true
+            }
+            2 -> {
+                if (currentGiardinoPage != -1){
+                    loadImageWithAnimation(R.drawable.giardino_linguistico_2)
+                }else{
+                    binding?.imgGiardino?.setImageResource(R.drawable.giardino_linguistico_2)
                 }
                 viewFound=true
             }

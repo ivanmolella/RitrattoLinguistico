@@ -1,0 +1,650 @@
+[
+  {
+    "color": "86b5a9",
+    "mapping": [
+      {
+        "item_code": "0",
+        "item_name": "parete",
+        "x-init": 0,
+        "y-init": 0,
+        "x-end": 59,
+        "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "ede5ca",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "tenda",
+        "x-init": 2,
+        "y-init": 20,
+        "x-end": 43,
+        "y-end": 43
+      }
+    ]
+  },
+  {
+    "color": "a73d37",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "tenda",
+        "x-init": 2,
+        "y-init": 20,
+        "x-end": 43,
+        "y-end": 43
+      }
+    ]
+  },
+  {
+    "color": "42071f",
+    "mapping": [
+      {
+        "item_code": "2",
+        "item_name": "asta per tenda",
+        "x-init": 0,
+        "y-init": 18,
+        "x-end": 43,
+        "y-end": 20
+      },
+      {
+        "item_code": "12",
+        "item_name": "divano",
+        "x-init": 42,
+        "y-init": 48,
+        "x-end": 100,
+        "y-end": 69
+      }
+    ]
+  },
+  {
+    "color": "fff4c5",
+    "mapping": [
+      {
+        "item_code": "3",
+        "item_name": "lampada",
+        "x-init": 33,
+        "y-init": 30,
+        "x-end": 58,
+        "y-end": 53
+      }
+    ]
+  },
+  {
+    "color": "231f20",
+    "mapping": [
+      {
+        "item_code": "3",
+        "item_name": "lampada",
+        "x-init": 33,
+        "y-init": 30,
+        "x-end": 58,
+        "y-end": 53
+      }
+    ]
+  },
+  {
+    "color": "333131",
+    "mapping": [
+      {
+        "item_code": "3",
+        "item_name": "lampada",
+        "x-init": 33,
+        "y-init": 30,
+        "x-end": 58,
+        "y-end": 53
+      }
+    ]
+  },
+  {
+    "color": "dddddb",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "quadro",
+        "x-init": 45,
+        "y-init": 23,
+        "x-end": 58,
+        "y-end": 38
+      }
+    ]
+  },
+  {
+    "color": "ff0000",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "quadro",
+        "x-init": 45,
+        "y-init": 23,
+        "x-end": 58,
+        "y-end": 38
+      }
+    ]
+  },
+  {
+    "color": "0000ff",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "quadro",
+        "x-init": 45,
+        "y-init": 23,
+        "x-end": 58,
+        "y-end": 38
+      }
+    ]
+  },
+  {
+    "color": "7e6456",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "quadro",
+        "x-init": 45,
+        "y-init": 23,
+        "x-end": 58,
+        "y-end": 38
+      }
+    ]
+  },
+  {
+    "color": "9e005d",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "quadro",
+        "x-init": 45,
+        "y-init": 23,
+        "x-end": 58,
+        "y-end": 38
+      }
+    ]
+  },
+  {
+    "color": "5e3c29",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "quadro",
+        "x-init": 45,
+        "y-init": 23,
+        "x-end": 58,
+        "y-end": 38
+      }
+    ]
+  },
+  {
+    "color": "fbf8ec",
+    "mapping": [
+      {
+        "item_code": "5",
+        "item_name": "libreria",
+        "x-init": 59,
+        "y-init": 12,
+        "x-end": 100,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color": "bab8ae",
+    "mapping": [
+      {
+        "item_code": "5",
+        "item_name": "libreria",
+        "x-init": 59,
+        "y-init": 12,
+        "x-end": 100,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color": "207c91",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "libri",
+        "x-init": 59,
+        "y-init": 12,
+        "x-end": 100,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color": "c1be57",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "libri",
+        "x-init": 59,
+        "y-init": 12,
+        "x-end": 100,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color":"823d44",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "libri",
+        "x-init": 59,
+        "y-init": 12,
+        "x-end": 100,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color":"8c5458",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "libri",
+        "x-init": 59,
+        "y-init": 12,
+        "x-end": 100,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color":"a5a5a5",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "monitor",
+        "x-init": 0,
+        "y-init": 12,
+        "x-end": 44,
+        "y-end": 56
+      }
+    ]
+  },
+  {
+    "color":"7f8487",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "monitor",
+        "x-init": 3,
+        "y-init": 12,
+        "x-end": 44,
+        "y-end": 56
+      }
+    ]
+  },
+  {
+    "color":"9c9d9e",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "tastiera",
+        "x-init": 3,
+        "y-init": 12,
+        "x-end": 44,
+        "y-end": 56
+      }
+    ]
+  },
+  {
+    "color":"152935",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "tastiera",
+        "x-init": 3,
+        "y-init": 12,
+        "x-end": 44,
+        "y-end": 56
+      }
+    ]
+  },
+  {
+    "color":"45535a",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "tastiera",
+        "x-init": 3,
+        "y-init": 12,
+        "x-end": 44,
+        "y-end": 56
+      }
+    ]
+  },
+  {
+    "color":"6c7478",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "tastiera",
+        "x-init": 3,
+        "y-init": 12,
+        "x-end": 44,
+        "y-end": 56
+      }
+    ]
+  },
+  {
+    "color":"0b212d",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "tastiera",
+        "x-init": 5,
+        "y-init": 53,
+        "x-end": 23,
+        "y-end": 55
+      },
+      {
+        "item_code": "9",
+        "item_name": "mouse",
+        "x-init": 24,
+        "y-init": 53,
+        "x-end": 28,
+        "y-end": 55
+      }
+    ]
+  },
+  {
+    "color":"ab6865",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "scrivania",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"774444",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "scrivania",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"7a4646",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "scrivania",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"c58a84",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "agenda",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"aa3529",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "agenda",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"ab6865",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "agenda",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"e0e0e0",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "agenda",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color":"ebd467",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "agenda",
+        "x-init": 0,
+        "y-init": 51,
+        "x-end": 46,
+        "y-end": 68
+      },
+      {
+        "item_code": "16",
+        "item_name": "tappeto",
+        "x-init": 27,
+        "y-init": 76,
+        "x-end": 100,
+        "y-end": 90
+      }
+    ]
+  },
+  {
+    "color":"473f65",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "sedia",
+        "x-init": 0,
+        "y-init": 54,
+        "x-end": 31,
+        "y-end": 77
+      }
+    ]
+  },
+  {
+    "color":"272438",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "sedia",
+        "x-init": 0,
+        "y-init": 54,
+        "x-end": 31,
+        "y-end": 77
+      }
+    ]
+  },
+  {
+    "color":"280515",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "divano",
+        "x-init": 42,
+        "y-init": 48,
+        "x-end": 100,
+        "y-end": 69
+      }
+    ]
+  },
+  {
+    "color":"f3efd9",
+    "mapping": [
+      {
+        "item_code": "13",
+        "item_name": "cucscino",
+        "x-init": 42,
+        "y-init": 48,
+        "x-end": 100,
+        "y-end": 69
+      }
+    ]
+  },
+  {
+    "color":"e9bbbd",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "lampada",
+        "x-init": 42,
+        "y-init": 48,
+        "x-end": 100,
+        "y-end": 72
+      }
+    ]
+  },
+  {
+    "color":"d38792",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "lampada",
+        "x-init": 42,
+        "y-init": 48,
+        "x-end": 100,
+        "y-end": 72
+      }
+    ]
+  },
+  {
+    "color":"8d3131",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "tavolino",
+        "x-init": 39,
+        "y-init": 68,
+        "x-end": 97,
+        "y-end": 85
+      }
+    ]
+  },
+  {
+    "color":"6e3929",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "tavolino",
+        "x-init": 39,
+        "y-init": 68,
+        "x-end": 97,
+        "y-end": 85
+      }
+    ]
+  },
+  {
+    "color":"561818",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "tavolino",
+        "x-init": 39,
+        "y-init": 68,
+        "x-end": 97,
+        "y-end": 85
+      }
+    ]
+  },
+  {
+    "color":"b52126",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "tappeto",
+        "x-init": 27,
+        "y-init": 76,
+        "x-end": 100,
+        "y-end": 90
+      }
+    ]
+  },
+  {
+    "color":"0aa34f",
+    "mapping": [
+      {
+        "item_code": "17",
+        "item_name": "pianta",
+        "x-init": 0,
+        "y-init": 68,
+        "x-end": 49,
+        "y-end": 100
+      }
+    ]
+  },
+  {
+    "color":"542e19",
+    "mapping": [
+      {
+        "item_code": "17",
+        "item_name": "pianta",
+        "x-init": 0,
+        "y-init": 68,
+        "x-end": 49,
+        "y-end": 100
+      }
+    ]
+  },
+  {
+    "color":"a03122",
+    "mapping": [
+      {
+        "item_code": "17",
+        "item_name": "pianta",
+        "x-init": 0,
+        "y-init": 68,
+        "x-end": 49,
+        "y-end": 100
+      }
+    ]
+  },
+  {
+    "color":"b69c5b",
+    "mapping": [
+      {
+        "item_code": "18",
+        "item_name": "pavimento",
+        "x-init": 0,
+        "y-init": 62,
+        "x-end": 100,
+        "y-end": 100
+      }
+    ]
+  }
+]
