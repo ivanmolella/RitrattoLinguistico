@@ -646,5 +646,44 @@
         "y-end": 100
       }
     ]
+  },
+  {
+    "color":"e6e6e6",
+    "mapping": [
+      {
+        "item_code": "19",
+        "item_name": "lampadario",
+        "x-init": 22,
+        "y-init": 0,
+        "x-end": 78,
+        "y-end": 12
+      }
+    ]
+  },
+  {
+    "color":"2b1010",
+    "mapping": [
+      {
+        "item_code": "19",
+        "item_name": "lampadario",
+        "x-init": 22,
+        "y-init": 0,
+        "x-end": 78,
+        "y-end": 12
+      }
+    ]
+  },
+  {
+    "color":"ffff00",
+    "mapping": [
+      {
+        "item_code": "20",
+        "item_name": "lampadina",
+        "x-init": 22,
+        "y-init": 0,
+        "x-end": 78,
+        "y-end": 12
+      }
+    ]
   }
 ]
