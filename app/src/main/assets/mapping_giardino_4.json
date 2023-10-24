@@ -1,0 +1,512 @@
+[
+  {
+    "color": "48589b",
+    "mapping": [
+      {
+        "item_code": "0",
+        "item_name": "parete",
+        "x-init": 0,
+        "y-init": 0,
+        "x-end": 100,
+        "y-end": 7
+      },
+      {
+        "item_code": "20",
+        "item_name": "pavimento",
+        "x-init": 0,
+        "y-init": 62,
+        "x-end": 100,
+        "y-end": 100
+      }
+    ]
+  },
+  {
+    "color": "8787af",
+    "mapping": [
+      {
+        "item_code": "0",
+        "item_name": "parete",
+        "x-init": 0,
+        "y-init": 7,
+        "x-end": 100,
+        "y-end": 33
+      }
+    ]
+  },
+  {
+    "color": "9f9fbf",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "maioliche",
+        "x-init": 0,
+        "y-init": 33,
+        "x-end": 100,
+        "y-end": 60
+      }
+    ]
+  },
+  {
+    "color": "cfcfdf",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "maioliche",
+        "x-init": 0,
+        "y-init": 33,
+        "x-end": 100,
+        "y-end": 60
+      }
+    ]
+  },
+  {
+    "color": "39b54a",
+    "mapping": [
+      {
+        "item_code": "2",
+        "item_name": "pianta",
+        "x-init": 0,
+        "y-init": 23,
+        "x-end": 9,
+        "y-end": 32
+      }
+    ]
+  },
+  {
+    "color": "fcf4ed",
+    "mapping": [
+      {
+        "item_code": "3",
+        "item_name": "vaso",
+        "x-init": 0,
+        "y-init": 23,
+        "x-end": 9,
+        "y-end": 32
+      }
+    ]
+  },
+  {
+    "color": "bc701d",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "mobile",
+        "x-init": 0,
+        "y-init": 33,
+        "x-end": 8,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color": "7f4f1f",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "mobile",
+        "x-init": 0,
+        "y-init": 33,
+        "x-end": 8,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color": "f7f0f0",
+    "mapping": [
+      {
+        "item_code": "5",
+        "item_name": "carta igienica",
+        "x-init": 9,
+        "y-init": 50,
+        "x-end": 16,
+        "y-end": 55
+      }
+    ]
+  },
+  {
+    "color": "f9eff1",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "asciugamano bianco",
+        "x-init": 21,
+        "y-init": 49,
+        "x-end": 34,
+        "y-end": 56
+      },
+      {
+        "item_code": "14",
+        "item_name": "water",
+        "x-init": 15,
+        "y-init": 55,
+        "x-end": 36,
+        "y-end": 63
+      }
+    ]
+  },
+  {
+    "color": "00a651",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "spazzolini da denti",
+        "x-init": 40,
+        "y-init": 47,
+        "x-end": 44,
+        "y-end": 51
+      }
+    ]
+  },
+  {
+    "color": "ed1c24",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "spazzolini da denti",
+        "x-init": 40,
+        "y-init": 47,
+        "x-end": 44,
+        "y-end": 51
+      }
+    ]
+  },
+  {
+    "color": "fbf281",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "spazzolini da denti",
+        "x-init": 40,
+        "y-init": 47,
+        "x-end": 44,
+        "y-end": 51
+      }
+    ]
+  },
+  {
+    "color": "efefef",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "lavandino",
+        "x-init": 38,
+        "y-init": 51,
+        "x-end": 60,
+        "y-end": 57
+      }
+    ]
+  },
+  {
+    "color": "999999",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "lavandino",
+        "x-init": 38,
+        "y-init": 51,
+        "x-end": 60,
+        "y-end": 57
+      }
+    ]
+  },
+  {
+    "color": "f2bdc7",
+    "mapping": [
+      {
+        "item_code": "9",
+        "item_name": "saponetta",
+        "x-init": 38,
+        "y-init": 51,
+        "x-end": 60,
+        "y-end": 57
+      }
+    ]
+  },
+  {
+    "color": "d88796",
+    "mapping": [
+      {
+        "item_code": "9",
+        "item_name": "saponetta",
+        "x-init": 38,
+        "y-init": 51,
+        "x-end": 60,
+        "y-end": 57
+      }
+    ]
+  },
+  {
+    "color": "e51727",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "asciugamano rosso",
+        "x-init": 61,
+        "y-init": 46,
+        "x-end": 75,
+        "y-end": 54
+      }
+    ]
+  },
+  {
+    "color": "bc701d",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "mobiletto da bagno",
+        "x-init": 71,
+        "y-init": 52,
+        "x-end": 83,
+        "y-end": 62
+      }
+    ]
+  },
+  {
+    "color": "754001",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "mobiletto da bagno",
+        "x-init": 71,
+        "y-init": 52,
+        "x-end": 83,
+        "y-end": 62
+      }
+    ]
+  },
+  {
+    "color": "eae5df",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "mobiletto da bagno",
+        "x-init": 71,
+        "y-init": 52,
+        "x-end": 83,
+        "y-end": 62
+      }
+    ]
+  },
+  {
+    "color": "ea94bd",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "sapone liquido",
+        "x-init": 71,
+        "y-init": 52,
+        "x-end": 83,
+        "y-end": 62
+      }
+    ]
+  },
+  {
+    "color": "e2efe1",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "sapone liquido",
+        "x-init": 71,
+        "y-init": 52,
+        "x-end": 83,
+        "y-end": 62
+      }
+    ]
+  },
+  {
+    "color": "4a5a9e",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "sapone liquido",
+        "x-init": 71,
+        "y-init": 52,
+        "x-end": 83,
+        "y-end": 62
+      }
+    ]
+  },
+  {
+    "color": "ffffff",
+    "mapping": [
+      {
+        "item_code": "13",
+        "item_name": "lavatrice",
+        "x-init": 84,
+        "y-init": 50,
+        "x-end": 100,
+        "y-end": 63
+      }
+    ]
+  },
+  {
+    "color": "c6bebe",
+    "mapping": [
+      {
+        "item_code": "13",
+        "item_name": "lavatrice",
+        "x-init": 84,
+        "y-init": 50,
+        "x-end": 100,
+        "y-end": 63
+      }
+    ]
+  },
+  {
+    "color": "1786ad",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "water",
+        "x-init": 15,
+        "y-init": 55,
+        "x-end": 36,
+        "y-end": 63
+      }
+    ]
+  },
+  {
+    "color": "6dcff6",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "specchio",
+        "x-init": 49,
+        "y-init": 34,
+        "x-end": 58,
+        "y-end": 46
+      }
+    ]
+  },
+  {
+    "color": "207d99",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "specchio",
+        "x-init": 49,
+        "y-init": 34,
+        "x-end": 58,
+        "y-end": 47
+      }
+    ]
+  },
+  {
+    "color": "d3bd20",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "tappeto",
+        "x-init": 13,
+        "y-init": 64,
+        "x-end": 100,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color": "b4a42f",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "tappeto",
+        "x-init": 13,
+        "y-init": 65,
+        "x-end": 100,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color": "dbc816",
+    "mapping": [
+      {
+        "item_code": "16",
+        "item_name": "tappeto",
+        "x-init": 13,
+        "y-init": 65,
+        "x-end": 100,
+        "y-end": 68
+      }
+    ]
+  },
+  {
+    "color": "edf6f9",
+    "mapping": [
+      {
+        "item_code": "17",
+        "item_name": "vasca da bagno",
+        "x-init": 1,
+        "y-init": 68,
+        "x-end": 98,
+        "y-end": 99
+      }
+    ]
+  },
+  {
+    "color": "eaca0a",
+    "mapping": [
+      {
+        "item_code": "17",
+        "item_name": "vasca da bagno",
+        "x-init": 1,
+        "y-init": 68,
+        "x-end": 98,
+        "y-end": 99
+      }
+    ]
+  },
+  {
+    "color": "0cf4ed",
+    "mapping": [
+      {
+        "item_code": "18",
+        "item_name": "acqua",
+        "x-init": 1,
+        "y-init": 68,
+        "x-end": 98,
+        "y-end": 99
+      }
+    ]
+  },
+  {
+    "color": "f9d91e",
+    "mapping": [
+      {
+        "item_code": "18",
+        "item_name": "papera",
+        "x-init": 1,
+        "y-init": 68,
+        "x-end": 98,
+        "y-end": 99
+      }
+    ]
+  },
+  {
+    "color": "f3fbff",
+    "mapping": [
+      {
+        "item_code": "19",
+        "item_name": "schiuma",
+        "x-init": 1,
+        "y-init": 68,
+        "x-end": 98,
+        "y-end": 99
+      }
+    ]
+  },
+  {
+    "color": "eaac21",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "zoccoletto muro",
+        "x-init": 0,
+        "y-init": 60,
+        "x-end": 100,
+        "y-end": 62
+      }
+    ]
+  }
+]

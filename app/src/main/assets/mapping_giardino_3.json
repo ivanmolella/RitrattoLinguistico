@@ -1,0 +1,431 @@
+[
+  {
+    "color": "fdf0d9",
+    "mapping": [
+      {
+        "item_code": "0",
+        "item_name": "parete",
+        "x-init": 0,
+        "y-init": 0,
+        "x-end": 100,
+        "y-end": 74
+      }
+    ]
+  },
+  {
+    "color": "fcf7f7",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "lampadario",
+        "x-init": 33,
+        "y-init": 0,
+        "x-end": 65,
+        "y-end": 26
+      }
+    ]
+  },
+  {
+    "color": "3a3235",
+    "mapping": [
+      {
+        "item_code": "1",
+        "item_name": "lampadario",
+        "x-init": 33,
+        "y-init": 0,
+        "x-end": 65,
+        "y-end": 26
+      }
+    ]
+  },
+  {
+    "color": "7f4d5f",
+    "mapping": [
+      {
+        "item_code": "2",
+        "item_name": "mensola",
+        "x-init": 1,
+        "y-init": 46,
+        "x-end": 56,
+        "y-end": 49
+      }
+    ]
+  },
+  {
+    "color": "561837",
+    "mapping": [
+      {
+        "item_code": "2",
+        "item_name": "mensola",
+        "x-init": 1,
+        "y-init": 46,
+        "x-end": 56,
+        "y-end": 49
+      }
+    ]
+  },
+  {
+    "color": "a03122",
+    "mapping": [
+      {
+        "item_code": "3",
+        "item_name": "vaso",
+        "x-init": 0,
+        "y-init": 37,
+        "x-end": 12,
+        "y-end": 48
+      }
+    ]
+  },
+  {
+    "color": "0aa34f",
+    "mapping": [
+      {
+        "item_code": "4",
+        "item_name": "pianta",
+        "x-init": 0,
+        "y-init": 37,
+        "x-end": 12,
+        "y-end": 48
+      }
+    ]
+  },
+  {
+    "color": "207c91",
+    "mapping": [
+      {
+        "item_code": "5",
+        "item_name": "libro",
+        "x-init": 7,
+        "y-init": 43,
+        "x-end": 29,
+        "y-end": 47
+      }
+    ]
+  },
+  {
+    "color": "c1be57",
+    "mapping": [
+      {
+        "item_code": "5",
+        "item_name": "libro",
+        "x-init": 7,
+        "y-init": 43,
+        "x-end": 29,
+        "y-end": 47
+      }
+    ]
+  },
+  {
+    "color": "823d44",
+    "mapping": [
+      {
+        "item_code": "5",
+        "item_name": "libro",
+        "x-init": 7,
+        "y-init": 43,
+        "x-end": 29,
+        "y-end": 47
+      }
+    ]
+  },
+  {
+    "color": "7a0a55",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "bicchiere",
+        "x-init": 29,
+        "y-init": 44,
+        "x-end": 37,
+        "y-end": 48
+      }
+    ]
+  },
+  {
+    "color": "607c09",
+    "mapping": [
+      {
+        "item_code": "6",
+        "item_name": "bicchiere",
+        "x-init": 29,
+        "y-init": 44,
+        "x-end": 37,
+        "y-end": 48
+      }
+    ]
+  },
+  {
+    "color": "9593c9",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "valigia",
+        "x-init": 63,
+        "y-init": 35,
+        "x-end": 100,
+        "y-end": 42
+      }
+    ]
+  },
+  {
+    "color": "ed1c24",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "valigia",
+        "x-init": 63,
+        "y-init": 35,
+        "x-end": 100,
+        "y-end": 42
+      }
+    ]
+  },
+  {
+    "color": "5c2e3e",
+    "mapping": [
+      {
+        "item_code": "7",
+        "item_name": "armadio",
+        "x-init": 61,
+        "y-init": 41,
+        "x-end": 100,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "633748",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "letto",
+        "x-init": 0,
+        "y-init": 59,
+        "x-end": 43,
+        "y-end": 80
+      }
+    ]
+  },
+  {
+    "color": "edb7d1",
+    "mapping": [
+      {
+        "item_code": "8",
+        "item_name": "coperta",
+        "x-init": 0,
+        "y-init": 59,
+        "x-end": 43,
+        "y-end": 80
+      }
+    ]
+  },
+  {
+    "color": "bf4786",
+    "mapping": [
+      {
+        "item_code": "9",
+        "item_name": "cuscino",
+        "x-init": 0,
+        "y-init": 59,
+        "x-end": 43,
+        "y-end": 80
+      }
+    ]
+  },
+  {
+    "color": "d67fac",
+    "mapping": [
+      {
+        "item_code": "9",
+        "item_name": "cuscino",
+        "x-init": 0,
+        "y-init": 59,
+        "x-end": 43,
+        "y-end": 80
+      }
+    ]
+  },
+  {
+    "color": "cb6399",
+    "mapping": [
+      {
+        "item_code": "9",
+        "item_name": "cuscino",
+        "x-init": 0,
+        "y-init": 59,
+        "x-end": 43,
+        "y-end": 80
+      }
+    ]
+  },
+  {
+    "color": "995b74",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "comodino",
+        "x-init": 42,
+        "y-init": 65,
+        "x-end": 60,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "561d37",
+    "mapping": [
+      {
+        "item_code": "10",
+        "item_name": "comodino",
+        "x-init": 42,
+        "y-init": 65,
+        "x-end": 60,
+        "y-end": 76
+      }
+    ]
+  },
+  {
+    "color": "7a6fb9",
+    "mapping": [
+      {
+        "item_code": "11",
+        "item_name": "ciabatte",
+        "x-init": 45,
+        "y-init": 77,
+        "x-end": 55,
+        "y-end": 79
+      }
+    ]
+  },
+  {
+    "color": "725809",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "radiosveglia",
+        "x-init": 45,
+        "y-init": 63,
+        "x-end": 56,
+        "y-end": 65
+      }
+    ]
+  },
+  {
+    "color": "2d2704",
+    "mapping": [
+      {
+        "item_code": "12",
+        "item_name": "radiosveglia",
+        "x-init": 45,
+        "y-init": 63,
+        "x-end": 56,
+        "y-end": 65
+      }
+    ]
+  },
+  {
+    "color": "f7f6f5",
+    "mapping": [
+      {
+        "item_code": "13",
+        "item_name": "bicchiere",
+        "x-init": 51,
+        "y-init": 62,
+        "x-end": 56,
+        "y-end": 64
+      }
+    ]
+  },
+  {
+    "color": "f7eadf",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "tappeto",
+        "x-init": 0,
+        "y-init": 83,
+        "x-end": 71,
+        "y-end": 95
+      }
+    ]
+  },
+  {
+    "color": "b9ad9a",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "tappeto",
+        "x-init": 0,
+        "y-init": 83,
+        "x-end": 71,
+        "y-end": 95
+      }
+    ]
+  },
+  {
+    "color": "cec1b1",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "tappeto",
+        "x-init": 0,
+        "y-init": 83,
+        "x-end": 71,
+        "y-end": 95
+      }
+    ]
+  },
+  {
+    "color": "aa9e88",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "tappeto",
+        "x-init": 0,
+        "y-init": 83,
+        "x-end": 71,
+        "y-end": 95
+      }
+    ]
+  },
+  {
+    "color": "a2aabc",
+    "mapping": [
+      {
+        "item_code": "14",
+        "item_name": "pavimento",
+        "x-init": 0,
+        "y-init": 77,
+        "x-end": 100,
+        "y-end": 100
+      }
+    ]
+  },
+  {
+    "color": "fff4c5",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "lampada",
+        "x-init": 74,
+        "y-init": 68,
+        "x-end": 100,
+        "y-end": 100
+      }
+    ]
+  },
+  {
+    "color": "333131",
+    "mapping": [
+      {
+        "item_code": "15",
+        "item_name": "lampada",
+        "x-init": 74,
+        "y-init": 68,
+        "x-end": 100,
+        "y-end": 100
+      }
+    ]
+  }
+]
