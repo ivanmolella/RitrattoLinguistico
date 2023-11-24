@@ -32,17 +32,17 @@
         </ImageView>
         <LinearLayout
             android:id="@+id/mapPanel"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_width="wrap_content"
+            android:layout_height="600dp"
             android:orientation="vertical"
+            android:layout_marginTop="-30dp"
             android:layout_marginEnd="48dp"
             android:layout_marginStart="16dp">
             <ImageView
                 android:id="@+id/map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:src="@drawable/tmp_mappa">
+                android:src="@drawable/mappa">
             </ImageView>
         </LinearLayout>
     </LinearLayout>

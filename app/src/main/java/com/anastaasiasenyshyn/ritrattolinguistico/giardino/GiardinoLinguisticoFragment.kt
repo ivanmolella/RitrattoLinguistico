@@ -15,6 +15,7 @@ import android.view.ViewTreeObserver
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +24,7 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.customview.getCustomView
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants
+import com.anastaasiasenyshyn.ritrattolinguistico.IOnBackPressed
 import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentGiardinoLinguistico2Binding
 import com.anastaasiasenyshyn.ritrattolinguistico.model.FamilyLanguages
@@ -37,7 +39,7 @@ import com.google.gson.Gson
  * Use the [GiardinoLinguisticoFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class GiardinoLinguisticoFragment : Fragment() {
+class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -46,6 +48,11 @@ class GiardinoLinguisticoFragment : Fragment() {
 
     var imageX : Int? = null
     var imageY : Int? = null
+
+    var mapW : Int? = 0
+    var mapH : Int? = 0
+
+    var currentZone : Int = 0
 
     var bitmap : Bitmap?=null
 
@@ -71,7 +78,7 @@ class GiardinoLinguisticoFragment : Fragment() {
 
 
         setMapBtn()
-        loadGardenView(4)
+        loadGardenView(0)
 
         binding?.imgGiardino?.setOnTouchListener { v, event ->
             if (event.getAction() === MotionEvent.ACTION_UP) {
@@ -104,6 +111,7 @@ class GiardinoLinguisticoFragment : Fragment() {
                     showTranslateWordDialog(objMapping)
                 }
                 Log.i(TAG, "<image> bitmap width:${imageWidth} height:${imageHeight} touch x:$imageX($xPerc%) touch y:$imageY($yPerc%) color:#$pixelRGBCode objectName: $objMapping")
+                hideMapPanel(200)
             }
 
             true
@@ -113,6 +121,7 @@ class GiardinoLinguisticoFragment : Fragment() {
     }
 
     private fun setMapBtn() {
+        initMap()
         binding?.btnMap?.viewTreeObserver?.addOnGlobalLayoutListener { hideMapPanel(0) }
         binding?.btnMap?.setOnClickListener {
             if (isMapOpen == true){
@@ -124,22 +133,22 @@ class GiardinoLinguisticoFragment : Fragment() {
 
         binding?.map?.setOnTouchListener { view, event ->
             if (event.getAction() === MotionEvent.ACTION_UP) {
-                when(currentGiardinoPage){
-                    0 -> {
+                val zone  = evalMapZone(event)
+                Log.i(TAG,"<map> Map Touch on: ${event.x} ${event.y} zone: $zone")
+
+                when(zone){
+                    "00" -> {
                         changeCurrentPage(1)
                     }
 
-                    1 -> {
+                    "10" -> {
                         changeCurrentPage(2)
                     }
-                    2 -> {
-                        changeCurrentPage(3)
-                    }
-                    3 -> {
+                    "01" -> {
                         changeCurrentPage(4)
                     }
-                    4 -> {
-                        changeCurrentPage(0)
+                    "11" -> {
+                        changeCurrentPage(3)
                     }
                 }
             }
@@ -148,8 +157,38 @@ class GiardinoLinguisticoFragment : Fragment() {
         }
     }
 
+    private fun evalMapZone(event: MotionEvent?): String {
+        var xZone : Int = 0
+        var yZone : Int = 0
+
+        if (event?.x!! < mapW!! / 2){
+            xZone = 0
+        }else{
+            xZone = 1
+        }
+
+        if (event?.y!! < mapH!! / 2){
+            yZone = 0
+        }else{
+            yZone = 1
+        }
+
+        return "${xZone}${yZone}"
+
+    }
+
+    private fun initMap() {
+        binding?.map?.viewTreeObserver?.addOnGlobalLayoutListener {
+            val image = (( binding?.map as ImageView).drawable as BitmapDrawable).bitmap
+            mapW =   binding?.map?.width
+            mapH =  binding?.map?.height
+            Log.i(TAG,"<map> mapW: $mapW mapH: $mapH")
+        }
+    }
+
     private fun changeCurrentPage(page: Int) {
         loadGardenView(page)
+        hideMapPanel(200)
     }
 
     private fun hideMapPanel(duration : Long) {
@@ -181,7 +220,25 @@ class GiardinoLinguisticoFragment : Fragment() {
             .duration = duration
     }
 
+
     private fun loadGardenView(viewNumber: Int) {
+        currentZone=viewNumber
+        Log.i(TAG,"Zone: $currentZone")
+        var title = when (currentZone) {
+
+            0 -> "${getString(R.string.giardino_linguistico)}"
+            1 -> "${getString(R.string.zone_cucina)}"
+            2 -> "${getString(R.string.zone_salotto)}"
+            3 -> "${getString(R.string.zone_camera_da_letto)}"
+            4 -> "${getString(R.string.zone_bagno)}"
+
+            else -> "${getString(R.string.giardino_linguistico)}"
+
+        }
+
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = title;
+
+
         Log.i(TAG,"loadGardenView: $viewNumber")
         loadView(viewNumber)
         loadMappingPositions(viewNumber)
@@ -364,5 +421,14 @@ class GiardinoLinguisticoFragment : Fragment() {
             GiardinoLinguisticoFragment().apply {
 //
             }
+    }
+
+    override fun onBackPressed(): Boolean {
+        if (currentZone == 0){
+           return false
+        }else{
+            loadGardenView(0)
+            return true
+        }
     }
 }

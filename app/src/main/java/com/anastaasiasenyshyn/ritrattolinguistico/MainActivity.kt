@@ -12,6 +12,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.fragment.NavHostFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants.Companion.ID_SLIDER_RITRATTO_LINGUISTICO
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment
@@ -28,6 +29,20 @@ class MainActivity : AppCompatActivity(), SliderActions {
 
     companion object {
         const val TAG = "MainActivity"
+    }
+
+    override fun onBackPressed() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
+        val curFrag = navHostFragment!!.childFragmentManager.fragments[0]
+        if (curFrag is IOnBackPressed){
+            if (!curFrag.onBackPressed()){
+                super.onBackPressed()
+            }
+        }else{
+            super.onBackPressed()
+        }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

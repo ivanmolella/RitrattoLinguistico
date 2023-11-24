@@ -41,5 +41,9 @@
     <string name="giardino_linguistico">Language Garden</string>
     <string name="sistemi_di_scrittura">Writing systems</string>
     <string name="scopri_di_piu">Discover more</string>
+    <string name="zone_cucina">Kitchen</string>
+    <string name="zone_salotto">Parlour</string>
+    <string name="zone_bagno">Bathroom</string>
+    <string name="zone_camera_da_letto">Bedroom</string>
 
 </resources>

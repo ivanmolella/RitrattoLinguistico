@@ -39,5 +39,9 @@
     <string name="giardino_linguistico">Giardino Linguistico</string>
     <string name="sistemi_di_scrittura">Sistemi di scrittura</string>
     <string name="scopri_di_piu">Scopri di più</string>
+    <string name="zone_cucina">Cucina</string>
+    <string name="zone_salotto">Salotto</string>
+    <string name="zone_bagno">Bagno</string>
+    <string name="zone_camera_da_letto">Camera da letto</string>
 
 </resources>
