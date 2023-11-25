@@ -79,7 +79,7 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     private fun initView() {
         //TODO Scommentare
-        val isSlideRequired = checkSlideRequired()
+        val isSlideRequired = true //checkSlideRequired()
         if (isSlideRequired) {
             initViewForSlider()
         } else {

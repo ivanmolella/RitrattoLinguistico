@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
             override fun run() {
                 //startActivity(Intent(this@SplashActivity, DemoActivity::class.java))
                 var intent : Intent? = null
-                val isSlideRequired = checkSlideRequired()
+                val isSlideRequired = true //checkSlideRequired()
                 if (isSlideRequired){
                     intent = Intent(this@SplashActivity, DemoActivity::class.java)
                 }else{
