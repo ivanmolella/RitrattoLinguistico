@@ -508,5 +508,31 @@
         "y-end": 62
       }
     ]
+  },
+  {
+    "color": "404c6b",
+    "mapping": [
+      {
+        "item_code": "20",
+        "item_name": "lampadario",
+        "x-init": 25,
+        "y-init": 4,
+        "x-end": 74,
+        "y-end": 25
+      }
+    ]
+  },
+  {
+    "color": "fcf87a",
+    "mapping": [
+      {
+        "item_code": "20",
+        "item_name": "lampadario",
+        "x-init": 25,
+        "y-init": 4,
+        "x-end": 74,
+        "y-end": 25
+      }
+    ]
   }
 ]

@@ -41,6 +41,7 @@
                 <com.anastaasiasenyshyn.ritrattolinguistico.drawing.DrawingImageView
                     android:id="@+id/drawImageView"
                     android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
                     android:layout_height="0dp"
                     android:layout_weight="9"
                     android:src="@drawable/sagoma_ritratto">
