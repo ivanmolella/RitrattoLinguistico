@@ -351,23 +351,25 @@ class RitrattoLinguisticoFragment : Fragment() {
         var sliderItems: MutableList<RitrattoSliderFragment.SliderItem>? = mutableListOf(
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "1 - Chiedi a tuo/a figlio/a di pensare a una lingua o varietà linguistica che parla già o che vorrebbe imparare",
                 R.drawable.img_slider_ritratto_1,
-                "2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "2 - Chiedi di associare la lingua che ha scelto a un colore, dopodichè chiedi dove vorrebbe posizionarla nel disegno e colorate insieme la parte del corpo che per lui/lei rappresenta quella lingua",
                 R.drawable.img_slider_ritratto_2,
                 ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "3 - Per scegliere i colori, cambiare la larghezza del tratto o cancellarlo premi PALETTE. I colori si possono rinominare con la lingua a loro associata premendo il tasto MATITA. Il disegno può essere salvato e condiviso",
                 R.drawable.img_avatar_ritratto_linguistico,
-                "4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "4 -  Ripeti i passaggi precedenti per finalizzare il ritratto linguistico di tuo/tua figlio/figlia. IMPORTANTE: una volta riportato l’intero repertorio linguistico sul disegno fai le seguenti domande al/alla bambino/a: \n" +
+                        "1). Perché hai assegnato quel colore a quella determinata lingua?\n" +
+                        "2). Perché hai posizionato quella lingua in quella parte del corpo?",
                 R.drawable.img_slider_ritratto_4,
             ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "5 - Insieme creerete un racconto dal quale si evincerà il rapporto di tuo/tua figlio/figlia con ogni lingua presente nel disegno. Potrebbero crearsi metafore legate al colore, al corpo umano e allo spazio, ad esempio: testa= sede della ragione/sforzo cognitivo; cuore= affetti, familiarità; gambe= perifericità/sentirsi radicati; rosso= emozioniblu= distanza; dentro= appartenenza; fuori= estraneità",
                 R.drawable.img_slider_ritratto_5,
-                "6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "6 - ESEMPIO: “Metà della mia testa è italiana, metà della mia testa è in qualche modo occupata con l’italiano. Penso anche in italiano, parlo in italiano.” “Arancione e rosa sono rispettivamente tedesco e inglese, si collocano nelle mani perchè è con le mani che entro in contatto con altre persone e le posso aiutare”",
                 R.drawable.img_avatar_ritratto_linguistico,
             ),
 //            RitrattoSliderFragment.SliderItem(
