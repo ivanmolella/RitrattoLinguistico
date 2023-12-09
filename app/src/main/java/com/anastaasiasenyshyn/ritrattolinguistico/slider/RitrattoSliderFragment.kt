@@ -115,7 +115,7 @@ class RitrattoSliderFragment : Fragment() {
             var frag : Fragment? = null
 
             if (position == 0){
-                frag = RitrattoSlideFragment2()
+                frag = RitrattoSlideFragment1()
             }else{
                 frag = RitrattoSlideFragment2()
             }
