@@ -106,7 +106,8 @@ class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
 
                 val objMapping = Util.findMappedObject(currentImageMapping,pixelRGBCode,xPerc,yPerc)
                 if (objMapping == null){
-                    Toast.makeText(requireContext(),getString(R.string.no_image_detected),Toast.LENGTH_SHORT).show()
+                    Log.i(TAG,getString(R.string.no_image_detected))
+                    //Toast.makeText(requireContext(),getString(R.string.no_image_detected),Toast.LENGTH_SHORT).show()
                 }else {
                     showTranslateWordDialog(objMapping)
                 }

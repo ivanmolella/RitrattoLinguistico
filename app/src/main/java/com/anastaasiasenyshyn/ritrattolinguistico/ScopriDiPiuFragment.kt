@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentScopriDiPiuBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +23,8 @@ class ScopriDiPiuFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentScopriDiPiuBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,8 +37,8 @@ class ScopriDiPiuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scopri_di_piu, container, false)
+        _binding = FragmentScopriDiPiuBinding.inflate(inflater, container, false)
+        return _binding!!.root
     }
 
     companion object {
