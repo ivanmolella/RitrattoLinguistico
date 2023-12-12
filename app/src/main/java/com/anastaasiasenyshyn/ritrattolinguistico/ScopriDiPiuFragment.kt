@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentFirstBinding
+import android.widget.TextView
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentScopriDiPiuBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -24,6 +24,7 @@ class ScopriDiPiuFragment : Fragment() {
     private var param2: String? = null
 
     private var _binding: FragmentScopriDiPiuBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,26 @@ class ScopriDiPiuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentScopriDiPiuBinding.inflate(inflater, container, false)
+        setPanel(binding.btnExpand1,binding.testo12)
+        setPanel(binding.btnExpand2,binding.testo22)
+        setPanel(binding.btnExpand3,binding.testo32)
+        setPanel(binding.btnExpand4,binding.testo42)
+        setPanel(binding.btnExpand5,binding.testo52)
+        setPanel(binding.btnExpand6,binding.testo6Panel)
+        setPanel(binding.btnExpand7,binding.testo72)
+
         return _binding!!.root
+    }
+
+    private fun setPanel(btnExpand: TextView, testo2: View) {
+        testo2.visibility=View.GONE
+        btnExpand.setOnClickListener {
+            if (testo2.visibility == View.GONE){
+                testo2.visibility=View.VISIBLE
+            }else{
+                testo2.visibility=View.GONE
+            }
+        }
     }
 
     companion object {

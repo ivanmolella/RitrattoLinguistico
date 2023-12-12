@@ -45,5 +45,33 @@
     <string name="zone_salotto">Parlour</string>
     <string name="zone_bagno">Bathroom</string>
     <string name="zone_camera_da_letto">Bedroom</string>
+    <string name="more_title_1">Perché questo tasto?</string>
+    <string name="more_title_2">Bilinguismo/multilinguismo/plurilinguismo</string>
+    <string name="more_title_3">Multilinguismo individuale/sociale</string>
+    <string name="more_title_4">Condizioni per una competenza bilingue/plurilingue</string>
+    <string name="more_title_5">Età di acquisizione</string>
+    <string name="more_title_6">Periodo critico</string>
+    <string name="more_title_7">Effetti del bilinguismo/plurilinguismo</string>
+    <string name="more_desc_1_first">Nonostante la forte necessità delle famiglie plurilingui nell’implementazione digitale dei giochi linguistici,</string>
+    <string name="more_desc_1_second">questo tasto è stato progettato per i genitori per dare a loro le informazioni basilari riguardo alle ricerche sul bilinguismo/ plurilinguismo e sulla politica linguistica familiare.</string>
+    <string name="more_desc_2_first">Il termine bilinguismo è spesso adottato in modo generico nella comunicazione quotidiana e denota chiunque conosca due lingue o due varietà linguistiche, comprese le varietà dialettali.</string>
+    <string name="more_desc_2_second">Multilinguismo fa riferimento alla presenza di più di una lingua o varietà linguistiche in una stessa area geografica. Gli individui che vivono in aree geografiche multilingui possono essere plurilingui o monolingui, cioè, parlare soltanto una delle lingue/varietà presenti sul territorio.È bilingue/plurilingue chiunque possegga competenze in lingue diverse anche se diseguali e non necessariamente frutto dell’essere nati da genitori parlanti lingue differenti. Il bilinguismo/plurilinguismo, quindi, non descrive solo chi ha una competenza bilanciata delle due lingue e parla entrambe allo stesso livello: è bilingue anche chi ha una lingua dominante e un’altra che viene usata solo in specifiche circostanze. Il concetto in questione si riferisce anche agli adulti che imparano una seconda o una terza lingua, senza esservi stati esposti dalla tenera età.</string>
+    <string name="more_desc_3_first">NADA</string>
+    <string name="more_desc_3_second">NADA</string>
+    <string name="more_desc_4_first">La prima condizione è essere cresciuti da persone che parlino lingue diverse e che decidano di crescere il bambino sottoponendolo a stimoli continui e diversificati in questi due idiomi.</string>
+    <string name="more_desc_4_second">La seconda condizione è data dalla società circostante: il fenomeno di urbanizzazione e globalizzazione ha portato alla nascita delle società plurilingui, dove gli idiomi si mescolano e una persona ha la possibilità di ascoltare, leggere, comunicare in lingue diverse. La terza condizione è lo stile di vita, ovvero dalla quantità di tempo che le persone dedicano ad attività che presuppongono un contatto con un idioma diverso dal proprio. Dalle politiche linguistiche sia quelle globali che dalle politiche linguistiche familiare.</string>
+    <string name="more_desc_5_first">Il momento in cui si inizia ad essere esposti a una lingua. E’ possibile diventare bilingui anche in età adulta: tuttavia, apprendere una lingua da adulti può portare a tappe di sviluppo e gradi di competenza diversi.</string>
+    <string name="more_desc_5_second"> </string>
+    <string name="more_desc_6_first_top">Bilinguismo simultaneo</string>
+    <string name="more_desc_6_first_bottom">caratterizza l’individuo che ha imparato più di una lingua simultaneamente sin dalla nascita o che ne aggiunge una entro il primo anno di vita. Ne è l’esempio l’individuo che cresce in un unico ambiente familiare in cui circolano lingue diverse, una parlata, ipoteticamente, dal padre e una dalla madre. Si sottolinea che, per attivare forme di bilinguismo simultaneo, l’esposizione a due lingue deve essere di pari intensità. L’esposizione deve essere accompagnata da interazione e da negoziazione del significato tra l’adulto che parla la lingua e il bambino che la deve apprendere.</string>
+    <string name="more_desc_6_second_top">Bilinguismo composito precoce</string>
+    <string name="more_desc_6_second_bottom">questa forma appartiene a coloro che apprendono due lingue a partire dalla tenerissima età ma con un distacco temporale di uno o due anni tra la prima e la seconda lingua appresa. E’ il caso tipico di coloro che parlano una lingua in famiglia che non è quella parlata nella società che li ospita e quindi entreranno in contatto con il nuovo idioma solo quando inizieranno le interazioni sistematiche e autonome con l’esterno, quindi a scuola o con gli amici.</string>
+    <string name="more_desc_6_third_top">Bilinguismo composito tardivo</string>
+    <string name="more_desc_6_third_bottom">se una delle due lingue è appresa dopo i 4/5 anni (l’età di esposizione comunicativa, quando un bambino inizia a produrre enunciati complessi con un numero alto di parole riconosciute e usate), ma prima dell’inizio della pubertà (l’età considerata una soglia critica, passata la quale per alcuni diventa quasi impossibile arrivare a una piena competenza in una lingua, intorno a 8 anni).</string>
+    <string name="more_desc_6_forth_top">Bilinguismo da adulti tardivo e non bilanciato</string>
+    <string name="more_desc_6_forth_bottom">caratterizza coloro che hanno avviato l’apprendimento della seconda lingua dopo l’apprendimento della prima lingua. Non sono rari i casi di persone che imparano la lingua a livelli nativi anche da adulti. Per approfondimenti vedi Paradis 2011. No native accent pag 45 later bilingualism something…</string>
+    <string name="more_desc_7_first">Fino agli anni Sessanta del Novecento si credeva che il bilinguismo precoce e simultaneo fosse un ostacolo per arrivare a padroneggiare presto e bene una lingua.</string>
+    <string name="more_desc_7_second">Prevaleva l’idea che il cervello venisse disturbato dal dover apprendere simultaneamente due lingue e che fosse meglio aspettare di porre basi solide in una delle due e poi iniziare ad apprendere l’altra.</string>
 
+    <string name="btn_continue">Continua a leggere...</string>
 </resources>

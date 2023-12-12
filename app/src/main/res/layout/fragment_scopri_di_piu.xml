@@ -18,7 +18,7 @@
             android:orientation="vertical">
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -39,19 +39,51 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/notoserif_bold"
-                        android:text="Lorem ipsum dolor sit amet, consectetur">
-
+                        android:text="@string/more_title_1">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/more_desc_1_first">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/btn_expand1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/more_desc_1_second">
                     </TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -72,19 +104,51 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/notoserif_bold"
-                        android:text="Lorem ipsum dolor sit amet, consectetur">
-
+                        android:text="@string/more_title_2">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/more_desc_2_first">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/btn_expand2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/more_desc_2_second">
                     </TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -105,19 +169,51 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/notoserif_bold"
-                        android:text="Lorem ipsum dolor sit amet, consectetur">
-
+                        android:text="@string/more_title_3">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/more_desc_3_first">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/btn_expand3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/more_desc_3_second">
                     </TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -138,12 +234,324 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/notoserif_bold"
-                        android:text="Lorem ipsum dolor sit amet, consectetur">
+                        android:text="@string/more_title_4">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/more_desc_4_first">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/btn_expand4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/more_desc_4_second">
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                card_view:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.anastaasiasenyshyn.ritrattolinguistico.util.RoundedImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/img_slider_ritratto_0">
+                    </com.anastaasiasenyshyn.ritrattolinguistico.util.RoundedImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/notoserif_bold"
+                        android:text="@string/more_title_5">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/more_desc_5_first">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/btn_expand5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        android:text="@string/more_desc_5_second">
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                card_view:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.anastaasiasenyshyn.ritrattolinguistico.util.RoundedImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/img_slider_ritratto_0">
+                    </com.anastaasiasenyshyn.ritrattolinguistico.util.RoundedImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/notoserif_bold"
+                        android:text="@string/more_title_6">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/testo6_1_top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="12sp"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/notoserif_bold"
+                            android:text="@string/more_desc_6_first_top">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/testo6_1_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="12sp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@string/more_desc_6_first_bottom">
+                        </TextView>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/btn_expand6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <LinearLayout
+                        android:id="@+id/testo6_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/testo6_2_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/notoserif_bold"
+                                android:text="@string/more_desc_6_second_top">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/testo6_2_bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/more_desc_6_second_bottom">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/notoserif_bold"
+                                android:text="@string/more_desc_6_third_top">
+                            </TextView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/more_desc_6_third_bottom">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/notoserif_bold"
+                                android:text="@string/more_desc_6_forth_top">
+                            </TextView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/more_desc_6_forth_bottom">
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                card_view:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.anastaasiasenyshyn.ritrattolinguistico.util.RoundedImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/img_slider_ritratto_0">
+                    </com.anastaasiasenyshyn.ritrattolinguistico.util.RoundedImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/notoserif_bold"
+                        android:text="@string/more_title_7">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/more_desc_7_first">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/btn_expand7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="#4D808080"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/btn_continue">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/testo7_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/more_desc_7_second">
                     </TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
