@@ -71,7 +71,19 @@
     <string name="more_desc_6_forth_top">Bilinguismo da adulti tardivo e non bilanciato</string>
     <string name="more_desc_6_forth_bottom">caratterizza coloro che hanno avviato l’apprendimento della seconda lingua dopo l’apprendimento della prima lingua. Non sono rari i casi di persone che imparano la lingua a livelli nativi anche da adulti. Per approfondimenti vedi Paradis 2011. No native accent pag 45 later bilingualism something…</string>
     <string name="more_desc_7_first">Fino agli anni Sessanta del Novecento si credeva che il bilinguismo precoce e simultaneo fosse un ostacolo per arrivare a padroneggiare presto e bene una lingua.</string>
-    <string name="more_desc_7_second">Prevaleva l’idea che il cervello venisse disturbato dal dover apprendere simultaneamente due lingue e che fosse meglio aspettare di porre basi solide in una delle due e poi iniziare ad apprendere l’altra.</string>
+    <string name="more_desc_7_second_bottom">Prevaleva l’idea che il cervello venisse disturbato dal dover apprendere simultaneamente due lingue e che fosse meglio aspettare di porre basi solide in una delle due e poi iniziare ad apprendere l’altra. Uno dei primi studi sul bilinguismo è stato pubblicato nel 1962 da parte di Pearl e Lambert</string>
 
     <string name="btn_continue">Continua a leggere...</string>
+    <string name="more_contents_title">Altri contenuti</string>
+    <string name="more_content_link1"><a href="https://www.treccani.it/vocabolario/plurilinguismo/">Trecani</a></string>
+    <string name="more_content_link1_def">Plurilinguismo:</string>
+    <string name="more_desc_7_third_top">Vantaggi</string>
+    <string name="more_desc_7_third_bottom">impronta per il genitore e perché bisogna far capire al bambino il suo bagaglio linguistico\nTipi di bilinguismo:\npag 39 bilingual family file some thing you should know about bilingualism\n\nBilinguismo dal pdv della competenza oppure dal pdv dell’uso (es. George parla due lingue OGNI GIORNO)\nBilinguismo e interferenze il fenomeno da normalizzare.\nL’interferenza può essere un indicatore di DOMINANZA LINGUISTICA E DI PREFERENZA. \nVari tipi di bilinguismo così come vari tipi di famiglie\nBilinguismo ricettivo  una sua variante  bilinguismo asimmetrico\nThe subordinative type of bilingualism\nHer case illustrates\nthat dominance in childhood can in no way determine patterns of dominance\nas an adult.\nLater bilingualism : after puberty</string>
+    <string name="more_desc_7_forth_top">Trilinguismo</string>
+    <string name="more_desc_7_forth_bottom">Cos’è e vediamo se è utile menzionarlo</string>
+    <string name="more_desc_7_fifth_top">Poliglotta</string>
+    <string name="more_desc_7_fifith_bottom">Chi è e vediamo se è utile</string>
+    <string name="more_desc_7_sixth_top">Polylingualism</string>
+    <string name="more_desc_7_sixth_bottom">Multilinguismo storico\n\nMultilinguismo sociale\n\nMultilinguismo istituzionale\n\nMultilinguismo ricettivo\nMultilinguismo e attitudini\n\n\n\nKrashen: differenza tra acquisizione e apprendimento\nE poi parlo di acquaring a language\n\nCome si apprende? \n\nLanguage acquisition management</string>
+
 </resources>
