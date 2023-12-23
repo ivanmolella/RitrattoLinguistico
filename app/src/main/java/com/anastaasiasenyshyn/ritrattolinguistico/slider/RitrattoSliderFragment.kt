@@ -173,7 +173,7 @@ class RitrattoSliderFragment : Fragment() {
                         }
                     }
 
-                    1,2 -> {
+                    1,2,3 -> {
                         binding.startSlideArrowLeft.visibility=View.VISIBLE
                         binding.startSlideArrowRight.visibility=View.VISIBLE
                         binding.startSlideArrowLeft.setOnClickListener {
@@ -186,7 +186,7 @@ class RitrattoSliderFragment : Fragment() {
                         }
                     }
 
-                    3 -> {
+                    4 -> {
                         binding.startSlideArrowLeft.visibility=View.VISIBLE
                         binding.startSlideArrowRight.visibility=View.GONE
                         binding.startSlideArrowLeft.setOnClickListener {

@@ -52,7 +52,27 @@
                 </TextView>
             </LinearLayout>
         </LinearLayout>
-
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:id="@+id/btnEnterHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_bg_primary">
+            <TextView
+                android:id="@+id/btnEnterHomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:text="@string/btnEnterHome">
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

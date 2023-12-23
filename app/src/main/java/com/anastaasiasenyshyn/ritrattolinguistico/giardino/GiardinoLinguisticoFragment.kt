@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
@@ -325,7 +324,7 @@ class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
             .cancelable(true)
         val viewDialog = dialog.getCustomView()
         
-        loadCustomView(viewDialog,objMapping)
+        loadCustomView(dialog,viewDialog,objMapping)
 
         dialog.show {
 
@@ -335,7 +334,7 @@ class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
 
     }
 
-    private fun loadCustomView(viewDialog: View, objMapping: Mapping) {
+    private fun loadCustomView(dialog: MaterialDialog, viewDialog: View, objMapping: Mapping) {
         val familyLanguage =
             Util.readStringSharedPreference(Constants.SHAR_LANG_SELECTED, requireContext())
 
@@ -349,6 +348,7 @@ class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
         val saveWordPanel : View = viewDialog.findViewById(R.id.saveWordPanel)
         val editWord : EditText = viewDialog.findViewById(R.id.editWord)
         val btnSave : View = viewDialog.findViewById(R.id.btnSaveWord)
+        val btnEnterHome : View = viewDialog.findViewById(R.id.btnEnterHome)
         btnSave.isClickable = true
         wordListAdapter = WordListAdapter(requireContext(),itemList,currentGiardinoPage,objMapping){ itemPage,itemItalianName,itemLang ->
             Log.i(TAG,"OnClick pressed: $itemPage-$itemItalianName-${Util.trim(itemLang)}")
@@ -363,6 +363,15 @@ class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
         wordListRecycler.adapter=wordListAdapter
         wordListRecycler.layoutManager=LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
 
+        if (objMapping.itemItalianName.equals("porta", ignoreCase = true)){
+            btnEnterHome.visibility = View.VISIBLE
+            btnEnterHome.setOnClickListener {
+                dialog.dismiss()
+                showMapPanel(200)
+            }
+        }else{
+            btnEnterHome.visibility = View.GONE
+        }
     }
 
     private fun saveTranslatedWord(itemPage: Int, itemItalianName: String, itemLang: String, itemTranslated: String?) {
@@ -425,6 +434,7 @@ class GiardinoLinguisticoFragment : Fragment(),IOnBackPressed {
     }
 
     override fun onBackPressed(): Boolean {
+        Log.i(TAG,"onBackPressed currentZone: $currentZone")
         if (currentZone == 0){
            return false
         }else{

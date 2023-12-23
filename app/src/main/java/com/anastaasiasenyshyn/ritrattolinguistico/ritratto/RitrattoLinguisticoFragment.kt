@@ -379,6 +379,13 @@ class RitrattoLinguisticoFragment : Fragment() {
                 "6 - ESEMPIO: “Metà della mia testa è italiana, metà della mia testa è in qualche modo occupata con l’italiano. Penso anche in italiano, parlo in italiano.” “Arancione e rosa sono rispettivamente tedesco e inglese, si collocano nelle mani perchè è con le mani che entro in contatto con altre persone e le posso aiutare”",
                 R.drawable.img_slider_ritratto_5,
             ),
+            RitrattoSliderFragment.SliderItem(
+                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
+                "7 - Insieme creerete un racconto dal quale si evincerà il rapporto di tuo/tua figlio/figlia con ogni lingua presente nel disegno. Potrebbero crearsi metafore legate al colore, al corpo umano e allo spazio, ad esempio: testa= sede della ragione/sforzo cognitivo; cuore= affetti, familiarità; gambe= perifericità/sentirsi radicati; rosso= emozioniblu= distanza; dentro= appartenenza; fuori= estraneità",
+                R.drawable.img_slider_ritratto_5,
+                "8 - ESEMPIO: “Metà della mia testa è italiana, metà della mia testa è in qualche modo occupata con l’italiano. Penso anche in italiano, parlo in italiano.” “Arancione e rosa sono rispettivamente tedesco e inglese, si collocano nelle mani perchè è con le mani che entro in contatto con altre persone e le posso aiutare”",
+                R.drawable.img_slider_ritratto_5,
+            )
 //            RitrattoSliderFragment.SliderItem(
 //                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
 //                "7 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

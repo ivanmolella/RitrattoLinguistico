@@ -15,6 +15,7 @@ import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants.Companion.ID_SLIDER_RITRATTO_LINGUISTICO
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.giardino.GiardinoLinguisticoFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderActions
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity(), SliderActions {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
         val curFrag = navHostFragment!!.childFragmentManager.fragments[0]
+        Log.i(GiardinoLinguisticoFragment.TAG,"onBackPressed curFrag: $curFrag")
         if (curFrag is IOnBackPressed){
             if (!curFrag.onBackPressed()){
                 super.onBackPressed()
