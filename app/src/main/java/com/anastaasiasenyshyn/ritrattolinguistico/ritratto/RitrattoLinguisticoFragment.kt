@@ -351,30 +351,33 @@ class RitrattoLinguisticoFragment : Fragment() {
         var sliderItems: MutableList<RitrattoSliderFragment.SliderItem>? = mutableListOf(
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "L’autoritratto linguistico è uno strumento didattico e di ricerca che permette una rappresentazione creativa del repertorio linguistico di un individuo mediante l’uso dei colori e dei disegni.\n" +
+                        "\n" +
+                        "Viene concepito come uno tra i possibili strumenti più adeguati a stimolare una precoce consapevolezza linguistica e permettere all’individuo di scoprire e valorizzare la propria pluralità linguistico-culturale, favorendo l’espressione di sé in lingua, per mezzo della lingua e sulle lingue.\n" +
+                        "\u2028Per realizzare l’autoritratto di tuo/tua figlio/figlia segui i seguenti passaggi: \u2028\n" +
+                        "\n" +
+                        " ",
                 R.drawable.img_slider_ritratto_0,
                 "",
                 R.drawable.img_slider_ritratto_2,
                 ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "1 - Chiedi a tuo/a figlio/a di pensare a una lingua o varietà linguistica che parla già o che vorrebbe imparare",
+                "1 - Chiedi a tuo/a figlio/a di pensare a tutte le lingue che conoscce",
                 R.drawable.img_slider_ritratto_1,
-                "2 - Chiedi di associare la lingua che ha scelto a un colore, dopodichè chiedi dove vorrebbe posizionarla nel disegno e colorate insieme la parte del corpo che per lui/lei rappresenta quella lingua",
+                "2 - Chiedigli/le di scegliere un colore per ogni lingua",
                 R.drawable.img_slider_ritratto_2,
             ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "3 - Per scegliere i colori, cambiare la larghezza del tratto o cancellarlo premi PALETTE. I colori si possono rinominare con la lingua a loro associata premendo il tasto MATITA. Il disegno può essere salvato e condiviso",
+                "3 -colorate la parte del corpo che gli/le viene in mente pensando a quella lingua, se vuole può colorare anche fuori dai bordi",
                 R.drawable.sagoma_ritratto,
-                "4 -  Ripeti i passaggi precedenti per finalizzare il ritratto linguistico di tuo/tua figlio/figlia. IMPORTANTE: una volta riportato l’intero repertorio linguistico sul disegno fai le seguenti domande al/alla bambino/a: \n" +
-                        "1). Perché hai assegnato quel colore a quella determinata lingua?\n" +
-                        "2). Perché hai posizionato quella lingua in quella parte del corpo?",
+                "4 - insieme creerete un racconto che ti farà capire il mondo linguistico di tuo figlio/tua figlia",
                 R.drawable.img_slider_ritratto_4,
             ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "5 - Insieme creerete un racconto dal quale si evincerà il rapporto di tuo/tua figlio/figlia con ogni lingua presente nel disegno. Potrebbero crearsi metafore legate al colore, al corpo umano e allo spazio, ad esempio: testa= sede della ragione/sforzo cognitivo; cuore= affetti, familiarità; gambe= perifericità/sentirsi radicati; rosso= emozioniblu= distanza; dentro= appartenenza; fuori= estraneità",
+                "5 - potresti notare alcune metafore legate al colore, al corpo e alla posizione, ad esempio testa-> sede della ragione e dello sforzo cognitivo; cuore-> affetti, familiarità; gambe -> perifericità, sentirsi radicati; dentro-> appartenenza; fuori->estraneità",
                 R.drawable.img_slider_ritratto_5,
                 "6 - ESEMPIO: “Metà della mia testa è italiana, metà della mia testa è in qualche modo occupata con l’italiano. Penso anche in italiano, parlo in italiano.” “Arancione e rosa sono rispettivamente tedesco e inglese, si collocano nelle mani perchè è con le mani che entro in contatto con altre persone e le posso aiutare”",
                 R.drawable.img_slider_ritratto_5,
@@ -383,7 +386,7 @@ class RitrattoLinguisticoFragment : Fragment() {
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "7 - Insieme creerete un racconto dal quale si evincerà il rapporto di tuo/tua figlio/figlia con ogni lingua presente nel disegno. Potrebbero crearsi metafore legate al colore, al corpo umano e allo spazio, ad esempio: testa= sede della ragione/sforzo cognitivo; cuore= affetti, familiarità; gambe= perifericità/sentirsi radicati; rosso= emozioniblu= distanza; dentro= appartenenza; fuori= estraneità",
                 R.drawable.img_slider_ritratto_5,
-                "8 - ESEMPIO: “Metà della mia testa è italiana, metà della mia testa è in qualche modo occupata con l’italiano. Penso anche in italiano, parlo in italiano.” “Arancione e rosa sono rispettivamente tedesco e inglese, si collocano nelle mani perchè è con le mani che entro in contatto con altre persone e le posso aiutare”",
+                "8 - Esempio: metà della mia testa è italiana perchè parlo in italiano e metà è inglese perchè parlo in inglese. Le mie braccia sono arancioni perchè è il colore del tedesco e quando gioco con i miei amici parlo in tedesco",
                 R.drawable.img_slider_ritratto_5,
             )
 //            RitrattoSliderFragment.SliderItem(
