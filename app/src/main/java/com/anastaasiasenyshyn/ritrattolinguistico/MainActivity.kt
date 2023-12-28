@@ -106,4 +106,10 @@ class MainActivity : AppCompatActivity(), SliderActions {
         }
 
     }
+
+    override fun onSliderRequest() {
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)
+        val frag = navHostFragment?.childFragmentManager?.fragments?.get(0) as RitrattoLinguisticoFragment
+        frag.showSlider()
+    }
 }

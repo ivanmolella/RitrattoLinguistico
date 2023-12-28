@@ -14,13 +14,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Per realizzare il tuo, segui i seguenti passaggi"></TextView>
+            android:text="Per realizzare il tuo ritratto, segui i seguenti passaggi"></TextView>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="3">
 
         <LinearLayout
@@ -56,6 +56,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="20dp"
                     android:text=""></TextView>
             </LinearLayout>
         </LinearLayout>
@@ -94,6 +95,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="20dp"
                     android:text=""></TextView>
             </LinearLayout>
             <LinearLayout

@@ -99,7 +99,7 @@
                 android:layout_marginTop="25dp"
                 android:backgroundTint="#FFFFFF"
                 android:drawableLeft="@drawable/ico_btn_sistemi_home_small"
-                android:text="@string/sistemiscritturabutton"
+                android:text="@string/altrerisorse"
                 android:textColor="@color/black"
                 android:fontFamily="@font/notoserif_semibold"
                 android:textSize="14sp">

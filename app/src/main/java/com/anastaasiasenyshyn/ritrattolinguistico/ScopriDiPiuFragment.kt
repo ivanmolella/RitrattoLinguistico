@@ -41,7 +41,7 @@ class ScopriDiPiuFragment : Fragment() {
         _binding = FragmentScopriDiPiuBinding.inflate(inflater, container, false)
         setPanel(binding.btnExpand1,binding.testo12)
         setPanel(binding.btnExpand2,binding.testo22)
-        setPanel(binding.btnExpand3,binding.testo32)
+
         setPanel(binding.btnExpand4,binding.testo42)
         setPanel(binding.btnExpand5,binding.testo52)
         setPanel(binding.btnExpand6,binding.testo6Panel)

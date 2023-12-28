@@ -21,6 +21,7 @@ import com.anastaasiasenyshyn.ritrattolinguistico.Constants
 import com.anastaasiasenyshyn.ritrattolinguistico.R
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.FragmentRitrattoLinguisticoBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.RitrattoSliderFragment
+import com.anastaasiasenyshyn.ritrattolinguistico.slider.SliderActions
 import com.anastaasiasenyshyn.ritrattolinguistico.slider.StartAppSliderFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.DeviceInfo
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
@@ -79,7 +80,7 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     private fun initView() {
         //TODO Scommentare
-        val isSlideRequired = true //checkSlideRequired()
+        val isSlideRequired = checkSlideRequired()
         if (isSlideRequired) {
             initViewForSlider()
         } else {
@@ -89,6 +90,10 @@ class RitrattoLinguisticoFragment : Fragment() {
 
     fun showRitratto() {
         initViewForRitratto()
+    }
+
+    fun showSlider() {
+        initViewForSlider()
     }
 
     private fun initViewForRitratto() {
@@ -111,6 +116,10 @@ class RitrattoLinguisticoFragment : Fragment() {
 
         binding.btnShareRitratto.setOnClickListener {
             shareBitmapRistratto()
+        }
+
+        binding.btnInfo.setOnClickListener {
+            (requireActivity() as SliderActions).onSliderRequest()
         }
 
     }
@@ -349,18 +358,20 @@ class RitrattoLinguisticoFragment : Fragment() {
         fragmentTransaction.replace(R.id.slider, sliderFragment!!)
 
         var sliderItems: MutableList<RitrattoSliderFragment.SliderItem>? = mutableListOf(
+
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "L’autoritratto linguistico è uno strumento didattico e di ricerca che permette una rappresentazione creativa del repertorio linguistico di un individuo mediante l’uso dei colori e dei disegni.\n" +
                         "\n" +
                         "Viene concepito come uno tra i possibili strumenti più adeguati a stimolare una precoce consapevolezza linguistica e permettere all’individuo di scoprire e valorizzare la propria pluralità linguistico-culturale, favorendo l’espressione di sé in lingua, per mezzo della lingua e sulle lingue.\n" +
-                        "\u2028Per realizzare l’autoritratto di tuo/tua figlio/figlia segui i seguenti passaggi: \u2028\n" +
+                        "\u2028Per realizzare l’autoritratto di tuo/tua figlio/figlia segui i seguenti passaggi:" +
                         "\n" +
                         " ",
                 R.drawable.img_slider_ritratto_0,
                 "",
                 R.drawable.img_slider_ritratto_2,
                 ),
+
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "1 - Chiedi a tuo/a figlio/a di pensare a tutte le lingue che conoscce",
@@ -368,13 +379,15 @@ class RitrattoLinguisticoFragment : Fragment() {
                 "2 - Chiedigli/le di scegliere un colore per ogni lingua",
                 R.drawable.img_slider_ritratto_2,
             ),
+
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "3 -colorate la parte del corpo che gli/le viene in mente pensando a quella lingua, se vuole può colorare anche fuori dai bordi",
-                R.drawable.sagoma_ritratto,
+                R.drawable.img_slider_ritratto_2,
                 "4 - insieme creerete un racconto che ti farà capire il mondo linguistico di tuo figlio/tua figlia",
                 R.drawable.img_slider_ritratto_4,
             ),
+
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "5 - potresti notare alcune metafore legate al colore, al corpo e alla posizione, ad esempio testa-> sede della ragione e dello sforzo cognitivo; cuore-> affetti, familiarità; gambe -> perifericità, sentirsi radicati; dentro-> appartenenza; fuori->estraneità",
@@ -384,10 +397,15 @@ class RitrattoLinguisticoFragment : Fragment() {
             ),
             RitrattoSliderFragment.SliderItem(
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
-                "7 - Insieme creerete un racconto dal quale si evincerà il rapporto di tuo/tua figlio/figlia con ogni lingua presente nel disegno. Potrebbero crearsi metafore legate al colore, al corpo umano e allo spazio, ad esempio: testa= sede della ragione/sforzo cognitivo; cuore= affetti, familiarità; gambe= perifericità/sentirsi radicati; rosso= emozioniblu= distanza; dentro= appartenenza; fuori= estraneità",
+                "7 - Una volta completato il disegno ecco alcune domande da fare a tuo figlio/tua figlia:\n" +
+                        "1). Perchè hai scelto questo colore per questa lingua?\n" +
+                        "2). Perchè senti quella lingua in quella parte del corpo?\n" +
+                        "3). Quale è la tua lingua preferita e perchè ti piace tanto?",
                 R.drawable.img_slider_ritratto_5,
-                "8 - Esempio: metà della mia testa è italiana perchè parlo in italiano e metà è inglese perchè parlo in inglese. Le mie braccia sono arancioni perchè è il colore del tedesco e quando gioco con i miei amici parlo in tedesco",
-                R.drawable.img_slider_ritratto_5,
+                "8 - Per scegliere i colori e cambiare la larghezza del tratto o cancellarlo premi \"PALETTE\".\nVolendo i colori si possono rinominare premendo l'icona della matita.\n" +
+                        "Un'ultima cosa: il disegno può essere salvato e condiviso.\n" +
+                        "Buon divertimento!",
+                R.drawable.sagoma_con_salva,
             )
 //            RitrattoSliderFragment.SliderItem(
 //                Constants.ID_SLIDER_RITRATTO_LINGUISTICO,

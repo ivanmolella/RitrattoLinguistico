@@ -89,4 +89,7 @@ class DemoActivity : AppCompatActivity(), SliderActions {
         finish()
     }
 
+    override fun onSliderRequest() {
+    }
+
 }
