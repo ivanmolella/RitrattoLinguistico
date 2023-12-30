@@ -116,8 +116,20 @@
     <string name="more_desc_11_fifth_bottom">quando i genitori passano alla lingua che il bambino sta usando, facendo un\'enunciazione mista che coinvolge le due lingue o un\'enunciazione completamente nell\'altra lingua. In questo modo, il bambino impara che il cambio di codice è appropriato e può continuare a usarlo con il genitore</string>
     <string name="btn_continue">Continua a leggere...</string>
     <string name="more_contents_title">Altri contenuti</string>
-    <string name="more_content_link1"><a href="https://www.treccani.it/vocabolario/plurilinguismo/">Trecani</a></string>
-    <string name="more_content_link1_def">Plurilinguismo:</string>
+    <string name="more_content_link1"><a href="https://www.helpmykidlearn.ie/">Help my kid learn</a></string>
+    <string name="more_content_link1_def">Giochi per i bambini da 0 a 12 anni:</string>
+    <string name="more_content_link2"><a href="https://www.ecml.at/">ECML</a></string>
+    <string name="more_content_link2_def">Centro europeo per le lingue moderne:</string>
+    <string name="more_content_link3"><a href="https://sms-project.eurac.edu/scuole/materiali-didattici/?lang=it">Eurac Research</a></string>
+    <string name="more_content_link3_def">Attività didattiche per i bambini:</string>
+    <string name="more_contents_title2">Libri</string>
+    <string name="more_content_link4"><a href="https://www.google.com/search?q=M.+Citterio+%281999%29+%E2%80%9CCome+favorire+il+bilinguismo+dei+bambini&amp;client=firefox-b-d&amp;sca_esv=594569564&amp;ei=t-WPZdzLPP2Lxc8Ppf6r8AM&amp;ved=0ahUKEwicg-uX77aDAxX9RfEDHSX_Cj4Q4dUDCBA&amp;uact=5&amp;oq=M.+Citterio+%281999%29+%E2%80%9CCome+favorire+il+bilinguismo+dei+bambini&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiPk0uIENpdHRlcmlvICgxOTk5KSDigJxDb21lIGZhdm9yaXJlIGlsIGJpbGluZ3Vpc21vIGRlaSBiYW1iaW5pMggQABiABBiiBEjZB1CcBVicBXABeACQAQCYAdgBoAHYAaoBAzItMbgBA8gBAPgBAfgBAqgCCsICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQHCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AEB4gMEGAAgQYgGAboGBAgBGAo&amp;sclient=gws-wiz-serp">M. Citterio (1999) “Come favorire il bilinguismo dei bambini”</a></string>
+    <string name="more_content_link5"><a href="https://www.google.com/search?client=firefox-b-d&amp;q=Maria+Garraffa%2C+Antonella+Sorace%2C+Maria+Vender+%282020%29+%E2%80%9CIl+cervello+bilingue">Maria Garraffa, Antonella Sorace, Maria Vender (2020) “Il cervello bilingue”</a></string>
+    <string name="more_content_link6"><a href="https://books.google.it/books/about/Il_bilinguismo_in_et%C3%A0_evolutiva_Aspetti.html?id=THVcywEACAAJ&amp;redir_esc=y">Andrea Marini, M. Chiara Levorato (2019) “Il bilinguismo in età evolutiva. Aspetti cognitivi, linguistici, neuropsicologici, educativi”</a></string>
+    <string name="more_contents_title3">Altre applicazioni</string>
+    <string name="more_content_link7"><a href="https://play.google.com/store/apps/details?id=com.languagedrops.drops.international">Drops</a></string>
+    <string name="more_content_link8"><a href="https://n9cjb.app.goo.gl/bjYm">Beelinguapp</a></string>
+    <string name="more_content_link9"><a href="https://play.google.com/store/apps/details?id=es.monkimun.lingokids">Lingokids</a></string>
     <string name="btnEnterHome">Enter Home</string>
 
 </resources>

@@ -55,7 +55,7 @@
         tools:layout="@layout/fragment_giardino_linguistico2" />
     <fragment
         android:id="@+id/sistemiDiScritturaFragment"
-        android:name="com.anastaasiasenyshyn.ritrattolinguistico.SistemiDiScritturaFragment"
+        android:name="com.anastaasiasenyshyn.ritrattolinguistico.AltreRisorse"
         android:label="@string/sistemi_di_scrittura"
-        tools:layout="@layout/fragment_sistemi_di_scrittura" />
+        tools:layout="@layout/fragment_altre_risorse" />
 </navigation>
