@@ -36,13 +36,13 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/notoserif_bold"
-                    android:text="@string/more_contents_title">
+                    android:text="@string/more_contents_title_siti_web">
                 </TextView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <TextView
                         android:id="@+id/more_content_label1"
                         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <TextView
                         android:id="@+id/more_content_label2"
                         android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <TextView
                         android:id="@+id/more_content_label3"
                         android:layout_width="wrap_content"
