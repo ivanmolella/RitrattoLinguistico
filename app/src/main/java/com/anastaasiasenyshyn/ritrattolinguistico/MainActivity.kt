@@ -12,6 +12,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.fragment.NavHostFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.Constants.Companion.ID_SLIDER_RITRATTO_LINGUISTICO
 import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityMainBinding
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity(), SliderActions {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
