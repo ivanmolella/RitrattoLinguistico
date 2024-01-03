@@ -43,6 +43,14 @@ class AltreRisorse : Fragment() {
         _binding = FragmentAltreRisorseBinding.inflate(inflater, container, false)
 
         binding.moreContentLink1.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink2.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink3.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink4.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink5.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink6.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink7.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink8.movementMethod = LinkMovementMethod.getInstance()
+        binding.moreContentLink9.movementMethod = LinkMovementMethod.getInstance()
 
         return binding.root
     }

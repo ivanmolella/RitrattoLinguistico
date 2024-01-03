@@ -392,7 +392,7 @@ class RitrattoLinguisticoFragment : Fragment() {
                 Constants.ID_SLIDER_RITRATTO_LINGUISTICO,
                 "5 - potresti notare alcune metafore legate al colore, al corpo e alla posizione, ad esempio testa-> sede della ragione e dello sforzo cognitivo; cuore-> affetti, familiarità; gambe -> perifericità, sentirsi radicati; dentro-> appartenenza; fuori->estraneità",
                 R.drawable.img_slider_ritratto_5,
-                "6 - ESEMPIO: “Metà della mia testa è italiana, metà della mia testa è in qualche modo occupata con l’italiano. Penso anche in italiano, parlo in italiano.” “Arancione e rosa sono rispettivamente tedesco e inglese, si collocano nelle mani perchè è con le mani che entro in contatto con altre persone e le posso aiutare”",
+                "6 - ESEMPIO: “Metà della mia testa è italiana perchè parlo in italiano e metà è inglese perchè penso in inglese; le mie braccia sono arancioni perchè è il colore del tedesco e quando gioco con i miei amici parlo in tedesco",
                 R.drawable.img_slider_ritratto_5,
             ),
             RitrattoSliderFragment.SliderItem(
