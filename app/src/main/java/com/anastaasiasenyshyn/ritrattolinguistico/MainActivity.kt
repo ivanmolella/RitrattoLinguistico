@@ -45,11 +45,11 @@ class MainActivity : AppCompatActivity(), SliderActions {
         }else{
             super.onBackPressed()
         }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity(), SliderActions {
 
         Log.i(TAG,"This is the Main activity")
         Log.i(TAG,"appInfo called in 10 seconds...")
+
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

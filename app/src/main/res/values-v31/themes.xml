@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashThema" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowSplashScreenBackground">@android:color/white</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">#FFFFFF</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_new_167</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/logo_new_167</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+</resources>

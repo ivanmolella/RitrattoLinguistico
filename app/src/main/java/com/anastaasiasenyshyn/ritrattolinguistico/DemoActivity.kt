@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -48,6 +49,8 @@ class DemoActivity : AppCompatActivity(), SliderActions {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         binding = ActivityDemoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -69,7 +72,7 @@ class DemoActivity : AppCompatActivity(), SliderActions {
                 R.drawable.rl_1
             ),
             StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,getString(R.string.identita_linguistica), R.drawable.rl_2),
-            StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,getString(R.string.lessico_plurilinguistico), R.drawable.rl_3)
+            StartAppSliderFragment.SliderItem(Constants.ID_SLIDER_AFTER_SPLASH,getString(R.string.lessico_plurilinguistico), R.drawable.rl_3nuovo)
         )
         val sliderPolicy : StartAppSliderFragment.SliderPolicy = StartAppSliderFragment.SliderPolicy(autostartSlideShow = true)
         val args = Bundle()

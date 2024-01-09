@@ -8,6 +8,8 @@ import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivityDemoBinding
+import com.anastaasiasenyshyn.ritrattolinguistico.databinding.ActivitySplashBinding
 import com.anastaasiasenyshyn.ritrattolinguistico.ritratto.RitrattoLinguisticoFragment
 import com.anastaasiasenyshyn.ritrattolinguistico.util.AnimationUtil
 import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
@@ -15,8 +17,19 @@ import com.anastaasiasenyshyn.ritrattolinguistico.util.Util
 val handler : Handler = Handler(Looper.getMainLooper())
 
 class SplashActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySplashBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        var timeout = 0L
+
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.S) {
+            binding = ActivitySplashBinding.inflate(layoutInflater)
+            setContentView(binding.root)
+            timeout=1500
+        }
 
         handler.postDelayed(object : Runnable {
             override fun run() {
@@ -31,7 +44,7 @@ class SplashActivity : AppCompatActivity() {
                 AnimationUtil.startIntentWithSlideInRightAnimation(this@SplashActivity,intent,null)
                 finish()
             }
-        },1500)
+        },timeout)
     }
 
     private fun checkSlideRequired(): Boolean {

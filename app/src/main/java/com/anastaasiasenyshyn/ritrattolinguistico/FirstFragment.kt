@@ -130,6 +130,7 @@ class FirstFragment : Fragment() {
 
         val gson = Gson()
         val languages = gson.fromJson(langJson, Languages::class.java)
+        languages.sortBy { it.name?.trim()?.toUpperCase() }
 
         languages.forEach { langItem ->
             Log.i(TAG,"Lang: ${langItem.code} ${langItem.name} ${langItem.nativeName}")
@@ -157,7 +158,7 @@ class FirstFragment : Fragment() {
             .cancelable(false)
             .show {
                 val myItems = listOf("Hello", "World")
-                listItemsMultiChoice(initialSelection = initSelection,items = languages.map { it.nativeName as CharSequence }) { _, selectedIndex, text ->
+                listItemsMultiChoice(initialSelection = initSelection,items = languages.map { it.name as CharSequence }) { _, selectedIndex, text ->
                     Log.i(TAG, "Choosen Item: $text ($selectedIndex)")
                     val familyLanguages = FamilyLanguages()
                     text.forEachIndexed { index, lang ->

@@ -89,15 +89,15 @@ class ColorPaletteAdapter(
             holder.viewName3?.text = getColorName(colorItem,3)
 
             holder.view1?.setOnClickListener {
-                colorSelectionListener.onColorSelected(colorItem.color1,colorItem.color1Name)
+                colorSelectionListener.onColorSelected(colorItem.color1,getColorName(colorItem,1))
             }
 
             holder.view2?.setOnClickListener {
-                colorSelectionListener.onColorSelected(colorItem.color2,colorItem.color2Name)
+                colorSelectionListener.onColorSelected(colorItem.color2,getColorName(colorItem,2))
             }
 
             holder.view3?.setOnClickListener {
-                colorSelectionListener.onColorSelected(colorItem.color3,colorItem.color3Name)
+                colorSelectionListener.onColorSelected(colorItem.color3,getColorName(colorItem,3))
             }
 
             setPenBtn(holder.viewName1,holder.btnPen1,colorItem,1)
@@ -108,9 +108,9 @@ class ColorPaletteAdapter(
         }
     }
 
-    private fun getColorName(colorItem: ColorItem, i: Int): String? {
+    private fun getColorName(colorItem: ColorItem, i: Int): String {
         var color : Int? = null
-        var colorName : String? = null
+        var colorName : String? = ""
 
         when(i){
             1 -> {
@@ -134,7 +134,7 @@ class ColorPaletteAdapter(
             colorName = colorLanguage.colorLang
         }
 
-        return colorName
+        return colorName ?: ""
 
     }
 
